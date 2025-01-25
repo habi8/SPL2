@@ -1,0 +1,1363 @@
+
+    [
+      {
+        "species_name": "Dwarf Sawfish",
+        "scientific_name": "Pristis clavata",
+        "species_description": "The Dwarf Sawfish, also known as the Queensland Sawfish, is the smallest species in the sawfish family Pristidae, reaching lengths up to 3.2 meters (10.5 feet). It has a torpedo-shaped body resembling a shark, with broad, triangular pectoral fins and large, upright dorsal fins. Its snout is broad and flat, elongated into a rostrum with around twenty pairs of rostral teeth. The dorsal surface is typically greenish-brown or occasionally yellowish-brown, while the underside is whitish.",
+        "geography": {
+          "continents": ["Asia", "Oceania"],
+          "countries": ["Australia", "Indonesia", "Malaysia", "India", "Papua New Guinea"],
+          "regions": ["Northern Territory", "Western Australia", "Queensland", "Papua", "New South Wales"],
+          "oceans": ["Pacific Ocean", "Indian Ocean"],
+          "seas": ["Bay of Bengal", "Timor Sea", "Arafura Sea"],
+          "islands": ["Borneo"]
+        },
+        "habitat": {
+          "biomes": ["Brackish water", "Marine", "Benthic"],
+          "climate_zones": ["Tropical"],
+          "lifestyle": ["Oviparous"]
+        },
+        "diet": ["Carnivore"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Critically Endangered",
+        "environmental_threats": "The primary threat to the Dwarf Sawfish is bycatch in gillnets and trawl nets. Although protected in Australian waters, sawfishes are harvested in other regions for their meat, fins, rostrums, and oil."
+      },
+      {
+        "species_name": "Ganges Shark",
+        "scientific_name": "Glyphis gangeticus",
+        "species_description": "The Ganges Shark is a critically endangered species of requiem shark found in the Ganges and Brahmaputra rivers of India and Bangladesh. It is often confused with the more common Bull Shark, which also inhabits the Ganges River. The Ganges Shark is the world's only exclusively freshwater shark, typically found in the middle to lower reaches of rivers. It has a stocky build, with a broadly rounded snout, small eyes, and a uniform grey to brownish coloration.",
+        "geography": {
+          "continents": ["Asia"],
+          "countries": ["India", "Bangladesh", "Malaysia", "Sri Lanka"],
+          "oceans": ["Pacific Ocean", "Indian Ocean"],
+          "seas": ["Arabian Sea", "Bay of Bengal", "Laccadive Sea"]
+        },
+        "habitat": {
+          "biomes": ["Freshwater"],
+          "climate_zones": ["Tropical"],
+          "lifestyle": ["Viviparous"]
+        },
+        "diet": ["Carnivore"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Critically Endangered",
+        "environmental_threats": "The Ganges Shark faces significant threats from habitat degradation and overfishing. Its population is estimated to be around 240 individuals, making it one of the most endangered shark species globally."
+      },
+      {
+        "species_name": "Oceanic Whitetip Shark",
+        "scientific_name": "Carcharhinus longimanus",
+        "species_description": "The Oceanic Whitetip Shark is a large pelagic requiem shark inhabiting tropical and warm temperate seas. It has a stocky body with long, white-tipped, rounded fins. This species is typically solitary but may gather in large numbers at food concentrations. Bony fish and cephalopods are the main components of its diet, and females give live birth.",
+        "geography": {
+          "continents": ["Asia", "Africa", "North America", "South America", "Oceania"],
+          "countries": ["India", "Australia", "United States", "Brazil", "South Africa"],
+          "oceans": ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean"],
+          "seas": ["Caribbean Sea", "Red Sea", "Mediterranean Sea"]
+        },
+        "habitat": {
+          "biomes": ["Marine"],
+          "climate_zones": ["Tropical", "Warm Temperate"],
+          "lifestyle": ["Solitary"]
+        },
+        "diet": ["Carnivore"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Critically Endangered",
+        "environmental_threats": "The Oceanic Whitetip Shark faces significant threats from overfishing, primarily due to the high demand for its fins and meat. Recent studies show steeply declining populations, and the IUCN Red List considers the species to be critically endangered."
+      },
+      {
+        "species_name": "Pondicherry Shark",
+        "scientific_name": "Carcharhinus hemiodon",
+        "species_description": "The Pondicherry Shark is an extremely rare species of requiem shark, characterized by a small and stocky gray body, growing up to 1 meter (3.3 feet) in length. It has a fairly long, pointed snout and can be identified by the shape of its upper teeth, which are strongly serrated near the base and smooth-edged near the tip. The first dorsal fin is large with a long free rear tip, and it has prominent black tips on its pectoral fins, second dorsal fin, and caudal fin lower lobe.",
+        "geography": {
+          "continents": ["Asia"],
+          "countries": ["India", "Sri Lanka"],
+          "oceans": ["Indian Ocean"],
+          "seas": ["Bay of Bengal"]
+        },
+        "habitat": {
+          "biomes": ["Freshwater", "Marine"],
+          "climate_zones": ["Tropical"],
+          "lifestyle": ["Viviparous"]
+        },
+        "diet": ["Carnivore"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Critically Endangered",
+        "environmental_threats": "The Pondicherry Shark is critically endangered, with fewer than 20 specimens available for study. It was once found throughout Indo-Pacific coastal waters from the Gulf of Oman to New Guinea and is known to enter fresh water. The species is probably threatened by intense and escalating fishing pressure throughout its range."
+      },
+
+      {
+        "species_name": "Smalleye Hammerhead",
+        "scientific_name": "Sphyrna tudes",
+        "species_description": "The smalleye hammerhead, also known as the golden hammerhead or curry shark, is a small species of hammerhead shark in the family Sphyrnidae. Typically reaching 1.2–1.3 meters (3.9–4.3 feet) in length, this shark has a unique, bright golden color on its head, sides, and fins. Its head is flattened and laterally expanded into a hammer-shaped structure called the cephalofoil, which in this species is wide and long with an arched front margin bearing central and lateral indentations.",
+        "geography": {
+          "continents": ["South America"],
+          "countries": ["Venezuela", "Guyana", "Suriname", "French Guiana", "Brazil", "Uruguay"],
+          "oceans": ["Atlantic Ocean"]
+        },
+        "habitat": {
+          "biomes": ["Marine"],
+          "climate_zones": ["Tropical"],
+          "lifestyle": ["Viviparous"]
+        },
+        "diet": ["Carnivore"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Critically Endangered",
+        "environmental_threats": "The smalleye hammerhead is an economically important bycatch of artisanal gillnet fisheries throughout its range and is used as food. In recent years, overfishing has caused marked declines in its numbers off Trinidad, northern Brazil, and probably elsewhere. Coupled with the smalleye hammerhead's low reproductive rate, this led the International Union for Conservation of Nature to list the species as critically endangered in 2020."
+      },
+
+      {
+        "species_name": "Dusky Shark",
+        "scientific_name": "Carcharhinus obscurus",
+        "species_description": "The dusky shark is a species of requiem shark found in tropical and warm-temperate continental seas worldwide. It is a generalist apex predator, inhabiting areas from the coast to the outer continental shelf and adjacent pelagic waters, recorded at depths up to 400 meters (1,300 feet). Populations migrate seasonally, moving towards the poles in the summer and towards the equator in the winter, traveling hundreds to thousands of kilometers.",
+        "geography": {
+          "continents": ["Africa", "Asia", "Australia", "North America", "South America"],
+          "countries": ["United States", "Mexico", "Brazil", "South Africa", "Japan", "Australia"],
+          "oceans": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean"]
+        },
+        "habitat": {
+          "biomes": ["Marine"],
+          "climate_zones": ["Tropical", "Warm Temperate"],
+          "lifestyle": ["Oceanodromous"]
+        },
+        "diet": ["Carnivore"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Endangered",
+        "environmental_threats": "Due to its slow reproductive rate, the dusky shark is highly vulnerable to population depletion caused by human activities. It is highly valued by commercial fisheries for its fins, meat, skin, and liver oil, and is also sought after by recreational fishers. The International Union for Conservation of Nature (IUCN) has assessed this species as Endangered worldwide, with populations off the eastern United States dropping to 15–20% of 1970s levels."
+      },
+
+      {
+        "species_name": "Grey Reef Shark",
+        "scientific_name": "Carcharhinus amblyrhynchos",
+        "species_description": "The grey reef shark is a species of requiem shark, in the family Carcharhinidae. One of the most common reef sharks in the Indo-Pacific, it is found as far east as Easter Island and as far west as South Africa. This species is most often seen in shallow water near the drop-offs of coral reefs. It has the typical 'reef shark' shape, with a broad, round snout and large eyes. It can be distinguished from similar species by the plain or white-tipped first dorsal fin, the dark tips on the other fins, the broad, black rear margin on the tail fin, and the lack of a ridge between the dorsal fins. Most individuals are less than 1.88 meters (6.2 feet) long.",
+        "geography": {
+          "continents": ["Africa", "Asia", "Australia"],
+          "countries": ["South Africa", "India", "Australia"],
+          "oceans": ["Indian Ocean", "Pacific Ocean"]
+        },
+        "habitat": {
+          "biomes": ["Marine"],
+          "climate_zones": ["Tropical", "Warm Temperate"],
+          "lifestyle": ["Diurnal", "Viviparous"]
+        },
+        "diet": ["Carnivore"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Endangered",
+        "environmental_threats": "The grey reef shark has been caught in many fisheries and is susceptible to local population depletion due to its low reproduction rate and limited dispersal. As a result, the International Union for Conservation of Nature has assessed this species as endangered."
+      },
+
+      {
+        "species_name": "Holothuria scabra",
+        "common_name": "Sandfish",
+        "scientific_name": "Holothuria scabra",
+        "species_description": "Holothuria scabra, commonly known as sandfish, is a species of sea cucumber in the family Holothuriidae. These marine invertebrates have elongated, cylindrical bodies with a leathery texture. The dorsal side varies in color from grey-brown to black, featuring dark wrinkles and small black papillae, while the ventral side is lighter and relatively flat. They possess a mouth on the ventral surface at one end, surrounded by approximately 20 short feeding tentacles, and an anus on the dorsal side at the opposite end. Sandfish can grow up to an average length of 22 cm, with some individuals reaching up to 40 cm. They reach maturity at around 16 cm or 200 grams and can live for at least 10 years.",
+        "geography": {
+          "continents": ["Asia", "Africa", "Oceania"],
+          "countries": ["China", "Japan", "Taiwan", "Egypt", "Australia"],
+          "oceans": ["Indian Ocean", "Pacific Ocean"]
+        },
+        "habitat": {
+          "biomes": ["Marine"],
+          "climate_zones": ["Tropical", "Subtropical"],
+          "lifestyle": ["Benthic"]
+        },
+        "diet": ["Detritivore"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Sandfish are harvested and processed into 'beche-de-mer,' a delicacy in China and other Pacific coastal communities. Overexploitation due to high demand has led to significant population declines, resulting in their classification as Vulnerable by the International Union for Conservation of Nature (IUCN)."
+      },
+      {
+        "species_name": "Humphead Wrasse",
+        "scientific_name": "Cheilinus undulatus",
+        "species_description": "The humphead wrasse is a large species of wrasse mainly found on coral reefs in the Indo-Pacific region. It is also known as the Māori wrasse, Napoleon wrasse, and Napoleon fish. This species can be easily identified by its large size, thick lips, two black lines behind its eyes, and the hump on the foreheads of larger adults. Its color can vary between dull blue-green to more vibrant shades of green and purplish-blue. Adults are usually observed living singly, but are also seen in male/female pairs and in small groups.",
+        "geography": {
+          "continents": ["Asia", "Africa", "Oceania"],
+          "countries": ["China", "Japan", "Taiwan", "Egypt", "Australia", "Kiribati", "Papua New Guinea", "Fiji", "Marshall Islands", "Federated States of Micronesia", "Nauru", "Palau", "Samoa", "Solomon Islands", "Tonga", "Tuvalu", "Vanuatu", "India", "Cambodia", "Indonesia", "Malaysia", "Maldives", "Myanmar", "Philippines", "Singapore", "Sri Lanka", "Thailand", "Timor-Leste", "Vietnam", "Seychelles", "Comoros", "Djibouti", "Eritrea", "Kenya", "Madagascar", "Mozambique", "Somalia", "Sudan", "Tanzania", "Yemen", "Israel", "Saudi Arabia", "United Arab Emirates"],
+          "oceans": ["Indian Ocean", "Pacific Ocean"]
+        },
+        "habitat": {
+          "biomes": ["Marine"],
+          "climate_zones": ["Tropical"],
+          "lifestyle": ["Diurnal", "Oviparous", "Sequential hermaphroditism"]
+        },
+        "diet": ["Carnivore"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Endangered",
+        "environmental_threats": "The humphead wrasse is threatened by overfishing and habitat loss. Its slow reproductive rate and late maturity make it particularly vulnerable to overexploitation. The species is highly valued in the live reef fish trade, leading to significant declines in its population across its range."
+      },
+      {
+        "species_name": "Knifetooth Sawfish",
+        "scientific_name": "Anoxypristis cuspidata",
+        "species_description": "The knifetooth sawfish, also known as the narrow or pointed sawfish, is a species of sawfish in the family Pristidae. It is characterized by a long, narrow, flattened rostrum lined with sharp transverse teeth, resembling a saw, used for hunting prey. This species can grow up to 3.5 meters (11 feet) in length. Its body is generally shark-like, with a greyish dorsal side and pale grey ventral side and fins. The rostrum is grey with white teeth and sometimes has a chocolate-brown base portion.",
+        "geography": {
+          "continents": ["Asia", "Oceania"],
+          "countries": ["Australia", "Papua New Guinea", "India", "Bangladesh", "Indonesia", "Malaysia", "Myanmar", "Sri Lanka", "Iran", "Somalia", "China", "Pakistan", "Singapore", "Thailand", "South Korea", "Vietnam", "Japan", "Cambodia", "Iraq", "Egypt", "Philippines", "Oman", "Taiwan"],
+          "oceans": ["Indian Ocean", "Pacific Ocean"],
+          "seas": ["Bay of Bengal", "Java Sea", "Laccadive Sea", "Persian Gulf", "South China Sea", "Timor Sea", "Coral Sea", "Arafura Sea", "Arabian Sea"]
+        },
+        "habitat": {
+          "biomes": ["Marine", "Estuarine"],
+          "climate_zones": ["Tropical", "Subtropical"],
+          "lifestyle": ["Benthic"]
+        },
+        "diet": ["Carnivore"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Critically Endangered",
+        "environmental_threats": "The knifetooth sawfish faces significant threats from overfishing, habitat loss, and bycatch in various fisheries. Its long rostrum often becomes entangled in fishing nets, leading to injury or death. Additionally, the degradation of coastal habitats, such as mangroves and estuaries, further threatens its survival. Due to these factors, the International Union for Conservation of Nature (IUCN) has classified this species as Critically Endangered."
+      },
+      {
+        "species_name": "Leopard Torpedo",
+        "scientific_name": "Torpedo panthera",
+        "species_description": "The Leopard Torpedo, also known as the Panther Electric Ray, is a species of electric ray in the family Torpedinidae. It is characterized by its nearly circular pectoral fin disc and a robust tail with two dorsal fins. The dorsal surface is typically light brown with dark spots, resembling a leopard's pattern, while the ventral side is lighter. This species can grow up to 100 cm (39 inches) in length.",
+        "geography": {
+          "continents": ["Asia", "Africa"],
+          "countries": ["Djibouti", "Egypt", "Eritrea", "India", "Iran", "Oman", "Pakistan", "Saudi Arabia", "Somalia", "Sudan", "Yemen"],
+          "oceans": ["Indian Ocean"],
+          "seas": ["Red Sea", "Persian Gulf", "Arabian Sea", "Bay of Bengal"]
+        },
+        "habitat": {
+          "biomes": ["Marine"],
+          "climate_zones": ["Tropical", "Subtropical"],
+          "lifestyle": ["Benthic"]
+        },
+        "diet": ["Carnivore"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Endangered",
+        "environmental_threats": "The Leopard Torpedo faces threats from habitat degradation and bycatch in fisheries. Its population is decreasing, leading to its classification as Endangered by the International Union for Conservation of Nature (IUCN)."
+      },
+      {
+        "species_name": "Longfin Mako Shark",
+        "scientific_name": "Isurus paucus",
+        "species_description": "The longfin mako shark is a species of mackerel shark in the family Lamnidae, with a probable worldwide distribution in temperate and tropical waters. An uncommon species, it is typically lumped together under the name 'mako' with its better-known relative, the shortfin mako shark. The longfin mako is a pelagic species found in moderately deep water, having been reported to a depth of 220 meters (720 feet). Growing to a maximum length of 4.3 meters (14 feet), the slimmer build and long, broad pectoral fins of this shark suggest that it is a slower and less active swimmer than the shortfin mako.",
+        "geography": {
+          "continents": ["North America", "South America", "Africa", "Asia", "Oceania"],
+          "countries": ["United States", "Brazil", "South Africa", "Japan", "Australia"],
+          "oceans": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean"]
+        },
+        "habitat": {
+          "biomes": ["Marine"],
+          "climate_zones": ["Temperate", "Tropical"],
+          "lifestyle": ["Pelagic"]
+        },
+        "diet": ["Carnivore"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Endangered",
+        "environmental_threats": "The longfin mako shark is of limited commercial value, as its meat and fins are of lower quality than those of other pelagic sharks; however, it is caught unintentionally in low numbers across its range. The International Union for Conservation of Nature has assessed this species as endangered due to its rarity, low reproductive rate, and continuing bycatch mortality."
+      },
+      {
+        "species_name": "Reticulate Whipray",
+        "scientific_name": "Himantura uarnak",
+        "species_description": "The reticulate whipray, also known as the honeycomb stingray, is a species of stingray in the family Dasyatidae. It inhabits coastal waters in the western Indian Ocean, including the Red Sea, Natal in South Africa, and the Arabian Sea. Notably, it has also migrated through the Suez Canal and is now common in the southeastern Mediterranean. This large species can reach up to 2 meters (6.6 feet) in width. It has a diamond-shaped pectoral fin disc and an extremely long, whip-like tail without fin folds. The dorsal coloration features many small, close-set dark spots or reticulations on a lighter background, giving it a distinctive appearance.",
+        "geography": {
+          "continents": ["Africa", "Asia", "Europe"],
+          "countries": ["South Africa", "Egypt", "Saudi Arabia", "India", "Sri Lanka", "Australia"],
+          "oceans": ["Indian Ocean"],
+          "seas": ["Red Sea", "Arabian Sea", "Mediterranean Sea"]
+        },
+        "habitat": {
+          "biomes": ["Marine"],
+          "climate_zones": ["Tropical", "Subtropical"],
+          "lifestyle": ["Benthic"]
+        },
+        "diet": ["Carnivore"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Endangered",
+        "environmental_threats": "The reticulate whipray is fished in parts of the Indian Ocean for meat, skin, cartilage, and other purposes. It is highly susceptible to population depletion because of its large size, inshore habits, and low reproductive rate, and is additionally threatened by extensive habitat degradation."
+      },
+      {
+        "species_name": "Shortfin Mako Shark",
+        "scientific_name": "Isurus oxyrinchus",
+        "species_description": "The shortfin mako shark, also known as the blue pointer or bonito shark, is a large mackerel shark. It is commonly referred to as the mako shark, as is the longfin mako shark (Isurus paucus). The shortfin mako can reach a size of 4 meters (13 feet) in length and weigh 570 kg (1,260 lbs). The species is classified as Endangered by the IUCN.",
+        "geography": {
+          "continents": ["North America", "South America", "Africa", "Asia", "Oceania"],
+          "countries": ["United States", "Brazil", "South Africa", "Japan", "Australia"],
+          "oceans": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean"]
+        },
+        "habitat": {
+          "biomes": ["Marine"],
+          "climate_zones": ["Temperate", "Tropical"],
+          "lifestyle": ["Pelagic"]
+        },
+        "diet": ["Carnivore"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Endangered",
+        "environmental_threats": "The shortfin mako shark is threatened by overfishing and bycatch. Its slow reproductive rate makes it vulnerable to population declines."
+      },
+      {
+        "species_name": "Spotted Eagle Ray",
+        "scientific_name": "Aetobatus narinari",
+        "species_description": "The spotted eagle ray is a cartilaginous fish of the eagle ray family, Aetobatidae. It is found globally in tropical regions, including the Atlantic, Pacific, and Indian Oceans. These rays are most commonly seen alone but occasionally swim in groups. They are ovoviviparous, with females retaining the eggs and then releasing the young as miniature versions of the parent.",
+        "geography": {
+          "continents": ["North America", "South America", "Africa", "Oceania"],
+          "countries": ["Bahamas", "Belize", "Cuba", "Dominican Republic", "Honduras", "Jamaica", "Mexico", "Nicaragua", "Panama", "United States"],
+          "oceans": ["Atlantic Ocean", "Pacific Ocean", "Indian Ocean"]
+        },
+        "habitat": {
+          "biomes": ["Marine"],
+          "climate_zones": ["Tropical", "Subtropical"],
+          "lifestyle": ["Pelagic"]
+        },
+        "diet": ["Carnivore"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Near Threatened",
+        "environmental_threats": "The spotted eagle ray is hunted by a wide variety of sharks. They are fished mainly in Southeast Asia and Africa, with the most common markets being in commercial trade and aquariums. They are protected in the Great Barrier Reef."
+      },
+      {
+        "species_name": "Pineapple Sea Cucumber",
+        "scientific_name": "Thelenota ananas",
+        "species_description": "The pineapple sea cucumber is a large species of sea cucumber found in tropical Indo-Pacific waters. It is known for its reddish-orange color and star-shaped, pointed teats covering its body, resembling the surface of a pineapple. This species can reach up to 70 centimeters (28 inches) in length and weigh between 3 to 6 kilograms.",
+        "geography": {
+          "continents": ["Asia", "Africa", "Oceania"],
+          "countries": ["China", "Japan", "Australia", "India", "Bangladesh", "Indonesia", "Malaysia", "Philippines", "Sri Lanka", "Kenya", "Mozambique", "South Africa", "Seychelles", "Yemen"],
+          "oceans": ["Indian Ocean", "Pacific Ocean"],
+          "seas": ["Red Sea", "Timor Sea", "South China Sea", "Java Sea", "Andaman Sea", "Solomon Sea", "Coral Sea"]
+        },
+        "habitat": {
+          "biomes": ["Marine"],
+          "climate_zones": ["Tropical"],
+          "lifestyle": ["Benthic"]
+        },
+        "diet": ["Detritivore"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Endangered",
+        "environmental_threats": "The pineapple sea cucumber is highly valued in the seafood industry, particularly in Asian markets, leading to overfishing. Habitat degradation, including the destruction of coral reefs and seagrass beds, also poses significant threats to its survival."
+      },
+      {
+        "species_name": "Whale Shark",
+        "scientific_name": "Rhincodon typus",
+        "species_description": "The whale shark is a slow-moving, filter-feeding carpet shark and the largest known extant fish species. The largest confirmed individual had a length of 18.8 meters (61.7 feet). Despite their massive size, whale sharks are gentle giants, feeding primarily on plankton and small fishes, and pose no threat to humans.",
+        "geography": {
+          "continents": ["Asia", "Africa", "North America", "South America", "Oceania"],
+          "countries": ["Philippines", "Maldives", "Mexico", "Australia", "South Africa"],
+          "oceans": ["Indian Ocean", "Pacific Ocean", "Atlantic Ocean"]
+        },
+        "habitat": {
+          "biomes": ["Marine"],
+          "climate_zones": ["Tropical"],
+          "lifestyle": ["Pelagic"]
+        },
+        "diet": ["Planktivore", "Piscivore"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Endangered",
+        "environmental_threats": "Whale sharks face threats from overfishing, bycatch, and vessel strikes. Their slow reproductive rates and late maturity make them particularly vulnerable to population declines. Conservation efforts are essential to protect this species."
+      },
+      {
+        "species_name": "Actinopyga mauritiana",
+        "scientific_name": "Actinopyga mauritiana",
+        "species_description": "Actinopyga mauritiana is a species of sea cucumber found in tropical marine environments. It has a leathery body and is typically found on outer reef flats and fringe reefs.",
+        "geography": {
+          "continents": ["Asia", "Africa", "Oceania"],
+          "countries": ["China", "India", "Australia", "Malaysia", "Philippines", "Sri Lanka", "Kenya", "Mozambique", "Madagascar", "Mauritius", "Solomon Islands"]
+        },
+        "habitat": {
+          "depth_range": "0-50 m",
+          "biome": ["Marine", "Benthic", "Coastal", "Reef"]
+        },
+        "diet": ["Detritivore"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Overharvesting for commercial trade, habitat destruction, and environmental pollution."
+      },
+      {
+        "species_name": "Atlantic Blue Marlin",
+        "scientific_name": "Makaira nigricans",
+        "species_description": "The Atlantic blue marlin is a species of marlin found in the Atlantic Ocean, known for its large size and prized as a game fish. It is recognized for its blue-black upper body, silvery white underside, and long bill used to stun prey.",
+        "geography": {
+          "continents": ["North America", "South America", "Africa", "Europe"],
+          "countries": ["USA", "Brazil", "Portugal", "The Bahamas"]
+        },
+        "habitat": {
+          "depth_range": "Open sea",
+          "biome": ["Pelagic"]
+        },
+        "diet": ["Carnivore", "Piscivore"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Threatened",
+        "environmental_threats": "Overfishing, bycatch in commercial tuna fisheries"
+      },
+      {
+        "species_name": "Bagarius bagarius",
+        "scientific_name": "Bagarius bagarius",
+        "species_description": "Bagarius bagarius, also known as the giant devil catfish or goonch, is a species of catfish found in large and medium rivers of South Asia. It is known for its large size and distinctive features, including a long, muscular body and sharp spines.",
+        "geography": {
+          "continents": ["Asia"],
+          "countries": ["India", "Bangladesh", "Bhutan", "Nepal", "Pakistan", "Cambodia", "Thailand", "Laos"]
+        },
+        "habitat": {
+          "biome": ["Freshwater", "Brackish water"]
+        },
+        "diet": ["Carnivore"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Overfishing, habitat destruction, and pollution from surrounding human settlements."
+      },
+      {
+        "species_name": "Bigeye Thresher",
+        "scientific_name": "Alopias superciliosus",
+        "species_description": "The bigeye thresher is a species of thresher shark found in temperate and tropical oceans. Known for its large eyes and elongated tail, it uses its tail to stun prey. It migrates vertically to hunt and has a unique vascular system to protect its eyes and brain during these movements.",
+        "geography": {
+          "continents": ["North America", "South America", "Europe", "Africa", "Asia", "Oceania"],
+          "countries": ["USA", "Mexico", "Australia", "Brazil", "China", "Japan", "New Zealand"]
+        },
+        "habitat": {
+          "depth_range": "100-500 m",
+          "biome": ["Pelagic"]
+        },
+        "diet": ["Fish", "Squid"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Overfishing, bycatch in commercial fisheries"
+      },
+      {
+        "species_name": "Bigeye Tuna",
+        "scientific_name": "Thunnus obesus",
+        "species_description": "Bigeye tuna are large, deep-bodied tuna found in tropical and temperate oceans. They have a distinctive appearance with large heads, eyes, and elongated pectoral fins. They can tolerate oxygen-poor waters, using specialized blood that aids in foraging in deeper, colder waters.",
+        "geography": {
+          "continents": ["North America", "South America", "Europe", "Africa", "Asia", "Oceania"],
+          "countries": ["USA", "Mexico", "Australia", "Brazil", "China", "Japan"]
+        },
+        "habitat": {
+          "depth_range": "Up to 500 m",
+          "biome": ["Pelagic"]
+        },
+        "diet": ["Fish", "Squid"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Overfishing, bycatch in commercial fisheries"
+      },
+      {
+        "species_name": "Blacktip Reef Shark",
+        "scientific_name": "Carcharhinus melanopterus",
+        "species_description": "The blacktip reef shark is a species of requiem shark found in tropical coral reefs of the Indian and Pacific Oceans. It is easily identified by the black tips on its fins, particularly the first dorsal and caudal fins. It prefers shallow waters and exhibits strong site fidelity, staying in local areas for extended periods.",
+        "geography": {
+          "continents": ["Asia", "North America", "Africa", "Oceania"],
+          "countries": ["China", "Australia", "Costa Rica", "Kiribati", "Papua New Guinea", "Fiji", "Japan"]
+        },
+        "habitat": {
+          "depth_range": "Shallow inshore waters",
+          "biome": ["Marine", "Coral reefs"]
+        },
+        "diet": ["Small bony fish", "Cephalopods", "Crustaceans", "Sea snakes", "Seabirds"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Overfishing, habitat degradation, bycatch in commercial fisheries"
+      },
+      {
+        "species_name": "Blue Coral",
+        "scientific_name": "Heliopora coerulea",
+        "species_description": "Blue coral is the only extant octocoral species that produces a massive skeleton composed of aragonite. It is recognized for its blue or green-grey polyps and unique structure. Known for its resistance to thermal changes, it thrives in warmer waters and is often used in marine aquariums.",
+        "geography": {
+          "continents": ["Asia", "Africa", "Oceania"],
+          "countries": ["Japan", "Taiwan", "Australia", "Kiribati", "Papua New Guinea", "Fiji", "Philippines", "Sri Lanka", "India", "Bangladesh", "Indonesia", "Malaysia", "Maldives"]
+        },
+        "habitat": {
+          "depth_range": "Shallow reefs, intertidal zones",
+          "biome": ["Coral reefs"]
+        },
+        "diet": ["Suspension feeder"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Coral bleaching, ocean acidification, habitat destruction, aquarium harvesting"
+      },
+      {
+        "species_name": "Brown-marbled Grouper",
+        "scientific_name": "Epinephelus fuscoguttatus",
+        "species_description": "The brown-marbled grouper, also known as the tiger grouper, is a medium-sized fish characterized by a robust body and pale yellowish-brown color with dark blotches. It is typically found in clear, tropical waters close to coral reefs and rocky areas. The species grows up to 120 cm, with an average size around 50 cm.",
+        "geography": {
+          "continents": ["Asia", "Africa", "Oceania"],
+          "countries": ["Japan", "Taiwan", "Australia", "Papua New Guinea", "Fiji", "Philippines", "Indonesia", "Sri Lanka"]
+        },
+        "habitat": {
+          "depth_range": "Up to 60 m",
+          "biome": ["Coral reefs", "Rocky reefs"]
+        },
+        "diet": ["Fish", "Crustaceans"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Overfishing, habitat destruction, coral reef degradation"
+      },
+      {
+        "species_name": "Ceylon Snakehead",
+        "scientific_name": "Channa orientalis",
+        "species_description": "The Ceylon snakehead is a small species of snakehead found in freshwater habitats, primarily in Sri Lanka. It is a dwarf species, typically lacking pelvic fins, and is notable for its ability to breathe atmospheric oxygen and survive on land for short periods. It is an oviparous species, with males brooding the eggs while guarding the territory.",
+        "geography": {
+          "continents": ["Asia"],
+          "countries": ["Sri Lanka", "India", "Bangladesh", "Cambodia", "China", "Malaysia", "Nepal", "Thailand"]
+        },
+        "habitat": {
+          "depth_range": "Shaded streams",
+          "biome": ["Freshwater", "Brackish water", "Rivers"]
+        },
+        "diet": ["Plankton", "Insects", "Small amphibians"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Habitat loss, pollution, overfishing"
+      },
+      {
+        "species_name": "Coconut Crab",
+        "scientific_name": "Birgus latro",
+        "species_description": "The coconut crab, also known as the robber crab or palm thief, is the largest terrestrial arthropod, capable of growing up to 4.1 kg with a leg span of over 1 m. It is a terrestrial species related to hermit crabs and has adaptations for life on land, including lungs for breathing. Coconut crabs are scavengers and opportunistic feeders, primarily consuming fruits, nuts, seeds, and carrion.",
+        "geography": {
+          "continents": ["Asia", "Oceania", "Africa"],
+          "countries": ["Zanzibar", "India", "Japan", "Australia", "Papua New Guinea", "Fiji"]
+        },
+        "habitat": {
+          "depth_range": "Terrestrial, near coastal areas",
+          "biome": ["Tropical islands", "Coastal regions"]
+        },
+        "diet": ["Fruits", "Nuts", "Seeds", "Carrion"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Data Deficient",
+        "environmental_threats": "Habitat loss, overharvesting, human activity"
+      },
+      {
+        "species_name": "Common Thresher",
+        "scientific_name": "Alopias vulpinus",
+        "species_description": "The common thresher is the largest species of thresher shark, characterized by its long tail fin, which can be as long as its body. It uses this tail to stun prey and is commonly found in temperate and tropical oceans. The species migrates seasonally and prefers cooler water temperatures.",
+        "geography": {
+          "continents": ["North America", "South America", "Europe", "Africa", "Asia", "Oceania"],
+          "countries": ["USA", "Australia", "Japan", "South Africa", "New Zealand"]
+        },
+        "habitat": {
+          "depth_range": "Surface to 500 m",
+          "biome": ["Marine", "Open ocean"]
+        },
+        "diet": ["Schooling fish", "Squid"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Overfishing, bycatch, low reproductive rates"
+      },
+      {
+        "species_name": "Anguilla bicolor",
+        "scientific_name": "Anguilla bicolor",
+        "species_description": "Anguilla bicolor, or the shortfin eel, is a catadromous species that migrates between marine and freshwater habitats. It is distributed across Asia, Oceania, and parts of Africa, inhabiting rivers, estuaries, and coastal areas. The species has significant ecological and economic importance.",
+        "geography": {
+          "continents": ["Asia", "Africa", "Oceania"],
+          "countries": [
+            "India", "Bangladesh", "Indonesia", "Malaysia", "China", 
+            "South Korea", "Australia", "Papua New Guinea", "Sri Lanka"
+          ]
+        },
+        "habitat": {
+          "depth_range": "Freshwater and marine areas, brackish water",
+          "biome": ["Marine", "Freshwater", "Brackish"]
+        },
+        "diet": ["Fish", "Crustaceans", "Invertebrates"],
+        "photos": true,
+        "population_trend": "Unknown",
+        "population_status": "Near Threatened",
+        "environmental_threats": "Habitat destruction, overfishing, migration barriers"
+      },
+      {
+        "species_name": "Arabian Carpetshark",
+        "scientific_name": "Chiloscyllium arabicum",
+        "species_description": "The Arabian carpetshark is a small, slender shark found in the coral reefs and shallow coastal waters of the Indian Ocean and surrounding seas, including the Persian Gulf. It is recognized for its plain brown coloration and nocturnal habits. This species reproduces via egg-laying, with hatchlings emerging after 70–80 days.",
+        "geography": {
+          "continents": ["Asia", "Africa"],
+          "countries": ["India", "Pakistan", "Oman", "UAE", "Iran"]
+        },
+        "habitat": {
+          "depth_range": "Shallow coastal waters and coral reefs",
+          "biome": ["Marine", "Reefs"]
+        },
+        "diet": ["Bony fish", "Invertebrates"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Near Threatened",
+        "environmental_threats": "Overfishing, habitat degradation"
+      },
+      {
+        "species_name": "Bignose Shark",
+        "scientific_name": "Carcharhinus altimus",
+        "species_description": "The bignose shark is a deep-water species found in tropical and subtropical waters worldwide. It is characterized by a long snout and large, triangular fins, growing up to 3 m in length. This shark feeds on fish and cephalopods and is viviparous, giving birth to litters of 3–15 pups after a gestation period of 10 months.",
+        "geography": {
+          "continents": ["Asia", "Africa", "Oceania", "North America", "South America"],
+          "countries": ["USA", "Australia", "Japan", "Brazil", "South Africa"]
+        },
+        "habitat": {
+          "depth_range": "90–430 m",
+          "biome": ["Marine", "Continental shelves"]
+        },
+        "diet": ["Fish", "Cephalopods"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Data Deficient",
+        "environmental_threats": "Overfishing, habitat destruction"
+      },
+      {
+        "species_name": "Blue Shark",
+        "scientific_name": "Prionace glauca",
+        "species_description": "The blue shark, also known as the great blue shark, is a slender, light-bodied shark found in temperate and tropical oceans worldwide. Known for its deep blue coloration and long pectoral fins, it migrates long distances and can grow up to 3.8 meters. It primarily feeds on fish and squid, reproduces via viviparous means, and gives birth to large litters of 25 to over 100 pups.",
+        "geography": {
+          "continents": ["Asia", "Africa", "Europe", "Oceania", "North America", "South America"],
+          "countries": ["USA", "Japan", "Australia", "Spain", "South Africa", "Brazil"]
+        },
+        "habitat": {
+          "depth_range": "Surface to 350 m",
+          "biome": ["Marine", "Open oceans"]
+        },
+        "diet": ["Fish", "Squid"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Near Threatened",
+        "environmental_threats": "Overfishing, bycatch, habitat degradation"
+      },
+      {
+        "species_name": "Bombay Duck",
+        "scientific_name": "Harpadon nehereus",
+        "species_description": "The Bombay duck, also known as Bummalo or Bombil, is a species of lizardfish found in the tropical Indo-Pacific. Known for its distinctive odor when dried, this fish is an important part of the local diet in India and surrounding regions. It grows to about 25 cm on average and lives in coastal and brackish waters.",
+        "geography": {
+          "continents": ["Asia", "Oceania"],
+          "countries": ["India", "Bangladesh", "Indonesia", "Malaysia", "Thailand"]
+        },
+        "habitat": {
+          "depth_range": "Coastal and Neritic zones",
+          "biome": ["Marine", "Brackish waters"]
+        },
+        "diet": ["Small fish", "Plankton"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Near Threatened",
+        "environmental_threats": "Overfishing, habitat degradation"
+      },
+      {
+        "species_name": "Bonefish",
+        "scientific_name": "Albula vulpes",
+        "species_description": "The bonefish is a slender, fast fish known for its silvery body and distinctive long fins. It is found in subtropical and tropical waters of the western Atlantic, from Florida to the Gulf of Mexico and the West Indies. Bonefish are carnivorous, feeding on benthic worms, small crustaceans, and mollusks. They are migratory and live inshore, moving onto shallow mudflats or sand flats to feed with the incoming tide.",
+        "geography": {
+          "continents": ["North America", "South America", "Africa"],
+          "countries": ["USA", "Mexico", "Brazil", "Colombia", "Venezuela"]
+        },
+        "habitat": {
+          "depth_range": "Shallow coastal waters, mudflats, sand flats",
+          "biome": ["Marine", "Coastal", "Brackish water"]
+        },
+        "diet": ["Worms", "Crustaceans", "Mollusks"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Least Concern",
+        "environmental_threats": "Overfishing, habitat degradation"
+      },
+      {
+        "species_name": "Chevron Butterflyfish",
+        "scientific_name": "Chaetodon trifascialis",
+        "species_description": "The Chevron Butterflyfish is a marine species found in coral reefs across the Indo-Pacific. Recognized by its elongated body with black chevron markings and a yellowish hue, it primarily feeds on coral polyps. It is a territorial species often seen in pairs or solitary, inhabiting shallow waters up to 30 meters deep.",
+        "geography": {
+          "continents": ["Asia", "Oceania", "Africa"],
+          "countries": ["Indonesia", "Australia", "Philippines", "Kenya", "Maldives"]
+        },
+        "habitat": {
+          "depth_range": "0–30 m",
+          "biome": ["Marine", "Coral reefs"]
+        },
+        "diet": ["Coral polyps"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Least Concern",
+        "environmental_threats": "Coral reef degradation, climate change, habitat loss"
+      },
+      {
+        "species_name": "Diploastrea Brain Coral",
+        "scientific_name": "Diploastrea heliopora",
+        "species_description": "Diploastrea heliopora, commonly called Diploastrea brain coral or honeycomb coral, is a species of hard coral forming massive dome-shaped colonies. Known for its smooth surface and chevron-like structure, this coral is a zooxanthellate species, relying on symbiotic algae for energy.",
+        "geography": {
+          "continents": ["Asia", "Africa", "Oceania"],
+          "countries": ["Indonesia", "Australia", "India", "Kenya", "Maldives"],
+          "oceans": ["Pacific Ocean", "Indian Ocean"],
+          "seas": ["Red Sea", "Coral Sea", "Bay of Bengal"]
+        },
+        "habitat": {
+          "depth_range": "0–30 m",
+          "biome": ["Marine", "Reef", "Benthic"],
+          "climate_zones": ["Tropical"]
+        },
+        "diet": ["Zooplankton", "Organic particles"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Least Concern",
+        "environmental_threats": "Climate change, coral bleaching, ocean acidification, habitat degradation"
+      },
+      {
+        "species_name": "Torch Coral",
+        "scientific_name": "Euphyllia glabrescens",
+        "species_description": "Euphyllia glabrescens, commonly known as Torch Coral, is a large-polyped stony coral recognized for its elongated, tubular tentacles with knob-like tips. It is a popular species in marine aquariums and plays an essential role in reef ecosystems.",
+        "geography": {
+          "continents": ["Asia", "Africa", "Oceania"],
+          "countries": [
+            "Indonesia", "Fiji", "Australia", "Japan", "Philippines", "Kenya",
+            "Papua New Guinea", "Maldives", "India", "Thailand", "Sri Lanka"
+          ],
+          "oceans": ["Pacific Ocean", "Indian Ocean"],
+          "seas": ["Red Sea", "Coral Sea", "Andaman Sea", "Bay of Bengal"]
+        },
+        "habitat": {
+          "depth_range": "1–35 m",
+          "biome": ["Reef", "Marine", "Neritic zone", "Benthic"],
+          "climate_zones": ["Tropical", "Subtropical"]
+        },
+        "diet": ["Suspension feeder"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Least Concern",
+        "environmental_threats": "Habitat destruction, climate change, ocean acidification, overharvesting for aquariums"
+      },
+      {
+        "species_name": "Larger Star Coral",
+        "scientific_name": "Favites abdita",
+        "species_description": "Favites abdita, also known as the Larger Star Coral, is a species of stony coral forming massive colonies with rounded, irregular mounds. It is typically reddish-brown to green with green oral discs and has thick walls with well-developed teeth.",
+        "geography": {
+          "continents": ["Asia", "Africa", "Oceania"],
+          "countries": [
+            "India", "Indonesia", "Australia", "Japan", "Fiji", 
+            "South Africa", "Maldives", "Thailand", "Philippines", "Sri Lanka"
+          ],
+          "oceans": ["Pacific Ocean", "Indian Ocean"],
+          "seas": ["Red Sea", "Coral Sea", "Bay of Bengal", "Arabian Sea"]
+        },
+        "habitat": {
+          "depth_range": "0–15 m",
+          "biome": ["Reef", "Marine", "Neritic zone", "Benthic"],
+          "climate_zones": ["Tropical", "Subtropical"]
+        },
+        "diet": ["Suspension feeder"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Near Threatened",
+        "environmental_threats": "Coral bleaching, ocean acidification, habitat loss, and overharvesting."
+      },
+      {
+        "species_name": "Mushroom Coral",
+        "scientific_name": "Fungia fungites",
+        "species_description": "Mushroom Coral is a solitary species from the family Fungiidae, often found in Indo-Pacific reefs. Juveniles attach to rocks but mature corals are free-living. They are brightly colored, round or oval, and feed on plankton with visible tentacles at night. Known for asexual reproduction and regeneration.",
+        "geography": {
+          "continents": ["Asia", "Africa", "Oceania"],
+          "countries": ["India", "Indonesia", "Australia", "Japan", "Fiji", "Saudi Arabia"],
+          "oceans": ["Pacific Ocean", "Indian Ocean"],
+          "seas": ["Red Sea", "Bay of Bengal", "Coral Sea"]
+        },
+        "habitat": {
+          "depth_range": "0–30 m",
+          "biome": ["Reef", "Marine", "Neritic zone", "Benthic"],
+          "climate_zones": ["Tropical"]
+        },
+        "diet": ["Suspension feeder"],
+        "photos": true,
+        "population_trend": "Unknown",
+        "population_status": "Near Threatened",
+        "environmental_threats": "Habitat loss, coral bleaching, and ocean acidification."
+      },
+      {
+        "species_name": "Octopus Coral",
+        "scientific_name": "Galaxea fascicularis",
+        "species_description": "Octopus Coral is a stony coral species with irregular colonies reaching up to 5 meters wide. It adapts to light conditions, supporting photosynthetic zooxanthellae or extending tentacles for feeding. It is found in tropical marine environments.",
+        "geography": {
+          "continents": ["Asia", "Oceania", "Africa"],
+          "countries": ["Indonesia", "Australia", "Philippines", "Japan", "India", "Kenya"],
+          "oceans": ["Indian Ocean", "Pacific Ocean"],
+          "seas": ["Red Sea", "Coral Sea", "Bay of Bengal"]
+        },
+        "habitat": {
+          "depth_range": "0–30 m",
+          "biome": ["Reef", "Marine"],
+          "climate_zones": ["Tropical"]
+        },
+        "diet": ["Suspension feeder"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Near Threatened",
+        "environmental_threats": "Coral bleaching, ocean acidification, habitat destruction."
+      },
+      {
+        "species_name": "Lane Snapper",
+        "scientific_name": "Lutjanus synagris",
+        "species_description": "The Lane Snapper is a marine ray-finned fish found in the western Atlantic Ocean, Gulf of Mexico, and Caribbean Sea. Recognized by its pink-yellow body stripes and a black spot under its dorsal fin, it thrives in reefs and sandy bottoms.",
+        "geography": {
+          "continents": ["North America", "Central America", "South America"],
+          "oceans": ["Atlantic Ocean", "Caribbean Sea", "Gulf of Mexico"],
+          "countries": ["United States", "Mexico", "Cuba", "Brazil", "Bahamas"]
+        },
+        "habitat": {
+          "depth_range": "30–122 m",
+          "biome": ["Marine", "Reef", "Seagrass beds"],
+          "climate_zones": ["Tropical", "Subtropical"]
+        },
+        "diet": ["Crustaceans", "Small fish", "Mollusks"],
+        "photos": true,
+        "population_trend": "Stable",
+        "population_status": "Least Concern",
+        "environmental_threats": "Overfishing, habitat degradation"
+      },
+      {
+        "species_name": "Narrow-barred Spanish Mackerel",
+        "scientific_name": "Scomberomorus commerson",
+        "species_description": "The Narrow-barred Spanish Mackerel is a large fish found in the Indian and Pacific Oceans. Known for its blue-grey body and narrow vertical stripes, it can grow up to 200 cm in length. It is a popular species in commercial and recreational fishing.",
+        "geography": {
+          "continents": ["Asia", "Africa", "Oceania"],
+          "countries": ["India", "Australia", "Indonesia", "Sri Lanka", "Kenya"],
+          "oceans": ["Indian Ocean", "Pacific Ocean"]
+        },
+        "habitat": {
+          "depth_range": "0–100 m",
+          "biome": ["Marine", "Pelagic"]
+        },
+        "diet": ["Small fish", "Squid", "Crustaceans"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Least Concern",
+        "environmental_threats": "Overfishing, habitat degradation"
+      },
+      {
+        "species_name": "Open Brain Coral",
+        "scientific_name": "Trachyphyllia geoffroyi",
+        "species_description": "The Open Brain Coral is a brightly colored, free-living coral species found in the Indo-Pacific. It can be solitary or colonial, exhibiting a flabello-meandroid growth form with distinct valleys. It is known for its vibrant coloration and can host gall crabs. These corals are sedentary and are typically found in sandy reef slopes and lagoons.",
+        "geography": {
+          "continents": ["Asia", "Africa", "Oceania"],
+          "countries": ["Japan", "Australia", "Sri Lanka", "Indonesia", "Philippines"],
+          "oceans": ["Indian Ocean", "Pacific Ocean"],
+          "seas": ["Red Sea", "Coral Sea", "Bay of Bengal"]
+        },
+        "habitat": {
+          "depth_range": "0–40 m",
+          "biome": ["Marine", "Reef", "Benthic"],
+          "lifestyle": "Sedentary",
+          "climate_zones": ["Tropical"]
+        },
+        "diet": ["Suspension feeder"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Near Threatened",
+        "environmental_threats": "Habitat loss, over-harvesting for the aquarium trade"
+      },
+      {
+        "species_name": "Open Brain Coral",
+        "scientific_name": "Plerogyra sinuosa",
+        "species_description": "Plerogyra sinuosa, commonly called 'bubble coral,' has bubbly vesicles that change size according to light conditions. It is a sedentary, zooxanthellate species, thriving in the Indo-Pacific region. The coral's vesicles enlarge during the day and retract at night to expose polyps for feeding. This species is known for its vibrant appearance and is an important reef-building organism.",
+        "geography": {
+          "continents": ["Asia", "Africa", "Oceania"],
+          "countries": ["Japan", "Australia", "Sri Lanka", "Indonesia", "Philippines", "Kenya", "Madagascar"],
+          "oceans": ["Indian Ocean", "Pacific Ocean"],
+          "seas": ["Red Sea", "Coral Sea", "South China Sea"]
+        },
+        "habitat": {
+          "depth_range": "1–40 m",
+          "biome": ["Marine", "Coral Reef", "Neritic Zone"]
+        },
+        "diet": ["Plankton", "Symbiotic dinoflagellates (zooxanthellae)"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Climate change, coral bleaching, ocean acidification"
+      },
+      {
+        "species_name": "Short-finned Eel",
+        "scientific_name": "Anguilla australis",
+        "species_description": "The Short-finned Eel is a carnivorous species found in lakes, dams, and coastal rivers in southeastern Australia and the South Pacific. It has a long, tubular body and can reach up to 1.1 meters. The eel migrates to spawn in the Coral Sea, and its larvae metamorphose into transparent 'glass eels' before maturing.",
+        "geography": {
+          "continents": ["Oceania"],
+          "countries": ["Australia", "New Zealand"],
+          "oceans": ["Pacific Ocean", "Indian Ocean"],
+          "seas": ["Coral Sea", "Tasman Sea"]
+        },
+        "habitat": {
+          "depth_range": "0–50 m",
+          "biome": ["Freshwater", "Coastal", "Estuaries", "Brackish water"]
+        },
+        "diet": ["Crustaceans", "Fish", "Frogs", "Birds", "Snakes", "Water rats"],
+        "photos": true,
+        "population_trend": "Stable",
+        "population_status": "Least Concern",
+        "environmental_threats": "Habitat loss, overfishing"
+      },
+      {
+        "species_name": "Smooth Butterfly Ray",
+        "scientific_name": "Gymnura micrura",
+        "species_description": "The smooth butterfly ray is a cartilaginous fish with a broad, diamond-shaped body and short tail. It is known for its wide pectoral fins, which are larger than its body length. Found in shallow seas, estuaries, and coastal lagoons, this species inhabits tropical waters and feeds on crustaceans, teleost fish, and bivalve mussels. It uses aplacental viviparity for reproduction and is generally not dangerous to humans.",
+        "geography": {
+          "continents": ["North America", "South America", "Africa", "Asia"],
+          "countries": ["Brazil", "Venezuela", "Mexico", "India", "China", "United States"],
+          "oceans": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean"],
+          "seas": ["Gulf of Mexico", "Caribbean Sea", "Red Sea", "South China Sea", "Gulf of Guinea", "Bay of Bengal", "Arabian Sea"]
+        },
+        "habitat": {
+          "depth_range": "Shallow to 40m",
+          "biome": ["Neritic Zone", "Brackish Water", "Estuaries", "Coastal"]
+        },
+        "diet": ["Crustaceans", "Teleosts", "Bivalves", "Polychaetes"],
+        "photos": true,
+        "population_trend": "Stable",
+        "population_status": "Least Concern",
+        "environmental_threats": "Overfishing, habitat loss"
+      },
+      {
+        "species_name": "Spadenose Shark",
+        "scientific_name": "Scoliodon laticaudus",
+        "species_description": "The spadenose shark is a small requiem shark found in the tropical Indian and western Pacific Oceans. It is named for its flattened, triangular snout and typically grows up to 74 cm. It is a carnivore that feeds on small bony fish and invertebrates. Known for its advanced viviparous reproduction, females give birth to 6-18 pups after a 5-6 month gestation period.",
+        "geography": {
+          "continents": ["Asia"],
+          "subcontinents": ["South Asia", "Western Asia"],
+          "countries": ["India", "Bangladesh", "Iran", "Pakistan", "Somalia", "Djibouti", "Tanzania", "Mozambique", "Indonesia", "Taiwan", "China"],
+          "oceans": ["Indian Ocean", "Pacific Ocean"],
+          "seas": ["South China Sea", "Philippine Sea", "Laccadive Sea", "Java Sea", "Bay of Bengal", "Arabian Sea", "Andaman Sea"]
+        },
+        "habitat": {
+          "depth_range": "10–13 m",
+          "biome": ["Neritic Zone", "Marine", "Brackish Water", "Freshwater", "Benthic", "Coastal"]
+        },
+        "diet": ["Small bony fish", "Crustaceans", "Shrimp", "Crabs", "Cuttlefish", "Stomatopods"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Near Threatened",
+        "environmental_threats": "Overfishing, habitat degradation"
+      },
+      {
+        "species_name": "Spot-tail Shark",
+        "scientific_name": "Carcharhinus sorrah",
+        "species_description": "The spot-tail shark, also known as the sorrah shark, is a requiem shark found in tropical Indo-West Pacific waters. It has a spindle-shaped body and distinctive black tips on its fins. The shark is an active predator, feeding on bony fish, cephalopods, and crustaceans. It can grow to around 1.6 meters and is fished commercially. The species is considered near threatened due to fishing pressures.",
+        "geography": {
+          "continents": ["Asia", "Africa", "Oceania"],
+          "countries": ["China", "Australia", "India", "Sri Lanka", "Egypt", "Indonesia", "Malaysia", "Philippines", "Pakistan", "Yemen", "Kenya", "Madagascar", "Mozambique"],
+          "oceans": ["Indian Ocean", "Pacific Ocean"],
+          "seas": ["Red Sea", "Timor Sea", "South China Sea", "Philippine Sea", "Persian Gulf", "Bay of Bengal", "Arabian Sea"]
+        },
+        "habitat": {
+          "depth_range": "Surface to 73 meters",
+          "biome": ["Neritic Zone", "Reef", "Coastal"]
+        },
+        "diet": ["Bony fish", "Cephalopods", "Crustaceans"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Near Threatened",
+        "environmental_threats": "Overfishing, habitat degradation"
+      },
+      {
+        "species_name": "Swordfish",
+        "scientific_name": "Xiphias gladius",
+        "species_description": "Swordfish are large, migratory predatory fish characterized by a long, flat, pointed bill. They are a popular sport fish and are found in tropical and temperate parts of the Atlantic, Pacific, and Indian Oceans. Swordfish can grow up to 4.55 m in length and 650 kg in weight. They are strong, agile swimmers, and they lose all teeth and scales as adults. They are important commercially but are also impacted by overfishing.",
+        "geography": {
+          "continents": ["North America", "South America", "Europe", "Africa", "Asia", "Oceania"],
+          "countries": ["United States", "Mexico", "Cuba", "Canada", "Japan", "Australia", "Spain", "Portugal", "South Korea", "China", "Philippines", "France"],
+          "oceans": ["Atlantic Ocean", "Pacific Ocean", "Indian Ocean"],
+          "seas": ["Mediterranean Sea", "Caribbean Sea", "Coral Sea"]
+        },
+        "habitat": {
+          "depth_range": "Surface to 550 meters",
+          "biome": ["Oceanic", "Tropical", "Temperate"]
+        },
+        "diet": ["Fish", "Cephalopods", "Crustaceans"],
+        "photos": true,
+        "population_trend": "Stable",
+        "population_status": "Not Evaluated",
+        "environmental_threats": "Overfishing, bycatch"
+      },
+      {
+        "species_name": "Tiger Shark",
+        "scientific_name": "Galeocerdo cuvier",
+        "species_description": "The tiger shark is a large, predatory shark with a distinctive pattern of dark stripes across its body. It is found in tropical and temperate waters around the world and can reach lengths over 5 meters. Known for its wide diet, it feeds on fish, squid, birds, and even inedible objects. It has a reputation for attacking humans, although such incidents are rare. The tiger shark is classified as near threatened due to fishing pressures.",
+        "geography": {
+          "continents": ["North America", "South America", "Africa", "Asia", "Oceania"],
+          "countries": ["United States", "Australia", "Mexico", "Japan", "Brazil", "South Africa", "Philippines", "Sri Lanka"],
+          "oceans": ["Atlantic Ocean", "Pacific Ocean", "Indian Ocean"],
+          "seas": ["Caribbean Sea", "Mediterranean Sea", "Coral Sea"]
+        },
+        "habitat": {
+          "depth_range": "Surface to 200 meters",
+          "biome": ["Coastal", "Oceanic", "Tropical", "Temperate"]
+        },
+        "diet": ["Fish", "Cephalopods", "Birds", "Crustaceans", "Turtles", "Dolphins", "Other sharks"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Near Threatened",
+        "environmental_threats": "Overfishing, bycatch"
+      },
+      {
+        "species_name": "Knifetooth Sawfish",
+        "scientific_name": "Anoxypristis cuspidata",
+        "species_description": "The knifetooth sawfish, also known as the narrow sawfish or pointed sawfish, is a species of sawfish with a long, narrow rostrum covered in sharp, flat teeth. It can grow up to 3.5 meters in length and is found in shallow coastal waters, estuaries, and the Indo-West Pacific. It is the only extant species in the genus Anoxypristis. The knifetooth sawfish is considered critically endangered due to overfishing and habitat loss.",
+        "geography": {
+          "continents": ["Asia", "Oceania"],
+          "countries": ["Australia", "Papua New Guinea", "India", "Bangladesh", "Indonesia", "Malaysia", "Myanmar", "Sri Lanka", "Iran", "Somalia", "China", "Pakistan", "Singapore", "Thailand", "South Korea", "Vietnam", "Japan", "Cambodia", "Iraq", "Egypt", "Philippines", "Oman", "Taiwan"],
+          "oceans": ["Pacific Ocean", "Indian Ocean"],
+          "seas": ["Bay of Bengal", "Java Sea", "Laccadive Sea", "Persian Gulf", "South China Sea", "Timor Sea", "Coral Sea", "Arafura Sea", "Arabian Sea"]
+        },
+        "habitat": {
+          "depth_range": "Up to 100 meters",
+          "biome": ["Coastal", "Estuarine", "Tropical", "Temperate"]
+        },
+        "diet": ["Fish", "Crustaceans", "Cephalopods"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Critically Endangered",
+        "environmental_threats": "Overfishing, habitat destruction, bycatch"
+      },
+      {
+        "species_name": "Leopard Torpedo",
+        "scientific_name": "Torpedo panthera",
+        "species_description": "The leopard torpedo is a species of electric ray found in the coastal regions of the Indo-Pacific, including the Red Sea, the Arabian Sea, and the Bay of Bengal. It has a unique, leopard-like pattern on its body and is known for its ability to deliver an electric shock. The species is oviparous and typically resides in shallow, sandy or muddy environments. It is currently classified as endangered due to habitat degradation and fishing pressure.",
+        "geography": {
+          "continents": ["Asia", "Africa"],
+          "countries": ["Egypt", "India", "Djibouti", "Eritrea", "Somalia", "Sudan", "Yemen", "Israel", "Jordan", "Oman", "Pakistan", "Saudi Arabia", "Mauritius", "Seychelles", "Sri Lanka"],
+          "oceans": ["Indian Ocean"],
+          "seas": ["Arabian Sea", "Bay of Bengal", "Persian Gulf", "Red Sea"]
+        },
+        "habitat": {
+          "depth_range": "Shallow waters (up to 100 meters)",
+          "biome": ["Marine", "Benthic"]
+        },
+        "diet": ["Small fish", "Invertebrates"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Endangered",
+        "environmental_threats": "Overfishing, habitat loss, pollution"
+      },
+      {
+        "species_name": "Whitecheek Shark",
+        "scientific_name": "Carcharhinus dussumieri",
+        "species_description": "The whitecheek shark, also known as the widemouth blackspot shark, is a species of requiem shark found in the Indo-West Pacific Ocean. It can grow up to 1 meter in length and feeds primarily on fish, cephalopods, and crustaceans. This viviparous species is endangered due to overfishing and habitat loss. It is typically found in shallow continental shelves and inshore slopes.",
+        "geography": {
+          "continents": ["Asia", "Africa"],
+          "countries": ["India", "Sri Lanka", "Bahrain", "Iran", "Iraq", "Kuwait", "Oman", "Pakistan", "Qatar", "Saudi Arabia", "United Arab Emirates", "Seychelles", "Mozambique", "Indonesia", "Japan", "Taiwan", "Philippines", "China", "Australia"],
+          "oceans": ["Indian Ocean"],
+          "seas": ["Red Sea", "Timor Sea", "South China Sea", "Philippine Sea", "Persian Gulf", "Java Sea", "Coral Sea", "Bay of Bengal", "Arafura Sea", "Arabian Sea"]
+        },
+        "habitat": {
+          "depth_range": "Up to 170 meters",
+          "biome": ["Marine", "Neritic Zone", "Reef"]
+        },
+        "diet": ["Fish", "Cephalopods", "Crustaceans"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Endangered",
+        "environmental_threats": "Overfishing, bycatch, habitat loss"
+      },
+      {
+        "species_name": "Winghead Shark",
+        "scientific_name": "Eusphyra blochii",
+        "species_description": "The winghead shark is a species of hammerhead shark found in the tropical Indo-Pacific region. It has a distinctive, wing-like cephalofoil, or hammer-shaped head, which provides enhanced vision and sensory capabilities. The shark reaches a length of up to 1.9 meters and is found in shallow coastal waters. It feeds on small fish, crustaceans, and cephalopods. The species is endangered due to overfishing and habitat loss.",
+        "geography": {
+          "continents": ["Asia", "Oceania"],
+          "countries": ["China", "Taiwan", "Australia", "Papua New Guinea", "India", "Bangladesh", "Brunei", "Cambodia", "Indonesia", "Malaysia", "Myanmar", "Philippines", "Sri Lanka", "Thailand", "Vietnam", "Iran", "Kuwait", "Oman", "Pakistan", "Saudi Arabia", "United Arab Emirates", "Singapore"],
+          "oceans": ["Indian Ocean", "Pacific Ocean"],
+          "seas": ["Timor Sea", "Sulu Sea", "South China Sea", "Laccadive Sea", "Java Sea", "Gulf of Mexico", "Bay of Bengal", "Arafura Sea", "Arabian Sea", "Andaman Sea"]
+        },
+        "habitat": {
+          "depth_range": "Shallow coastal waters",
+          "biome": ["Marine", "Coastal", "Neritic zone"]
+        },
+        "diet": ["Small fish", "Crustaceans", "Cephalopods"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Endangered",
+        "environmental_threats": "Overfishing, habitat loss"
+      },
+      {
+        "species_name": "Zebra Shark",
+        "scientific_name": "Stegostoma tigrinum",
+        "species_description": "The zebra shark is a species of carpet shark found in tropical Indo-Pacific regions, frequenting coral reefs and sandy flats. Its appearance includes a cylindrical body, five longitudinal ridges, and dark spots on a pale background. Juvenile zebra sharks have vertical stripes. These sharks are nocturnal hunters and feed on molluscs, crustaceans, small fishes, and sea snakes. They are oviparous and endangered due to overfishing for meat, fins, and liver oil.",
+        "geography": {
+          "continents": ["Asia", "Oceania"],
+          "countries": ["Australia", "Indonesia", "Malaysia", "Philippines", "Sri Lanka", "Thailand", "India", "Vietnam", "Papua New Guinea"],
+          "oceans": ["Indian Ocean", "Pacific Ocean"],
+          "seas": ["Coral Sea", "South China Sea", "Sulu Sea", "Timor Sea", "Andaman Sea"]
+        },
+        "habitat": {
+          "depth_range": "Up to 62 m (203 ft)",
+          "biome": ["Marine", "Coral reefs", "Sandy flats"]
+        },
+        "diet": ["Molluscs", "Crustaceans", "Small fishes", "Sea snakes"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Endangered",
+        "environmental_threats": "Overfishing, habitat loss"
+      },
+      {
+        "species_name": "Blacktip Reef Shark",
+        "scientific_name": "Carcharhinus melanopterus",
+        "species_description": "The blacktip reef shark is a species of requiem shark, easily identified by the black tips on its fins. Found primarily in tropical coral reefs, it inhabits shallow waters and is an active predator. The shark feeds on small bony fish, cephalopods, and crustaceans, with occasional prey like sea snakes and seabirds. Females are larger than males, and it has a viviparous reproduction cycle. It is listed as Vulnerable due to overfishing.",
+        "geography": {
+          "continents": ["Asia", "North America", "Africa", "Oceania"],
+          "countries": ["Australia", "Papua New Guinea", "Philippines", "Indonesia", "Fiji", "India", "Sri Lanka", "Thailand", "Taiwan", "Japan"],
+          "oceans": ["Indian Ocean", "Pacific Ocean"],
+          "seas": ["Coral Sea", "South China Sea"]
+        },
+        "habitat": {
+          "depth_range": "Up to 60 m (197 ft)",
+          "biome": ["Marine", "Coral reefs", "Shallow waters"]
+        },
+        "diet": ["Small bony fish", "Cephalopods", "Crustaceans", "Sea snakes", "Seabirds"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Overfishing, habitat loss"
+      },
+      {
+        "species_name": "Dusky Grouper",
+        "scientific_name": "Epinephelus marginatus",
+        "species_description": "The dusky grouper, also known as the yellowbelly rock cod, is a large fish species found in the Mediterranean Sea and along the North African coast. It has a dark reddish-brown or greyish body with yellowish gold countershading. This species can reach up to 150 cm in length and has a carnivorous diet, feeding on fish, crustaceans, and cephalopods. It is known for its long lifespan of 50-60 years.",
+        "geography": {
+          "continents": ["Europe", "Africa", "Asia", "South America"],
+          "countries": ["United Kingdom", "Algeria", "Morocco", "Spain", "Italy", "South Africa", "Brazil", "Uruguay", "Argentina"],
+          "oceans": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean"],
+          "seas": ["Mediterranean Sea", "Aegean Sea", "Tyrrhenian Sea", "Caribbean Sea"]
+        },
+        "habitat": {
+          "depth_range": "Up to 150 m",
+          "biome": ["Marine", "Coral reefs", "Rocky coastal areas"]
+        },
+        "diet": ["Fish", "Crustaceans", "Cephalopods"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Overfishing, habitat destruction"
+      },
+      {
+        "species_name": "Great Seahorse",
+        "scientific_name": "Hippocampus kelloggi",
+        "species_description": "The great seahorse is one of the largest seahorse species, characterized by a crown-like head and pale, smooth body. It has longer tail rings, accounting for 57% of its body length. They live 2 to 4 years in the wild.",
+        "geography": {
+          "continents": ["Asia", "Africa", "Oceania"],
+          "countries": ["China", "Japan", "Australia", "Vanuatu", "India", "Indonesia", "Malaysia", "Philippines", "Thailand", "Egypt", "Pakistan", "Bangladesh"],
+          "oceans": ["Pacific Ocean"],
+          "seas": ["Tasman Sea", "Sulu Sea", "Philippine Sea", "Bay of Bengal", "Andaman Sea"]
+        },
+        "habitat": {
+          "depth_range": "Up to 152 m",
+          "biome": ["Marine", "Coastal", "Neritic zone"]
+        },
+        "diet": ["Small crustaceans", "Plankton", "Larvae"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Habitat loss, overfishing, aquarium trade"
+      },
+      {
+        "species_name": "Grey Bamboo Shark",
+        "scientific_name": "Chiloscyllium griseum",
+        "species_description": "The grey bamboo shark is a species of carpet shark in the family Hemiscylliidae, found in the Indo-West Pacific Oceans. It can reach up to 74 cm in length and is distinguished by its brown color. Juveniles have transverse dark bands on their bodies. The species is oviparous, laying eggs, and is classified as Vulnerable on the IUCN Red List.",
+        "geography": {
+          "continents": ["Asia"],
+          "countries": ["India", "Bangladesh", "Malaysia", "Myanmar", "Sri Lanka", "Thailand", "Pakistan", "Indonesia", "Philippines", "Papua New Guinea"],
+          "oceans": ["Pacific Ocean", "Indian Ocean"],
+          "seas": ["Red Sea", "Philippine Sea", "Persian Gulf", "Laccadive Sea", "Bay of Bengal", "Arabian Sea"]
+        },
+        "habitat": {
+          "depth_range": "Up to 100 m",
+          "biome": ["Marine", "Reef", "Brackish water"]
+        },
+        "diet": ["Small fish", "Crustaceans", "Cephalopods"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Overfishing, habitat degradation"
+      },
+      {
+        "species_name": "Grey Triggerfish",
+        "scientific_name": "Balistes capriscus",
+        "species_description": "The grey triggerfish is a medium-sized fish found in the western and eastern Atlantic. It has a drab grey color with broad dark bars and is fished recreationally for its tough skin and tasty meat. It grows up to 60 cm and weighs about 2.3 kg. The species is classified as vulnerable by the IUCN Red List.",
+        "geography": {
+          "continents": ["North America", "South America", "Europe", "Africa"],
+          "countries": ["Canada", "USA", "Mexico", "Spain", "Portugal", "Italy", "Angola", "Morocco", "Tunisia"],
+          "oceans": ["Atlantic Ocean"],
+          "seas": ["Mediterranean Sea", "Caribbean Sea"]
+        },
+        "habitat": {
+          "depth_range": "Up to 60 m",
+          "biome": ["Marine", "Reef"]
+        },
+        "diet": ["Carnivore", "Planktivore"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Overfishing, habitat loss"
+      },
+      {
+        "species_name": "Common Seahorse",
+        "scientific_name": "Hippocampus kuda",
+        "species_description": "The common seahorse, also known as the estuary seahorse, yellow seahorse, or spotted seahorse, can reach 30 cm in length. It features a large, elongated body with no spines, but it has a rounded texture. The seahorse is known for its ability to grasp objects with its tail and can be found in shallow coastal waters.",
+        "geography": {
+          "continents": ["Asia", "Oceania", "Africa", "North America"],
+          "countries": ["India", "Indonesia", "Malaysia", "Thailand", "Sri Lanka", "South Africa", "Japan", "China", "Australia", "Philippines"],
+          "oceans": ["Pacific Ocean", "Indian Ocean", "Atlantic Ocean"],
+          "seas": ["Mediterranean Sea", "Timor Sea", "Tasman Sea"]
+        },
+        "habitat": {
+          "depth_range": "Up to 50 m",
+          "biome": ["Marine", "Reefs", "Shallow Coastal Waters"]
+        },
+        "diet": ["Plankton", "Small invertebrates"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Habitat destruction, overfishing"
+      },
+      {
+        "species_name": "Marbled Electric Ray",
+        "scientific_name": "Torpedo marmorata",
+        "species_description": "The marbled electric ray is a species of electric ray found in the coastal waters of the eastern Atlantic Ocean. It features a circular pectoral fin disc and a muscular tail. Known for its electric shock capability, it can deliver up to 70–80 volts to subdue prey. This species is nocturnal, solitary, and feeds on small bony fishes.",
+        "geography": {
+          "continents": ["Europe", "Africa", "Asia"],
+          "countries": ["Spain", "Portugal", "France", "United Kingdom", "Algeria", "Egypt"],
+          "oceans": ["Atlantic Ocean"],
+          "seas": ["Mediterranean Sea"]
+        },
+        "habitat": {
+          "depth_range": "Shallow to moderately deep waters",
+          "biome": ["Rocky Reefs", "Seagrass Beds", "Sandy Flats"]
+        },
+        "diet": ["Small bony fishes"],
+        "photos": true,
+        "population_trend": "Stable",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Bycatch in coastal fisheries"
+      },
+      {
+        "species_name": "Orange Spotted Filefish",
+        "scientific_name": "Oxymonacanthus longirostris",
+        "species_description": "The orange spotted filefish, also known as the harlequin filefish, is a small fish found on coral reefs in the Indo-Pacific Oceans. It has a pale blue body adorned with orange-yellow patches, and feeds almost exclusively on Acropora polyps. This species is recognized for its beautiful coloration and is often kept in aquariums, though it requires specific care and live corals to survive.",
+        "geography": {
+          "continents": ["Asia", "Oceania", "Africa"],
+          "countries": ["China", "Japan", "South Korea", "Taiwan", "Australia", "Kiribati", "Papua New Guinea", "Fiji", "Marshall Islands", "Micronesia", "Seychelles", "Mauritius", "Comoros", "Kenya", "Madagascar", "Mozambique", "Somalia", "Tanzania", "Sri Lanka", "India", "Indonesia", "Malaysia", "Maldives", "Myanmar", "Philippines", "Thailand", "Vietnam"],
+          "oceans": ["Pacific Ocean", "Indian Ocean"],
+          "seas": ["Tasman Sea", "South China Sea", "Philippine Sea", "Coral Sea", "Red Sea"]
+        },
+        "habitat": {
+          "depth_range": "Shallow reefs",
+          "biome": ["Coral Reefs"]
+        },
+        "diet": ["Acropora polyps"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Overfishing, habitat loss due to coral reef degradation"
+      },
+      {
+        "species_name": "Pavona cactus",
+        "scientific_name": "Pavona cactus",
+        "species_description": "Pavona cactus, also known as cactus coral, is a species of colonial stony coral found in shallow waters on reefs and lagoons in tropical Indo-Pacific regions. Its colonies have irregular, two-sided fronds and are often olive green or brown. The species is zooxanthellate, benefiting from symbiotic algae living in its tissues.",
+        "geography": {
+          "continents": ["Asia", "Africa", "Oceania"],
+          "countries": ["Japan", "Taiwan", "Australia", "Fiji", "Solomon Islands", "Philippines", "India", "Indonesia", "Sri Lanka", "Kenya", "Mozambique", "Mauritius", "Seychelles", "Madagascar", "Egypt"],
+          "oceans": ["Pacific Ocean", "Indian Ocean"],
+          "seas": ["Red Sea", "Persian Gulf", "South China Sea", "Coral Sea", "Java Sea", "Andaman Sea"],
+          "biogeographical_realms": ["Palearctic", "Oceanian", "Australasian", "Indomalayan", "Afrotropical"]
+        },
+        "habitat": {
+          "depth_range": "Up to 40 meters",
+          "biome": ["Coral Reefs", "Coastal", "Benthic"]
+        },
+        "diet": ["Plankton", "Zooxanthellae"],
+        "photos": true,
+        "population_trend": "Stable",
+        "population_status": "Not Evaluated",
+        "environmental_threats": "Habitat degradation from coral reef destruction, climate change"
+      },
+      {
+        "species_name": "Silky Shark",
+        "scientific_name": "Carcharhinus falciformis",
+        "species_description": "The silky shark, also known as the blackspot shark, gray whaler shark, and other names, is a highly mobile, migratory species found in tropical waters. Its slender, streamlined body and long sickle-shaped pectoral fins distinguish it. The species feeds on bony fishes and cephalopods and is known for its sharp, slashing hunting style. Viviparous, it gives birth to up to 16 pups annually or biennially.",
+        "geography": {
+          "continents": ["Asia", "Africa", "Oceania", "North America", "South America"],
+          "countries": ["United States", "Mexico", "Australia", "Thailand", "Japan", "Taiwan", "Costa Rica", "Ecuador", "Colombia", "Philippines"],
+          "oceans": ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean"],
+          "seas": ["Caribbean Sea", "Coral Sea", "Andaman Sea", "South China Sea"],
+          "biogeographical_realms": ["Neotropical", "Palearctic", "Indomalayan", "Australasian"]
+        },
+        "habitat": {
+          "depth_range": "Up to 50 meters",
+          "biome": ["Pelagic Zone", "Continental Shelf"]
+        },
+        "diet": ["Bony fishes", "Cephalopods"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Overfishing, bycatch in tuna fisheries, habitat degradation"
+      },
+      {
+        "species_name": "Slender Bamboo Shark",
+        "scientific_name": "Chiloscyllium indicum",
+        "species_description": "The slender bamboo shark is a small, harmless species found in the Indo-West Pacific. It is recognizable by its elongated body, brownish color with dark spots, and precaudal tail. It grows to a maximum length of 65 cm and is oviparous, laying eggs.",
+        "geography": {
+          "continents": ["Asia"],
+          "countries": ["China", "India", "Bangladesh", "Indonesia", "Malaysia", "Myanmar", "Singapore", "Sri Lanka", "Thailand", "Vietnam", "Taiwan"],
+          "oceans": ["Pacific Ocean", "Indian Ocean"],
+          "seas": ["South China Sea", "Bay of Bengal"],
+          "biogeographical_realms": ["Indomalayan"]
+        },
+        "habitat": {
+          "depth_range": "Coastal waters",
+          "biome": ["Neritic Zone", "Marine", "Benthic"]
+        },
+        "diet": ["Small bottom-dwelling invertebrates"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Overfishing, habitat degradation"
+      },
+      {
+        "species_name": "Wallago attu",
+        "scientific_name": "Wallago attu",
+        "species_description": "Wallago attu is a freshwater catfish native to South and Southeast Asia, found in large rivers and lakes. It can reach a maximum length of 2 m (6 ft 7 in) and shares parts of its range with the larger Wallagonia leerii. This species is known for its long, narrow head and high, sharp dorsal fin.",
+        "geography": {
+          "continents": ["Asia"],
+          "countries": ["India", "Bangladesh", "Cambodia", "Indonesia", "Laos", "Myanmar", "Nepal", "Sri Lanka", "Thailand", "Vietnam", "Pakistan"],
+          "oceans": ["Bay of Bengal", "South China Sea", "Arabian Sea", "Andaman Sea"],
+          "biogeographical_realms": ["Indomalayan"]
+        },
+        "habitat": {
+          "depth_range": "Freshwater, Brackish water",
+          "biome": ["Freshwater", "Benthic"]
+        },
+        "diet": ["Piscivorous, consuming small fish like razorbelly minnows, ticto barbs, and perchlets"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Overfishing, habitat destruction"
+      },
+      {
+        "species_name": "Whitetip Reef Shark",
+        "scientific_name": "Triaenodon obesus",
+        "species_description": "A small requiem shark, easily recognizable by its slender body and white-tipped dorsal and caudal fins. It is commonly found on Indo-Pacific coral reefs and can reach up to 1.6 m (5.2 ft). Whitetip reef sharks are nocturnal hunters, preying on bony fishes, crustaceans, and octopus. This species is not generally aggressive towards humans but may investigate swimmers.",
+        "geography": {
+          "continents": ["Asia", "North America", "Africa", "Oceania"],
+          "countries": ["Hong Kong", "Japan", "Taiwan", "Panama", "Egypt", "Australia", "Kiribati", "Papua New Guinea", "Fiji", "Marshall Islands", "India", "Indonesia", "Malaysia", "Maldives"],
+          "biogeographical_realms": ["Indomalayan", "Oceanian", "Afrotropical"]
+        },
+        "habitat": {
+          "depth_range": "8-40 m",
+          "biome": ["Coral reefs", "Benthic"]
+        },
+        "diet": ["Bony fishes", "Crustaceans", "Octopus"],
+        "photos": true,
+        "population_trend": "Decreasing",
+        "population_status": "Vulnerable",
+        "environmental_threats": "Overfishing, unregulated fishing, habitat destruction"
+      }
+
+
+      
+        
+]
