@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0099FF; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#005F99; stop-opacity:1" />
+    </linearGradient>
+    <animateTransform 
+      attributeName="transform" 
+      type="translate" 
+      values="0 0; 0 -10; 0 0" 
+      dur="2s" 
+      repeatCount="indefinite"/>
+  </defs>
+  <path d="M0 300 Q 150 200 300 300 T 600 300 T 900 300 V 400 H 0 Z" fill="url(#waveGradient)" stroke="#004080" stroke-width="2" />
+  
+
+</svg>
