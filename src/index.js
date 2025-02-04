@@ -30,12 +30,15 @@ app.get('/signup',(req,res)=>{
     console.log('signup route accessed')
     res.render('signup')
 })
-app.post('/signup',async(req,res)=>{
+
+
+app.post('/signupVerification',async(req,res)=>{
     const data = {
         institute:req.body.institute,
+        occupation:req.body.occupation,
         name: req.body.name,
         email: req.body.email,
-        password: req.body.password
+        //password: req.body.password
     }
     const existingUser = await collection.findOne({email:data.email})
     if(existingUser){
@@ -43,12 +46,13 @@ app.post('/signup',async(req,res)=>{
     }
 
     else{
-        const saltRounds = 10
-        const hashedPassword = await bcrypt.hash(data.password,saltRounds)
-        data.password = hashedPassword
+       // const saltRounds = 10
+        //const hashedPassword = await bcrypt.hash(data.password,saltRounds)
+        //data.password = hashedPassword
         const userdata = await collection.insertMany(data)
         console.log(userdata)
-        res.end('Signup Successful')
+        console.log("Written on db")
+        res.render('OTP')
     }
     
 })

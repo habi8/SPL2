@@ -14,6 +14,11 @@ const LoginSchema = new mongoose.Schema({
         type:String,
         required:false
     },
+    occupation:{
+        type:String,
+        required:false
+    },
+    
     name:{
         type: String,
         required: true
@@ -24,7 +29,7 @@ const LoginSchema = new mongoose.Schema({
     },
     password:{
         type: String,
-        required: true
+        required: false
     }
 })
 
