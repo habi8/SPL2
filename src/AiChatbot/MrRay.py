@@ -1,7 +1,7 @@
 import openai 
 openai.api_key = "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"
 
-
+print("Chatbot OK")
 ALLOWED_TOPICS = ["bey of bengal","sundarbans","mangroves","nature","environment","global warming","ocean", "marine", "fish", "coral", "pollution", "sea", "whale", "shark", "underwater", "ecosystem", "species", "conservation","hi there","hi","hello","greetings","how are you?","whats up?"]
 
 def is_valid_question(user_input):
