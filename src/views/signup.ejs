@@ -22,7 +22,16 @@
                 </div>
                 
                     <input type="text" id="name" name = "name" placeholder="Full Name" required>
-                    <input type="text" id="institute" name = "institute" placeholder="Institute Name" required>
+                    <select id="role" name="role" required>
+                        <option value="" disabled selected>Select Your Role</option>
+                        <option value="Student">Student</option>
+                        <option value="Researcher">Researcher</option>
+                        <option value="Conservationist">Conservationist</option>
+                        <option value="Ecologist">Ecologist</option>
+                        <option value="Environmental activist">Environmental activist</option>
+                        <option value="Visitor">Visitor</option>
+                    </select>
+                    <input type="text" id="institute/Workplace" name = "institute" placeholder="Institute Name" required>
                     <input type="email" id="email" name = "email" placeholder="Email" required>
                     <input type="password" id="password" name = "password" placeholder="Password" required>
                     <button type="submit" class="reg-button">Sign up</button>
