@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bay of Bengal</title>
+    <link rel="stylesheet" href="Ocean.css">
+</head>
+<body>
+    <div class="moving-text" id="movingText">Welcome to Bay Of Bengal</div>
+
+    <div class="ocean-container">
+        <section class="ocean-layer" id="sunlight-zone">
+            <img src="diver.svg" class="info-icon" data-zone="sunlight-zone">
+            <h1 class="layer-title">Sunlight Zone</h1>
+           
+        </section>
+
+        <section class="ocean-layer" id="twilight-zone">
+            <img src="diver.svg" class="info-icon" data-zone="twilight-zone">
+            <h1 class="layer-title">Twilight Zone</h1>
+        </section>
+
+        <section class="ocean-layer" id="midnight-zone">
+            <img src="diver.svg" class="info-icon" data-zone="midnight-zone">
+            <h1 class="layer-title">Midnight Zone</h1>
+        </section>
+
+        <section class="ocean-layer" id="abyss-zone">
+            <img src="diver.svg" class="info-icon" data-zone="abyss-zone">
+            <h1 class="layer-title">Abyss Zone</h1>
+        </section>
+
+        <section class="ocean-layer" id="trenches-zone">
+            <img src="diver.svg" class="info-icon" data-zone="trenches-zone">
+            <h1 class="layer-title">Trenches</h1>
+        </section>
+    </div>
+
+    <div id="info-box" class="info-box hidden">
+        <p id="zone-info"></p>
+    </div>
+
+   
+
+    <script src="Ocean.js"></script>
+</body>
+</html>
