@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('images/ocean-background.jpg') no-repeat center center fixed;
+    background: url('finalbg.jpeg') no-repeat center center fixed;
     background-size: cover;
     color: white;
 }
@@ -34,8 +34,25 @@ nav ul li a {
     display: flex;
     gap: 20px;
 }
+.news-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.news-section h2 {
+    font-size: 2em;
+}
+.news-section p {
+    font-size: 1.2em;
+}
 footer {
     text-align: center;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0,0, 0, 0.3);
+}
+.content p {
+    font-size: 0.5rem;
+    letter-spacing: 0.5px;
+    font-style: italic;
+  
 }
