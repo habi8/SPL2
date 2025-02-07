@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('finalbg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+}
+.social-icon img, .auth-icon img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+.icon-container {
+    display: flex;
+    gap: 20px;
+}
+.news-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.news-section h2 {
+    font-size: 2em;
+}
+.news-section p {
+    font-size: 1.2em;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0,0, 0, 0.3);
+}
+.content p {
+    font-size: 0.5rem;
+    letter-spacing: 0.5px;
+    font-style: italic;
+  
+}
