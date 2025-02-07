@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-size: cover;
+}
+
+/* Backgrounds for each level */
+body[level1] {
+    background-image: url('sunlight.jpg');
+}
+
+body[level2] {
+    background-image: url('twilight.jpg');
+}
+
+body[level3] {
+    background-image: url('midnight.png');
+}
+
+canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Game Controls */
+#controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
