@@ -2,6 +2,13 @@ const express = require('express')
 const path = require('path')
 const bcrypt = require('bcrypt')
 const collection = require('./config')
+
+require('dotenv').config();
+const mongoose = require('mongoose');
+const nodemailer = require('nodemailer');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
 //const { name,email,password } = require('ejs')
 
 const app = express()
@@ -29,6 +36,11 @@ app.get('/ocean',(req,res)=>{
 app.get('/signup',(req,res)=>{
     console.log('signup route accessed')
     res.render('signup')
+})
+
+app.get('/getOTP',(req,res)=>{
+    console.log("OTP verification");
+    res.render('OTPverification');
 })
 
 
@@ -80,6 +92,68 @@ app.post('/login',async(req,res)=>{
         res.end("Wrong info")
     }
 })
+
+// Middleware
+app.use(bodyParser.json());
+app.use(cors());
+
+// MongoDB connection
+// mongoose.connect('mongodb://localhost:27017/users', {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true
+// }).then(() => console.log("MongoDB connected"))
+// .catch(err => console.log(err));
+
+// User Schema
+// const UserSchema = new mongoose.Schema({
+//     email: String,
+//     otp: String,
+//     verified: Boolean
+// });
+// const User = mongoose.model('User', UserSchema);
+
+// Nodemailer transporter
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: process.env.EMAIL,
+        pass: process.env.PASSWORD
+    }
+});
+
+// Generate OTP
+const generateOTP = () => Math.floor(100000 + Math.random() * 900000).toString();
+
+// Signup Route
+app.post('/signup', async (req, res) => {
+    const { email } = req.body;
+    const otp = generateOTP();
+    
+    await mongoose.connection.findOneAndUpdate({ email }, { otp, verified: false }, { upsert: true });
+    
+    const mailOptions = {
+        from: process.env.EMAIL,
+        to: email,
+        subject: 'Your OTP Code',
+        text: `Your OTP is: ${otp}`
+    };
+    res.render('OTP');
+    transporter.sendMail(mailOptions, (error) => {
+        if (error) return res.status(500).json({ message: 'Error sending OTP' });
+        res.json({ message: 'OTP sent successfully' });
+    });
+});
+
+// Verify OTP Route
+app.post('/verify', async (req, res) => {
+    const { email, otp } = req.body;
+    const user = await User.findOne({ email, otp });
+    
+    if (!user) return res.status(400).json({ message: 'Invalid OTP' });
+    
+    await User.updateOne({ email }, { verified: true });
+    res.json({ message: 'Signup Successful' });
+});
 
 app.listen(7000,()=>{
     console.log("App running on port number 7000...")

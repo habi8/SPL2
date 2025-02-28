@@ -1,14 +1,25 @@
-function showRegister() {
-    document.getElementById('login-form').classList.add('hidden');
-    document.getElementById('register-form').classList.remove('hidden');
-}
-function showLogin() {
-    document.getElementById('register-form').classList.add('hidden');
-    document.getElementById('login-form').classList.remove('hidden');
-}
-function loginUser() {
-    alert('Login functionality to be implemented');
-}
-function registerUser() {
-    alert('Register functionality to be implemented');
-}
+
+        async function sendOTP() {
+            const email = document.getElementById('email').value;
+            const res = await fetch('http://localhost:7000/signup', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email })
+            });
+            if (res.ok) {
+                document.getElementById('otpSection').style.display = 'block';
+            }
+        }
+
+        async function verifyOTP() {
+            const email = document.getElementById('email').value;
+            const otp = document.getElementById('otp').value;
+            const res = await fetch('http://localhost:7000/verify', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, otp })
+            });
+            const data = await res.json();
+            alert(data.message);
+        }
+   

@@ -14,7 +14,7 @@
        
         
         <div class="reg-form-container">
-           <form action="/signupVerification" method="post">
+           <form action="/signup" method="post">
             <div id="register-form" >
                 <div class="header">
                     <img src="conserve-the-deep-logo.png">
@@ -47,7 +47,7 @@
                         <input type="password" id="password" name = "password" placeholder="Password" required>
                     -->
                         
-                   <button type="submit" class="reg-button">Get OTP</button>  
+                   <button type="submit" class="reg-button" onclick="sendOTP()">Get OTP</button>  
  
                 
                 <p>Already have an account? <a href="/login">Login here</a></p>

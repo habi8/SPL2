@@ -27,6 +27,10 @@ const LoginSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    OTP:{
+        type: String,
+        required:true
+    },
     password:{
         type: String,
         required: false
