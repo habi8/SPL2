@@ -18,14 +18,19 @@ const transporter = nodemailer.createTransport({
 });
 
 // Function to Generate OTP
-const generateOTP = () => Math.floor(1000 + Math.random() * 9000).toString();
+const generateOTP = ()=> Math.floor(1000 + Math.random() * 9000).toString();
+const otpStorage = {}; 
 
 // Function to Send OTP Email & Store in Database
 const sendOTPEmail = async (email) => {
-    console.log(Email)
-console.log(password)
-    const otp = generateOTP();
-    console.log("✅ OTP Generated:", otp);
+    // console.log(Email)
+    // console.log(password)
+    // const otp = generateOTP();
+    // console.log("✅ OTP Generated:", otp);
+    const otp = Math.floor(1000 + Math.random() * 9000).toString();
+    otpStorage[email] = otp; // Store OTP in memory
+    console.log(`✅ OTP for ${email}: ${otp}`);
+
 
     try {
         // Update OTP in Database
@@ -52,6 +57,8 @@ console.log(password)
         await transporter.sendMail(mailOptions);
         console.log(`✅ OTP Sent to ${email}`);
 
+      // localStorage.setItem("OTP",otp)
+
         return { success: true, message: "OTP sent successfully" };
 
     } catch (error) {
@@ -61,4 +68,4 @@ console.log(password)
 };
 
 // Export Functions
-module.exports = { sendOTPEmail };
+module.exports = { sendOTPEmail,otpStorage };

@@ -34,6 +34,10 @@ const LoginSchema = new mongoose.Schema({
     password:{
         type: String,
         required:false
+    },
+    verified:{
+        type: Boolean,
+        required: false
     }
 })
 

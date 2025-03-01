@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path')
 const bcrypt = require('bcrypt')
 const collection = require('./config')
+const router = express.Router();
 
 require('dotenv').config();
 const mongoose = require('mongoose');
@@ -15,33 +16,38 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
-app.set('view engine','ejs')
+app.set('view engine','ejs','js')
 
 app.use(express.static('public'))
+const otpStorage = new Map(); // Store {email: otp}
 
 // Replace the previous OTP route with this
 const { sendOTPEmail } = require('./mailer'); // Import mailer.js
-
-app.post('/OTP', async (req, res) => {
-
-   
-            
+app.post('/OTP', async (req, res) => {            
     console.log("Signup & OTP Sending Process Started");
-    
-    
+
     const { email, name, institute, occupation } = req.body;
 
     const existingUser = await collection.findOne({ email });
     if (existingUser) return res.send("User already exists");
 
     else{
+       
+         // Send OTP via mail
+    const mailResponse = await sendOTPEmail(email);
+    console.log(mailResponse);
+
+    if (mailResponse.success) {
         const data = {
             institute:req.body.institute,
             occupation:req.body.Role,
             name: req.body.name,
             email: req.body.email,
+            OTP: "1234",
             //password: req.body.password
         }
+
+        
         
            // const saltRounds = 10
             //const hashedPassword = await bcrypt.hash(data.password,saltRounds)
@@ -51,12 +57,8 @@ app.post('/OTP', async (req, res) => {
             console.log("Written on db")
             //res.render('OTP')
 
-         // Send OTP via mail
-    const mailResponse = await sendOTPEmail(email);
-    console.log(mailResponse);
-
-    if (mailResponse.success) {
         res.render("OTP", { email });
+        // await collection.updateOne({ email }, { otp, verified: false }); 
     } else {
         res.status(500).json({ message: "Failed to send OTP" });
     }
@@ -65,6 +67,29 @@ app.post('/OTP', async (req, res) => {
 
     
 });
+
+app.post("/verify-otp", (req, res) => {
+    const { email, otp } = req.body;
+
+    if (!email || !otp) {
+        return res.status(400).json({ success: false, message: "Email and OTP are required" });
+    }
+
+    const storedOtp = otpStorage.get(email);
+    console.log(storedOtp)
+    if (storedOtp === otp) {
+        otpStorage.delete(email); // Clear OTP after verification
+        return res.json({ success: true, message: "OTP verified successfully" });
+    }
+
+    return res.status(401).json({ success: false, message: "Invalid OTP" });
+});
+
+// 📌 Route to resend OTP
+router.post("/resend-otp", async (req, res) => {
+    const mailResponse = await sendOTPEmail(email)
+});
+
 
 app.get('/',(req,res)=>{
     res.render('welcome')
