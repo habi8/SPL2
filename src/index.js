@@ -38,9 +38,9 @@ app.get('/signup',(req,res)=>{
     res.render('signup')
 })
 
-app.get('/getOTP',(req,res)=>{
+app.post('/OTP',(req,res)=>{
     console.log("OTP verification");
-    res.render('OTPverification');
+    res.render('OTP');
 })
 
 
