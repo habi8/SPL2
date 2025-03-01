@@ -1,33 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding doesn’t add extra space */
+    overflow: hidden; /* Prevents scrolling */
+}
+
 .login-container {
-    width: 100%; 
-    max-width: 800px; 
-    margin: 0 auto; 
-    height: 90vh; 
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    
     text-align: center;
-    font-family:system-ui;
-    background: url('Bg.jpg') ;
+    font-family: system-ui;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 180px;
-    margin-top: 50px;
-    box-sizing: border-box; 
-    border: 2px solid navy;
-    border-radius: 5px;
+
+    background: url('loginbg.webp') no-repeat center center fixed;
+    background-size: cover; /* Covers entire screen */
+
+    animation: fadeIn 0.9s ease-in-out;
 }
 
 .login-form-container {
     background: rgba(255, 255, 255, 0.8); 
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 30px;
     border-radius: 10px;
     margin: 0 auto; 
-    max-width: 550px; 
-    margin-top: 60px;
+    margin-top: 30px;
+    max-width: 450px; 
     width: 90%; 
-    height: -10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-   
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideIn 1.8s ease-out forwards;
+}
+
+/* Keyframes for smooth animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .header{

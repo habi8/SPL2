@@ -1,34 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding doesn’t add extra space */
+    overflow: hidden; /* Prevents scrolling */
+}
+
 .reg-container {
-    width: 100%; 
-    max-width: 800px; 
-    margin: 0 auto; 
-    height: 90vh; 
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    
     text-align: center;
-    font-family:system-ui;
-    background: url('Bg.jpg') ;
+    font-family: system-ui;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 180px;
-    margin-top: 50px;
-    box-sizing: border-box; 
-    border: 2px solid navy;
-    border-radius: 5px;
+
+    background: url('signupbg.webp') no-repeat center center fixed;
+    background-size: cover; /* Covers entire screen */
+
+    animation: fadeIn 0.9s ease-in-out;
 }
 
 .reg-form-container {
     background: rgba(255, 255, 255, 0.8); 
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 30px;
     border-radius: 10px;
     margin: 0 auto; 
     margin-top: 30px;
-    max-width: 550px; 
+    max-width: 450px; 
     width: 90%; 
-    height: -10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-   
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 1.8s ease-out forwards;
 }
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .role{
     display: flex;
@@ -51,8 +82,9 @@ img{
     width: 120px;
     height: 120px;
 }
-.form {
+#register-form {
     display: block;
+    padding: 5px;
 }
 
 input, button {
@@ -62,6 +94,10 @@ input, button {
     margin-top: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+.role {
+    display: flex;
+    align-items: center;
 }
 button {
     background-color: #032a73;
