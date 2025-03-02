@@ -1,0 +1,32 @@
+2025-03-02 14:39:26.811 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-vscode.vscode-selfhost-test-provider' wants API proposal 'attributableCoverage' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-03-02 14:39:26.835 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.python' wants API proposal 'contribIssueReporter' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-03-02 14:39:26.836 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.debugpy' wants API proposal 'contribIssueReporter' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-03-02 14:39:26.836 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'redhat.java' wants API proposal 'documentPaste' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-03-02 14:39:27.465 [info] Started local extension host with pid 10116.
+2025-03-02 14:39:28.110 [warning] [twxs.cmake]: Cannot register 'cmake.cmakePath'. This property is already registered.
+2025-03-02 14:39:28.111 [warning] [zobo.php-intellisense]: Cannot register 'php.executablePath'. This property is already registered.
+2025-03-02 14:39:29.046 [info] Settings Sync: Account status changed from uninitialized to unavailable
+2025-03-02 14:39:31.177 [info] [perf] Render performance baseline is 42ms
+2025-03-02 14:39:59.059 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-vscode.vscode-selfhost-test-provider' wants API proposal 'attributableCoverage' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-03-02 14:39:59.060 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.python' wants API proposal 'contribIssueReporter' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-03-02 14:39:59.060 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.debugpy' wants API proposal 'contribIssueReporter' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-03-02 14:39:59.061 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'redhat.java' wants API proposal 'documentPaste' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-03-02 14:39:59.440 [info] Started local extension host with pid 18544.
+2025-03-02 14:39:59.953 [warning] [zobo.php-intellisense]: Cannot register 'php.executablePath'. This property is already registered.
+2025-03-02 14:40:00.592 [info] Settings Sync: Account status changed from uninitialized to unavailable
+2025-03-02 14:40:02.144 [info] [perf] Render performance baseline is 26ms
+2025-03-02 14:40:03.591 [warning] [twxs.cmake]: Cannot register 'cmake.cmakePath'. This property is already registered.
+2025-03-02 14:42:47.686 [error] No default agent contributed: CodeExpectedError: No default agent contributed
+    at zKe.S (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:1931:25353)
+2025-03-02 14:50:19.811 [error] TreeError [mongoDBConnectionExplorer] Data tree node not found: 1/28d511e3-879e-45f9-88f1-d3ea3380c9c4-1740905419754: Error: TreeError [mongoDBConnectionExplorer] Data tree node not found: 1/28d511e3-879e-45f9-88f1-d3ea3380c9c4-1740905419754
+    at Bls.D (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:412:32193)
+    at Bls.rerender (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:412:29434)
+    at vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:762:19185
+    at Array.forEach (<anonymous>)
+    at vte.value (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:762:19166)
+    at x.B (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:29:2392)
+    at x.fire (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:29:2611)
+    at wJ.U (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:763:9082)
+    at vte.value (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:763:5114)
+    at Wp.B (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:29:2392)
+2025-03-02 15:45:50.420 [error] [chat setup] signIn: error Canceled: Canceled

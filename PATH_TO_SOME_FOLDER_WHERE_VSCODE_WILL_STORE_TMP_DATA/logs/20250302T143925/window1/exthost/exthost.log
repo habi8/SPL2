@@ -1,0 +1,476 @@
+2025-03-02 14:39:28.973 [info] Extension host with pid 10116 started
+2025-03-02 14:39:29.192 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-03-02 14:39:29.321 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-03-02 14:39:29.330 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-03-02 14:39:29.444 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-03-02 14:39:29.600 [info] Eager extensions activated
+2025-03-02 14:39:29.670 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-03-02 14:39:29.678 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-03-02 14:39:29.711 [info] ExtensionService#_doActivateExtension cweijan.vscode-database-client2, startup: false, activationEvent: 'onStartupFinished'
+2025-03-02 14:39:30.533 [info] ExtensionService#_doActivateExtension eamodio.gitlens, startup: false, activationEvent: 'onStartupFinished'
+2025-03-02 14:39:30.795 [info] ExtensionService#_doActivateExtension formulahendry.code-runner, startup: false, activationEvent: 'onStartupFinished'
+2025-03-02 14:39:30.918 [info] ExtensionService#_doActivateExtension Oracle.sql-developer, startup: false, activationEvent: 'onStartupFinished'
+2025-03-02 14:39:31.227 [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer, startup: false, activationEvent: 'onStartupFinished'
+2025-03-02 14:39:31.961 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-03-02 14:39:31.981 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-03-02 14:39:32.090 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-03-02 14:39:32.182 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-03-02 14:39:58.596 [info] Extension host terminating: renderer closed the MessagePort
+2025-03-02 14:39:58.642 [error] An error occurred when disposing the subscriptions for extension 'eamodio.gitlens':
+2025-03-02 14:39:58.647 [error] TypeError: Cannot read properties of undefined (reading 'dispose')
+	at Object.dispose (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:135:120822)
+	at cv.<anonymous> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:106:20084)
+	at cv.dispose (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:106:20180)
+	at Object.dispose (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1154:125988)
+	at c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1425:15122
+	at Array.forEach (<anonymous>)
+	at Object.dispose (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1425:15104)
+	at ui (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:14992
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at PW.eb (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:11919)
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9874
+	at Array.map (<anonymous>)
+	at PW.$ (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9862)
+	at PW.terminate (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:10105)
+	at wC.terminate (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:117:1434)
+	at ts (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:15080)
+	at MessagePortMain.<anonymous> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:11628)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949)
+2025-03-02 14:39:58.656 [error] Canceled: Canceled
+	at new XR (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:110406)
+	at Uy.U (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:115016)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:112510)
+	at mw.g (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:32221)
+	at mw.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31725)
+	at r.registerCommand.description (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31055)
+	at mw.h (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:32741)
+	at mw.g (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31818)
+	at mw.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31725)
+	at Object.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:172:37254)
+	at f (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1479:63905)
+	at c (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1479:68465)
+	at ActionRunners._updateContextKeys (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:92462)
+	at s (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:90906)
+	at RegisteredActionRunner.unregister (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:91049)
+	at RegisteredActionRunner.dispose (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:89716)
+	at Object.dispose (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:91143)
+	at ui (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:14992
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at PW.eb (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:11919)
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9874
+	at Array.map (<anonymous>)
+	at PW.$ (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9862)
+	at PW.terminate (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:10105)
+	at wC.terminate (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:117:1434)
+	at ts (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:15080)
+	at MessagePortMain.<anonymous> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:11628)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-03-02 14:39:58.656 [error] Canceled: Canceled
+	at new XR (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:110406)
+	at Uy.U (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:115016)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:112510)
+	at mw.g (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:32221)
+	at mw.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31725)
+	at r.registerCommand.description (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31055)
+	at mw.h (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:32741)
+	at mw.g (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31818)
+	at mw.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31725)
+	at Object.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:172:37254)
+	at f (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1479:63905)
+	at c (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1479:68465)
+	at ActionRunners._updateContextKeys (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:92462)
+	at s (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:90906)
+	at RegisteredActionRunner.unregister (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:91049)
+	at RegisteredActionRunner.dispose (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:89716)
+	at Object.dispose (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:91143)
+	at ui (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:14992
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at PW.eb (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:11919)
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9874
+	at Array.map (<anonymous>)
+	at PW.$ (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9862)
+	at PW.terminate (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:10105)
+	at wC.terminate (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:117:1434)
+	at ts (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:15080)
+	at MessagePortMain.<anonymous> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:11628)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-03-02 14:39:58.657 [error] Canceled: Canceled
+	at new XR (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:110406)
+	at Uy.U (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:115016)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:112510)
+	at mw.g (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:32221)
+	at mw.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31725)
+	at r.registerCommand.description (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31055)
+	at mw.h (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:32741)
+	at mw.g (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31818)
+	at mw.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31725)
+	at Object.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:172:37254)
+	at f (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1479:63905)
+	at c (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1479:68465)
+	at ActionRunners._updateContextKeys (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:92462)
+	at s (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:90906)
+	at RegisteredActionRunner.unregister (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:91049)
+	at RegisteredActionRunner.dispose (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:89716)
+	at Object.dispose (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:91143)
+	at ui (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:14992
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at PW.eb (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:11919)
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9874
+	at Array.map (<anonymous>)
+	at PW.$ (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9862)
+	at PW.terminate (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:10105)
+	at wC.terminate (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:117:1434)
+	at ts (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:15080)
+	at MessagePortMain.<anonymous> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:11628)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-03-02 14:39:58.680 [error] Error: Channel has been closed
+	at s (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:2431)
+	at Object.appendLine (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:2570)
+	at D.logOutputMessage (c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\json-language-features\client\dist\node\jsonClientMain.js:2:292566)
+	at D.info (c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\json-language-features\client\dist\node\jsonClientMain.js:2:292299)
+	at ChildProcess.<anonymous> (c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\json-language-features\client\dist\node\jsonClientMain.js:2:510402)
+	at ChildProcess.emit (node:events:518:28)
+	at ChildProcess._handle.onexit (node:internal/child_process:293:12)
+2025-03-02 14:39:58.682 [info] Extension host with pid 10116 exiting with code 0
+2025-03-02 14:40:00.464 [info] Extension host with pid 18544 started
+2025-03-02 14:40:00.465 [info] Skipping acquiring lock for c:\Users\habib\Desktop\5th Sem\SE 505(SPL 2)\Project folder\SPL2_Elin\PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA\User\workspaceStorage\caf2c5e0a4ac38053c75bec3f277e76b.
+2025-03-02 14:40:00.652 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-03-02 14:40:00.774 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2025-03-02 14:40:00.833 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-03-02 14:40:00.975 [info] Eager extensions activated
+2025-03-02 14:40:01.057 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-03-02 14:40:01.114 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-03-02 14:40:01.140 [info] ExtensionService#_doActivateExtension eamodio.gitlens, startup: false, activationEvent: 'onStartupFinished'
+2025-03-02 14:40:03.901 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github
+2025-03-02 14:40:04.008 [info] ExtensionService#_doActivateExtension Oracle.sql-developer, startup: false, activationEvent: 'onWalkthrough:sqldeveloper.walkthroughs.connections'
+2025-03-02 14:40:04.325 [info] ExtensionService#_doActivateExtension cweijan.vscode-database-client2, startup: false, activationEvent: 'onStartupFinished'
+2025-03-02 14:40:05.173 [info] ExtensionService#_doActivateExtension formulahendry.code-runner, startup: false, activationEvent: 'onStartupFinished'
+2025-03-02 14:40:05.254 [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer, startup: false, activationEvent: 'onStartupFinished'
+2025-03-02 14:40:05.636 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-03-02 14:40:05.653 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-03-02 14:40:05.732 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-03-02 14:40:05.805 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-03-02 14:40:19.734 [info] ExtensionService#_doActivateExtension mongodb.mongodb-vscode, startup: false, activationEvent: 'onView:mongoDBConnectionExplorer'
+2025-03-02 14:43:28.757 [info] ExtensionService#_doActivateExtension VisualStudioExptTeam.intellicode-api-usage-examples, startup: false, activationEvent: 'onLanguage:javascript'
+2025-03-02 14:43:29.067 [info] ExtensionService#_doActivateExtension VisualStudioExptTeam.vscodeintellicode, startup: false, activationEvent: 'onLanguage:javascript'
+2025-03-02 14:43:30.952 [warning] TextEditor is closed/disposed
+2025-03-02 14:43:32.172 [warning] TextEditor is closed/disposed
+2025-03-02 14:43:34.331 [warning] TextEditor is closed/disposed
+2025-03-02 14:43:38.280 [warning] TextEditor is closed/disposed
+2025-03-02 14:43:41.122 [warning] TextEditor is closed/disposed
+2025-03-02 14:43:43.361 [warning] TextEditor is closed/disposed
+2025-03-02 14:43:45.015 [warning] TextEditor is closed/disposed
+2025-03-02 14:43:48.610 [warning] TextEditor is closed/disposed
+2025-03-02 14:43:53.170 [warning] TextEditor is closed/disposed
+2025-03-02 14:43:53.378 [info] ExtensionService#_doActivateExtension vscode.html-language-features, startup: false, activationEvent: 'onLanguage:html'
+2025-03-02 14:43:55.781 [warning] TextEditor is closed/disposed
+2025-03-02 14:44:01.975 [warning] TextEditor is closed/disposed
+2025-03-02 14:47:12.966 [warning] TextEditor is closed/disposed
+2025-03-02 14:47:20.532 [warning] TextEditor is closed/disposed
+2025-03-02 14:49:02.589 [warning] TextEditor is closed/disposed
+2025-03-02 14:49:20.848 [warning] TextEditor is closed/disposed
+2025-03-02 14:49:23.451 [warning] TextEditor is closed/disposed
+2025-03-02 14:50:14.252 [warning] TextEditor is closed/disposed
+2025-03-02 14:50:26.925 [error] No tree item with id '1/28d511e3-879e-45f9-88f1-d3ea3380c9c4-1740905419792/0:local' found.
+2025-03-02 14:50:30.888 [error] No tree item with id '1/28d511e3-879e-45f9-88f1-d3ea3380c9c4-1740905428737/0:SPL2' found.
+2025-03-02 14:50:35.001 [error] No tree item with id '1/28d511e3-879e-45f9-88f1-d3ea3380c9c4-1740905432058/0:SPL2/0:users/0:Schema' found.
+2025-03-02 14:50:45.766 [warning] TextEditor is closed/disposed
+2025-03-02 14:53:47.492 [warning] TextEditor is closed/disposed
+2025-03-02 14:53:51.538 [warning] TextEditor is closed/disposed
+2025-03-02 14:54:19.584 [warning] TextEditor is closed/disposed
+2025-03-02 14:54:38.372 [warning] TextEditor is closed/disposed
+2025-03-02 14:54:41.083 [warning] TextEditor is closed/disposed
+2025-03-02 15:00:04.827 [warning] TextEditor is closed/disposed
+2025-03-02 15:00:12.831 [warning] TextEditor is closed/disposed
+2025-03-02 15:00:16.917 [warning] TextEditor is closed/disposed
+2025-03-02 15:02:14.607 [warning] TextEditor is closed/disposed
+2025-03-02 15:05:15.028 [warning] TextEditor is closed/disposed
+2025-03-02 15:06:10.017 [warning] TextEditor is closed/disposed
+2025-03-02 15:06:11.133 [warning] TextEditor is closed/disposed
+2025-03-02 15:06:53.724 [warning] TextEditor is closed/disposed
+2025-03-02 15:07:08.028 [warning] TextEditor is closed/disposed
+2025-03-02 15:07:11.617 [warning] TextEditor is closed/disposed
+2025-03-02 15:08:09.603 [warning] TextEditor is closed/disposed
+2025-03-02 15:08:19.884 [warning] TextEditor is closed/disposed
+2025-03-02 15:08:42.355 [warning] TextEditor is closed/disposed
+2025-03-02 15:09:03.458 [warning] TextEditor is closed/disposed
+2025-03-02 15:09:10.846 [warning] TextEditor is closed/disposed
+2025-03-02 15:10:08.582 [warning] TextEditor is closed/disposed
+2025-03-02 15:10:22.863 [warning] TextEditor is closed/disposed
+2025-03-02 15:14:33.944 [warning] TextEditor is closed/disposed
+2025-03-02 15:17:44.607 [warning] TextEditor is closed/disposed
+2025-03-02 15:21:25.363 [warning] TextEditor is closed/disposed
+2025-03-02 15:22:28.368 [warning] TextEditor is closed/disposed
+2025-03-02 15:23:26.314 [warning] TextEditor is closed/disposed
+2025-03-02 15:24:02.720 [warning] TextEditor is closed/disposed
+2025-03-02 15:25:33.363 [warning] TextEditor is closed/disposed
+2025-03-02 15:26:14.430 [warning] TextEditor is closed/disposed
+2025-03-02 15:30:24.764 [warning] TextEditor is closed/disposed
+2025-03-02 15:31:08.673 [warning] TextEditor is closed/disposed
+2025-03-02 15:36:43.598 [warning] TextEditor is closed/disposed
+2025-03-02 15:36:48.374 [warning] TextEditor is closed/disposed
+2025-03-02 15:36:56.622 [warning] TextEditor is closed/disposed
+2025-03-02 15:37:04.069 [warning] TextEditor is closed/disposed
+2025-03-02 15:37:09.323 [warning] TextEditor is closed/disposed
+2025-03-02 15:37:42.061 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onTerminalQuickFixRequest:ms-vscode.npm-command'
+2025-03-02 15:37:47.382 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+2025-03-02 15:45:44.162 [warning] TextEditor is closed/disposed
+2025-03-02 15:45:50.220 [info] Extension host terminating: renderer closed the MessagePort
+2025-03-02 15:45:50.365 [error] An error occurred when disposing the subscriptions for extension 'eamodio.gitlens':
+2025-03-02 15:45:50.371 [error] TypeError: Cannot read properties of undefined (reading 'dispose')
+	at Object.dispose (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:135:120822)
+	at cv.<anonymous> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:106:20084)
+	at cv.dispose (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:106:20180)
+	at Object.dispose (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1154:125988)
+	at c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1425:15122
+	at Array.forEach (<anonymous>)
+	at Object.dispose (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1425:15104)
+	at ui (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:14992
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at PW.eb (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:11919)
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9874
+	at Array.map (<anonymous>)
+	at PW.$ (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9862)
+	at PW.terminate (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:10105)
+	at wC.terminate (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:117:1434)
+	at ts (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:15080)
+	at MessagePortMain.<anonymous> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:11628)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949)
+2025-03-02 15:45:50.400 [error] Canceled: Canceled
+	at new XR (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:110406)
+	at Uy.U (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:115016)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:112510)
+	at mw.g (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:32221)
+	at mw.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31725)
+	at r.registerCommand.description (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31055)
+	at mw.h (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:32741)
+	at mw.g (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31818)
+	at mw.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31725)
+	at Object.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:172:37254)
+	at Ah.L [as value] (c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\main.js:2:997602)
+	at D.B (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:2373)
+	at D.C (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:2443)
+	at D.fire (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:2660)
+	at Object.p [as dispose] (c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\main.js:2:1020242)
+	at c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\main.js:2:1026621
+	at Array.forEach (<anonymous>)
+	at b.dispose (c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\main.js:2:1026607)
+	at cv.<anonymous> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:106:20084)
+	at cv.dispose (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:106:20180)
+	at cv.<anonymous> (c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\main.js:2:1000086)
+	at cv.dispose (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:106:20180)
+	at ui (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:14992
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at PW.eb (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:11919)
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9874
+	at Array.map (<anonymous>)
+	at PW.$ (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9862)
+	at PW.terminate (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:10105)
+	at wC.terminate (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:117:1434)
+	at ts (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:15080)
+	at MessagePortMain.<anonymous> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:11628)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-03-02 15:45:50.402 [error] Canceled: Canceled
+	at new XR (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:110406)
+	at Uy.U (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:115016)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:112510)
+	at mw.g (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:32221)
+	at mw.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31725)
+	at r.registerCommand.description (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31055)
+	at mw.h (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:32741)
+	at mw.g (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31818)
+	at mw.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31725)
+	at Object.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:172:37254)
+	at set hasGitHubRepositories (c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\github\dist\extension.js:2:344164)
+	at c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\github\dist\extension.js:2:345123
+	at Ah.value (c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\main.js:2:1117802)
+	at D.B (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:2373)
+	at D.C (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:2443)
+	at D.fire (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:2660)
+	at Object.p [as dispose] (c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\main.js:2:1020242)
+	at c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\main.js:2:1026621
+	at Array.forEach (<anonymous>)
+	at b.dispose (c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\main.js:2:1026607)
+	at cv.<anonymous> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:106:20084)
+	at cv.dispose (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:106:20180)
+	at cv.<anonymous> (c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\main.js:2:1000086)
+	at cv.dispose (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:106:20180)
+	at ui (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:14992
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at PW.eb (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:11919)
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9874
+	at Array.map (<anonymous>)
+	at PW.$ (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9862)
+	at PW.terminate (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:10105)
+	at wC.terminate (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:117:1434)
+	at ts (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:15080)
+	at MessagePortMain.<anonymous> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:11628)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-03-02 15:45:50.402 [error] Canceled: Canceled
+	at new XR (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:110406)
+	at Uy.U (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:115016)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:112510)
+	at mw.g (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:32221)
+	at mw.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31725)
+	at r.registerCommand.description (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31055)
+	at mw.h (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:32741)
+	at mw.g (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31818)
+	at mw.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31725)
+	at Object.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:172:37254)
+	at f (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1479:63905)
+	at c (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1479:68465)
+	at ActionRunners._updateContextKeys (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:92462)
+	at s (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:90906)
+	at RegisteredActionRunner.unregister (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:91049)
+	at RegisteredActionRunner.dispose (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:89716)
+	at Object.dispose (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:91143)
+	at ui (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:14992
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at PW.eb (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:11919)
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9874
+	at Array.map (<anonymous>)
+	at PW.$ (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9862)
+	at PW.terminate (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:10105)
+	at wC.terminate (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:117:1434)
+	at ts (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:15080)
+	at MessagePortMain.<anonymous> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:11628)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-03-02 15:45:50.402 [error] Canceled: Canceled
+	at new XR (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:110406)
+	at Uy.U (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:115016)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:112510)
+	at mw.g (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:32221)
+	at mw.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31725)
+	at r.registerCommand.description (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31055)
+	at mw.h (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:32741)
+	at mw.g (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31818)
+	at mw.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31725)
+	at Object.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:172:37254)
+	at f (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1479:63905)
+	at c (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1479:68465)
+	at ActionRunners._updateContextKeys (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:92462)
+	at s (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:90906)
+	at RegisteredActionRunner.unregister (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:91049)
+	at RegisteredActionRunner.dispose (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:89716)
+	at Object.dispose (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:91143)
+	at ui (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:14992
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at PW.eb (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:11919)
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9874
+	at Array.map (<anonymous>)
+	at PW.$ (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9862)
+	at PW.terminate (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:10105)
+	at wC.terminate (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:117:1434)
+	at ts (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:15080)
+	at MessagePortMain.<anonymous> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:11628)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-03-02 15:45:50.402 [error] Canceled: Canceled
+	at new XR (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:110406)
+	at Uy.U (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:115016)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:112510)
+	at mw.g (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:32221)
+	at mw.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31725)
+	at r.registerCommand.description (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31055)
+	at mw.h (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:32741)
+	at mw.g (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31818)
+	at mw.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31725)
+	at Object.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:172:37254)
+	at f (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1479:63905)
+	at c (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1479:68465)
+	at ActionRunners._updateContextKeys (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:92462)
+	at s (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:90906)
+	at RegisteredActionRunner.unregister (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:91049)
+	at RegisteredActionRunner.dispose (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:89716)
+	at Object.dispose (c:\Users\habib\.vscode\extensions\eamodio.gitlens-16.3.2\dist\gitlens.js:1104:91143)
+	at ui (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:699)
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:14992
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1009
+	at Object.dispose (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+	at PW.eb (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:11919)
+	at file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9874
+	at Array.map (<anonymous>)
+	at PW.$ (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9862)
+	at PW.terminate (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:10105)
+	at wC.terminate (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:117:1434)
+	at ts (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:15080)
+	at MessagePortMain.<anonymous> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:11628)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949) setContext undefined
+2025-03-02 15:45:50.403 [error] Canceled: Canceled
+	at new XR (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:110406)
+	at Uy.U (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:115016)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:112510)
+	at mw.g (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:32221)
+	at mw.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31725)
+	at r.registerCommand.description (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31055)
+	at mw.h (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:32741)
+	at mw.g (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31818)
+	at mw.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31725)
+	at Object.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:172:37254)
+	at ConnectionController.disconnect (c:\Users\habib\.vscode\extensions\mongodb.mongodb-vscode-1.12.0\dist\extension.js:35:1033608)
+	at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+	at async MDBExtensionController.deactivate (c:\Users\habib\.vscode\extensions\mongodb.mongodb-vscode-1.12.0\dist\extension.js:35:1176419)
+	at async t.deactivate (c:\Users\habib\.vscode\extensions\mongodb.mongodb-vscode-1.12.0\dist\extension.js:35:1148644)
+	at async Promise.all (index 16)
+	at async PW.$ (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9888) setContext undefined
+2025-03-02 15:45:50.403 [error] Canceled: Canceled
+	at new XR (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:110406)
+	at Uy.U (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:115016)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:112510)
+	at mw.g (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:32221)
+	at mw.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31725)
+	at r.registerCommand.description (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31055)
+	at mw.h (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:32741)
+	at mw.g (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31818)
+	at mw.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:31725)
+	at Object.executeCommand (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:172:37254)
+	at ConnectionController.disconnect (c:\Users\habib\.vscode\extensions\mongodb.mongodb-vscode-1.12.0\dist\extension.js:35:1033676)
+	at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+	at async MDBExtensionController.deactivate (c:\Users\habib\.vscode\extensions\mongodb.mongodb-vscode-1.12.0\dist\extension.js:35:1176419)
+	at async t.deactivate (c:\Users\habib\.vscode\extensions\mongodb.mongodb-vscode-1.12.0\dist\extension.js:35:1148644)
+	at async Promise.all (index 16)
+	at async PW.$ (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:116:9888) setContext undefined
+2025-03-02 15:45:50.442 [error] Error: Channel has been closed
+	at s (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:2431)
+	at Object.appendLine (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:2570)
+	at D.logOutputMessage (c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\json-language-features\client\dist\node\jsonClientMain.js:2:292566)
+	at D.info (c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\json-language-features\client\dist\node\jsonClientMain.js:2:292299)
+	at ChildProcess.<anonymous> (c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\json-language-features\client\dist\node\jsonClientMain.js:2:510402)
+	at ChildProcess.emit (node:events:518:28)
+	at ChildProcess._handle.onexit (node:internal/child_process:293:12)
+2025-03-02 15:45:50.450 [error] Error: Channel has been closed
+	at s (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:2431)
+	at Object.appendLine (file:///c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:2570)
+	at D.logOutputMessage (c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\html-language-features\client\dist\node\htmlClientMain.js:2:272015)
+	at D.info (c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\html-language-features\client\dist\node\htmlClientMain.js:2:271748)
+	at ChildProcess.<anonymous> (c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\html-language-features\client\dist\node\htmlClientMain.js:2:489851)
+	at ChildProcess.emit (node:events:518:28)
+	at ChildProcess._handle.onexit (node:internal/child_process:293:12)
+2025-03-02 15:45:50.461 [info] Extension host with pid 18544 exiting with code 0

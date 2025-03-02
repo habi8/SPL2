@@ -1,0 +1,5 @@
+2025-03-02 14:40:21.435 [info] MongoDBService initializing...
+2025-03-02 14:40:21.468 [info] MongoDBService initialized {"extensionPath":"c:\\Users\\habib\\.vscode\\extensions\\mongodb.mongodb-vscode-1.12.0","connectionId":null,"hasConnectionString":false,"hasConnectionOptions":false}
+2025-03-02 14:50:19.795 [info] Changing NodeDriverServiceProvider active connection... {"currentConnectionId":null,"newConnectionId":"28d511e3-879e-45f9-88f1-d3ea3380c9c4","hasConnectionString":true,"hasConnectionOptions":true}
+2025-03-02 14:50:19.870 [info] NodeDriverServiceProvider active connection has changed: { connectionId: 28d511e3-879e-45f9-88f1-d3ea3380c9c4 }
+2025-03-02 15:45:50.447 [info] [Error - 3:45:50 PM] Server process exited with code 0.

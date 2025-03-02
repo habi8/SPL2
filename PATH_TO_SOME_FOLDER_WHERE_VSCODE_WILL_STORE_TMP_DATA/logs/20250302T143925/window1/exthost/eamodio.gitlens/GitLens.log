@@ -1,0 +1,9 @@
+2025-03-02 14:39:31.904 [info] GitLens v16.3.2 activating in Visual Studio Code (1.97.2) on the desktop; language='en', logLevel='warn', defaultDateLocale='null' (e820c39a7328ab40885eb5dfca1be1b7eb25c91a5f0d84d935a951ac09d7e362|6b447e59-fe60-4125-a9ce-63a3c22e94e71740904766910)
+To enable debug logging, set `"gitlens.outputLevel": "debug"` or run "GitLens: Enable Debug Logging" from the Command Palette
+
+2025-03-02 14:40:01.883 [info] GitLens v16.3.2 activating in Visual Studio Code (1.97.2) on the desktop; language='en', logLevel='warn', defaultDateLocale='null' (e820c39a7328ab40885eb5dfca1be1b7eb25c91a5f0d84d935a951ac09d7e362|728f2109-6b63-4ff4-968a-ace43ce69e521740904799083)
+To enable debug logging, set `"gitlens.outputLevel": "debug"` or run "GitLens: Enable Debug Logging" from the Command Palette
+
+2025-03-02 15:21:31.856 [info] [2025-03-02 09:21:31.341] [GIT          ] [c:\Users\habib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\node_modules\typescript\lib] git rev-parse --show-toplevel • Command failed: C:\Program Files\Git\cmd\git.exe -c core.longpaths=true -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any of the parent directories): .git [71ms]
+
+

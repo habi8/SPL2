@@ -1,0 +1,5 @@
+{
+    "database-client.autoSync": true,
+    "sqldeveloper.sqlHistory.historyLimit": 500,
+    "sqldeveloper.telemetry.enabled": true
+}

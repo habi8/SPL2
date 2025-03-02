@@ -1,0 +1,14 @@
+[3/2/2025, 2:39:32 PM] [dbtools-ext     ] [INFO ] Activating Oracle SQL Developer Extension for VSCode...
+[3/2/2025, 2:39:32 PM] [dbtools-client  ] [INFO ] Starting server...
+[3/2/2025, 2:39:32 PM] [dbtools-client  ] [INFO ] Server startup completed
+[3/2/2025, 2:39:38 PM] [dbtools-client  ] [INFO ] Server 'Oracle SQL Developer for VS Code' 24.4.1 running at http://localhost:53358/
+[3/2/2025, 2:39:38 PM] [dbtools-client  ] [INFO ] Language Services connecting at http://localhost:53358/20221610/language-server/socket
+[3/2/2025, 2:39:38 PM] [dbtools-client  ] [INFO ] Language Services Websocket Created
+[3/2/2025, 2:39:38 PM] [dbtools-ext     ] [INFO ] Oracle SQL Developer Extension for VSCode has been activated
+[3/2/2025, 2:39:58 PM] [language-service] [INFO ] Closing
+[3/2/2025, 2:39:58 PM] [language-service] [INFO ] closed
+[3/2/2025, 2:39:58 PM] [dbtools-client  ] [INFO ] Closing
+[3/2/2025, 2:39:58 PM] [dbtools-client  ] [INFO ] Sending server shutdown
+[3/2/2025, 2:39:58 PM] [DBToolsServerApp(352)] [INFO ] 2025-03-02T08:39:58.675Z INFO    Shutting down: http://localhost:53358/
+[3/2/2025, 2:39:58 PM] [dbtools-client  ] [INFO ] dbtools-server process terminated
+[3/2/2025, 2:39:58 PM] [dbtools-client  ] [INFO ] Closed
