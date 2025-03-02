@@ -71,25 +71,44 @@ app.post('/OTP', async (req, res) => {
     
 });
 
-app.post("/verify-otp", (req, res) => {
-    const { email, otp } = req.body;
-   //const email = req.session.email;
+//const User = require('./models/User'); // Import your User model
 
-    //where do i get the email from? becuase i dont save the email after i press the verify otp button in OTP.ejs rather email is stored in signup.ejs module
+app.post('/verify-otp', async (req, res) => {
+    const { email, otp } = req.body;
+
     if (!email || !otp) {
         return res.status(400).json({ success: false, message: "Email and OTP are required" });
     }
 
-    console.log("Fetching OTP for email:", email);
     const storedOtp = otpStorage.get(email);
-    console.log("Stored OTP in OTPStorage is: ",storedOtp)
+    console.log("Stored OTP in OTPStorage is:", storedOtp);
+
     if (storedOtp === otp) {
         otpStorage.delete(email); // Clear OTP after verification
-        return res.json({ success: true, message: "OTP verified successfully" });
+
+        // **Update the user's verified field**
+        try {
+            const updatedUser = await collection.findOneAndUpdate(
+                { email: email },        // Find user by email
+                { $set: { verified: true } }, // Update 'verified' field to true
+                { new: true }            // Return the updated document
+            );
+
+            if (!updatedUser) {
+                return res.status(404).json({ success: false, message: "User not found" });
+            }
+
+            return res.json({ success: true, message: "OTP verified successfully", user: updatedUser });
+
+        } catch (error) {
+            console.error("Error updating user:", error);
+            return res.status(500).json({ success: false, message: "Database update failed" });
+        }
     }
 
     return res.status(401).json({ success: false, message: "Invalid OTP" });
 });
+
 
 // 📌 Route to resend OTP
 app.post("/resend-otp", async (req, res) => {
@@ -97,12 +116,36 @@ app.post("/resend-otp", async (req, res) => {
     if (!email) return res.status(400).json({ success: false, message: "Email required" });
 
     const mailResponse = await sendOTPEmail(email);
+
+    otpStorage.set(email,mailResponse.otp);  
     if (mailResponse.success) {
         return res.json({ success: true, message: "New OTP sent" });
     } else {
         return res.status(500).json({ success: false, message: "Failed to resend OTP" });
     }
 });
+app.get("/setPassword", (req, res) => {
+    res.render("setPassword"); // Render setPassword.ejs
+});
+
+app.post("/setpassword", async (req, res) => {
+    const { email, password } = req.body;
+
+    if (!email || !password) {
+        return res.json({ success: false, message: "Missing fields!" });
+    }
+
+    try {
+        const hashedPassword = await bcrypt.hash(password, 10); // Hash password for security
+        await collection.updateOne({ email }, { $set: { password: hashedPassword, verified: true } });
+
+        res.json({ success: true, message: "Password set successfully!" });
+    } catch (error) {
+        console.error("Error setting password:", error);
+        res.json({ success: false, message: "Server error!" });
+    }
+});
+
 
 
 app.get('/',(req,res)=>{
