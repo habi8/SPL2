@@ -162,6 +162,10 @@ app.get('/ocean',(req,res)=>{
     res.render('ocean')
 })
 
+app.get('/shark_sprint',(req,res)=>{
+    res.render('shark_sprint')
+})
+
  app.get('/signup',(req,res)=>{
      console.log('signup route accessed')
     res.render('signup')
