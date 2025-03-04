@@ -10,10 +10,11 @@ body {
 
 .ocean-container {
     width: 100%;
-    height: 500vh;
+    height: 2000vh;
     position: relative;
 }
 
+/* Moving Text Animation */
 .moving-text {
     position: fixed;
     top: 20px;
@@ -33,15 +34,19 @@ body {
     0% { left: -100%; }
     100% { left: 100%; }
 }
+
+/* Ocean Layer Base */
 .ocean-layer {
-    height: 100vh;
+    height: 500vh;
     text-align: center;
     padding-top: 20vh;
     box-sizing: border-box;
     position: relative;
     transition: background 1s ease-in-out;
+    overflow: hidden;
 }
 
+/* Background Colors for Ocean Layers */
 #sunlight-zone {
     background: linear-gradient(to bottom, #1E90FF, #00BFFF);
 }
@@ -61,18 +66,150 @@ body {
 #trenches-zone {
     background: linear-gradient(to bottom, #1a001a, #050007);
 }
+/* Water Ripple Effect */
+.water-effect {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 70%);
+    opacity: 0.15;
+    animation: waterWaves 0.1 infinite linear, rippleEffect 10s infinite ease-in-out;
+    pointer-events: none;
+}
 
+/* Subtle Wave Movement */
+@keyframes waterWaves {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Ripple Expansion Effect */
+@keyframes rippleEffect {
+    0% { background-size: 50% 50%; opacity: 0.2; }
+    50% { background-size: 80% 80%; opacity: 0.3; }
+    100% { background-size: 50% 50%; opacity: 0.2; }
+}
+
+
+
+
+
+/* Bubble Effect */
+.bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.bubbles span {
+    position: absolute;
+    bottom: -50px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: riseUp linear infinite;
+}
+
+@keyframes riseUp {
+    from { transform: translateY(0); opacity: 0.6; }
+    to { transform: translateY(-200vh); opacity: 0; }
+}
+
+/* Different Bubble Sizes & Speeds */
+.bubbles span:nth-child(1) {
+    width: 20px;
+    height: 20px;
+    left: 10%;
+    animation-duration: 5s;
+}
+
+.bubbles span:nth-child(2) {
+    width: 15px;
+    height: 15px;
+    left: 30%;
+    animation-duration: 8s;
+}
+
+.bubbles span:nth-child(3) {
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    animation-duration: 6s;
+}
+
+.bubbles span:nth-child(4) {
+    width: 25px;
+    height: 25px;
+    left: 70%;
+    animation-duration: 9s;
+}
+
+.bubbles span:nth-child(5) {
+    width: 18px;
+    height: 18px;
+    left: 90%;
+    animation-duration: 7s;
+}
 
 .layer-title {
     font-size: 1.5rem;
     text-shadow: 0 0 10px #fff;
 }
 
+/* Species Placement */
+.species-icon {
+    position: absolute;
+    width: 100px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Sunlight Zone Species (0-200m) */
+#blacktip-reef-shark { bottom: 400px; right: 100px; }
+#blue-coral { height:100px; width:200px ; bottom:100px; right: 200px; }
+#brown-marbled-grouper { bottom: 200px; right: 300px; }
+#chevron-butterflyfish { bottom: 300px; right: 40px; }
+#diploastrea-brain-coral { bottom: 100px; right: 00px; }
+
+/* Twilight Zone Species (200-1000m) */
+#whitecheek-shark { bottom: 900px; right: 0px; }
+#spot-tail-shark { bottom: 1000px; right: 200px; }
+#swordfish { bottom: 1100px; right: 50px; }
+#tiger-shark { bottom: 1500px; right: 400px; }
+#larger-star-coral { bottom: 1300px; right: 500px; }
+
+/* Midnight Zone Species (1000-4000m) */
+#bigeye-thresher { bottom: 1400px; right: 100px; }
+#bigeye-tuna { bottom: 1500px; right: 200px; }
+#dusky-shark { bottom: 1600px; right: 300px; }
+#bignose-shark { bottom: 1700px; right: 400px; }
+
+
+/* Abyss Zone Species (4000-6000m) */
+#blue-shark { bottom: 1800px; right: 500px; }
+#longfin-mako-shark { bottom: 1900px; right: 100px; }
+#leopard-torpedo { bottom: 2000px; right: 200px; }
+#narrow-barred-spanish-mackerel { bottom: 2100px; right: 300px; }
+#mushroom-coral { bottom: 2200px; right: 400px; }
+#octopus-coral { bottom: 2300px; right: 500px; }
+
+/* Trenches Zone Species (6000m+) */
+#open-brain-coral { bottom: 2400px; right: 100px; }
+#torch-coral { bottom: 2500px; right: 200px; }
+#octopus-coral { bottom: 2600px; right: 300px; }
+
+
 
 .info-icon {
     position: absolute;
-    bottom: 300px;
-    right: 130px;
+    bottom: 100px;
+    right: 110px;
     width: 50px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
@@ -81,7 +218,6 @@ body {
 .info-icon:hover {
     transform: scale(1.2);
 }
-
 
 .info-box {
     position: absolute;
