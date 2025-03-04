@@ -39,11 +39,84 @@ squidImage.src = 'squid.png';
 const trashImage = new Image();
 trashImage.src = 'plastic.png';
 
+
+//let username = localStorage.getItem("shark_sprint_username") || null;
+
+async function askForUsername() {
+    let username = localStorage.getItem("username");
+
+    while (!username) {
+        username = prompt("Enter your username:");
+        if (username) {
+            localStorage.setItem("username", username);
+            return username;  // Return the username after it's set
+        } else {
+            alert("Username is required to play!");
+        }
+    }
+
+    return username;
+}
+
+
+let username = askForUsername();
+
+  // Declare globally
+
+  async function startGame() {
+    username = await askForUsername();  // Ensure username is set
+    console.log("Username set:", username);  
+    updateGame(); // Start the game loop ONLY after username is set
+}
+
+startGame(); // Call it when the script loads
+ // Call it to start the game properly
+
+
+async function saveScore(score) {
+    try {
+        const response = await fetch("/save-score", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username, score })
+        });
+
+        const data = await response.json();
+        console.log("Save Score Response:", data.message);
+    } catch (error) {
+        console.error("Error saving score:", error);
+    }
+}
+
+async function fetchLeaderboard() {
+    try {
+        const response = await fetch("/leaderboard");
+        const leaderboard = await response.json();
+
+        if (!Array.isArray(leaderboard)) {
+            console.error("Invalid leaderboard response:", leaderboard);
+            return;
+        }
+
+        let leaderboardText = "🏆 LEADERBOARD 🏆\n\n";
+        leaderboard.forEach((player, index) => {
+            leaderboardText += `${index + 1}. ${player.username} - ${player.highScore}\n`;
+        });
+
+        alert(leaderboardText); // Replace with in-game UI if needed
+    } catch (error) {
+        console.error("Error fetching leaderboard:", error);
+    }
+}
+
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         togglePause();
     } else if (isPaused && e.key === 'Enter') {
         quitGame(); // Call quitGame() when Enter is pressed
+    }
+    else if (isPaused && e.key === ' '){
+        fetchLeaderboard();
     }
 });
 
@@ -59,7 +132,9 @@ function togglePause() {
 }
 
 function quitGame() {
-    window.location.href = '/'; // Change this to your actual homepage URL
+   
+    localStorage.removeItem("username"); // Clear stored username
+    window.location.href='/' // Reload game to prompt for username again// Change this to your actual homepage URL
 }
 
 
@@ -73,6 +148,7 @@ function drawPauseMenu() {
     ctx.fillText('Game Paused', canvas.width / 2, canvas.height / 2 - 40);
     ctx.fillText('Press ESC to Resume', canvas.width / 2, canvas.height / 2);
     ctx.fillText('Press ENTER to Quit', canvas.width / 2, canvas.height / 2 + 40);
+    ctx.fillText('Press SPACE for Leaderboard', canvas.width / 2, canvas.height / 2 + 80);
 }
 
 // Player Class
@@ -101,13 +177,25 @@ class Player {
         this.x += this.dx;
 
         // Keep player inside bounds
-        if (this.y < 0) this.y = 0;
-        if (this.y > canvas.height - this.height) this.y = canvas.height - this.height;
+        // if (this.y < 0) this.y = 0;
+        // if (this.y > canvas.height - this.height) this.y = canvas.height - this.height;
+        // if (this.x > canvas.width - this.width) this.x = canvas.width - this.width;
+        // if (this.x < 0) this.x = 0;
+        // 🚨 Check if the player touches the top or bottom of the screen 🚨
+        if (this.y <= 0 || this.y >= canvas.height - this.height) {
+            gameOver(); // Trigger game over
+        }
+
+        // Keep player inside left & right bounds
         if (this.x > canvas.width - this.width) this.x = canvas.width - this.width;
         if (this.x < 0) this.x = 0;
     }
 }
-
+function gameOver() {
+    saveScore(score);  // Save the final score
+    alert('Game Over! You hit the boundary. Your final score: ' + score);
+    document.location.reload();  // Restart the game
+}
 // Enemy Class
 class Enemy {
     constructor(image) {
@@ -168,6 +256,7 @@ function checkCollisions() {
             player.y + player.height > trash.y
         ) {
             score += 500;
+            saveScore(score)
             return false;
         }
         return true;
@@ -181,6 +270,7 @@ function checkCollisions() {
             player.y < enemy.y + enemy.height &&
             player.y + player.height > enemy.y
         ) {
+            saveScore(score); 
             alert('Game Over! Your final score: ' + score);
             document.location.reload();
         }
@@ -253,6 +343,8 @@ function updateGame() {
         isGameRunning = false;
         updateGame();
     });
+
+   
 }
 
-updateGame();
+//updateGame();

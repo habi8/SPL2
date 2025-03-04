@@ -41,5 +41,11 @@ const LoginSchema = new mongoose.Schema({
     }
 })
 
+const playerSchema = new mongoose.Schema({
+    username: { type: String, unique: true, required: true },
+    highScore: { type: Number, default: 0 }
+});
+
 const collection =  mongoose.model('Users',LoginSchema);
-module.exports = collection;
+const Player = mongoose.model("shark_sprint", playerSchema);
+module.exports = {collection, Player};

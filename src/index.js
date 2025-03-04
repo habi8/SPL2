@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 const bcrypt = require('bcrypt')
-const collection = require('./config')
+const {collection,Player } = require('./config')
 const router = express.Router();
 
 require('dotenv').config();
@@ -23,6 +23,7 @@ const otpStorage = new Map();// Store {email: otp}
 
 // Replace the previous OTP route with this
 const { sendOTPEmail } = require('./mailer'); // Import mailer.js
+const { log } = require('console');
 app.post('/OTP', async (req, res) => {            
     console.log("Signup & OTP Sending Process Started");
 
@@ -230,6 +231,43 @@ app.post('/login',async(req,res)=>{
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
+
+app.post("/save-score", async (req, res) => {
+    const { username, score } = req.body;
+
+    try {
+        let player = await Player.findOne({ username });
+
+        if (player) {
+            if (score > player.highScore) {
+                player.highScore = score;
+                await player.save();
+            }
+        } else {
+            player = new Player({ username, highScore: score });
+            await player.save();
+        }
+
+        res.json({ message: "Score saved successfully!", player });
+    } catch (err) {
+        console.error("Error saving score:", err);
+        res.status(500).json({ message: "Failed to save score", error: err });
+    }
+});
+
+
+// Fetch Leaderboard
+app.get("/leaderboard", async (req, res) => {
+    try {
+        const leaderboard = await Player.find().sort({ highScore: -1 }).limit(5);
+        res.json(leaderboard);
+    } catch (err) {
+        console.error("Error fetching leaderboard:", err);
+        res.status(500).json({ message: "Failed to fetch leaderboard", error: err });
+    }
+});
+
+
 
 
 app.listen(5000,()=>{
