@@ -43,6 +43,7 @@ trashImage.src = 'plastic.png';
 //let username = localStorage.getItem("shark_sprint_username") || null;
 
 async function askForUsername() {
+    
     let username = localStorage.getItem("username");
 
     while (!username) {
@@ -59,14 +60,17 @@ async function askForUsername() {
 }
 
 
-let username = askForUsername();
+//let username = askForUsername();
 
   // Declare globally
 
-  async function startGame() {
-    username = await askForUsername();  // Ensure username is set
-    console.log("Username set:", username);  
-    updateGame(); // Start the game loop ONLY after username is set
+async function startGame() {
+    
+    username = await askForUsername();  // Wait for a valid username
+    console.log("Username set:", username);  // Debugging
+
+
+    updateGame(); // Now start the game
 }
 
 startGame(); // Call it when the script loads
@@ -177,11 +181,6 @@ class Player {
         this.x += this.dx;
 
         // Keep player inside bounds
-        // if (this.y < 0) this.y = 0;
-        // if (this.y > canvas.height - this.height) this.y = canvas.height - this.height;
-        // if (this.x > canvas.width - this.width) this.x = canvas.width - this.width;
-        // if (this.x < 0) this.x = 0;
-        // 🚨 Check if the player touches the top or bottom of the screen 🚨
         if (this.y <= 0 || this.y >= canvas.height - this.height) {
             gameOver(); // Trigger game over
         }
@@ -346,5 +345,3 @@ function updateGame() {
 
    
 }
-
-//updateGame();
