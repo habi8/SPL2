@@ -29,7 +29,7 @@ app.post('/OTP', async (req, res) => {
 
     const { email, name, institute, occupation } = req.body;
 
-    const existingUser = await collection.findOne({ email });
+    const existingUser = await collection.findOne({ email ,password: { $exists: true, $ne: null }});
     if (existingUser) return res.send("User already exists");
 
     else{
@@ -37,7 +37,7 @@ app.post('/OTP', async (req, res) => {
          // Send OTP via mail
     const mailResponse = await sendOTPEmail(email);
     const otp = mailResponse.otp;
-    console.log(mailResponse);
+    console.log("Mail response: ",mailResponse);
 
     if (mailResponse.success) {
         const data = {
@@ -45,19 +45,20 @@ app.post('/OTP', async (req, res) => {
             occupation:req.body.Role,
             name: req.body.name,
             email: req.body.email,
-           // OTP: "1234",
+            OTP: otp,
             //password: req.body.password
             //shouldn't i add email and otp to the otpStorage map?
         }
 
 
         otpStorage.set(email,otp);        
+        console.log("email: ",email,"OTP: ",otp)
         
            // const saltRounds = 10
             //const hashedPassword = await bcrypt.hash(data.password,saltRounds)
             //data.password = hashedPassword
             const userdata = await collection.insertMany(data)
-            console.log(userdata)
+           // console.log(userdata)
             console.log("Written on db")
             //res.render('OTP')
 
@@ -76,16 +77,18 @@ app.post('/OTP', async (req, res) => {
 
 app.post('/verify-otp', async (req, res) => {
     const { email, otp } = req.body;
+    console.log("Email and OTP: ",req.body)
 
     if (!email || !otp) {
         return res.status(400).json({ success: false, message: "Email and OTP are required" });
     }
 
     const storedOtp = otpStorage.get(email);
-    console.log("Stored OTP in OTPStorage is:", storedOtp);
+    console.log("Stored email and OTP in OTPStorage is:",email, storedOtp);
 
     if (storedOtp === otp) {
-        otpStorage.delete(email); // Clear OTP after verification
+        //otpStorage.clear(); 
+        // // Clear OTP after verification
 
         // **Update the user's verified field**
         try {
@@ -217,7 +220,7 @@ app.post('/login',async(req,res)=>{
         const isPasswordMatch = await bcrypt.compare(req.body.password,check.password)
         if(isPasswordMatch){
            // res.render('community')
-           res.send('login successful')
+           res.render('newsfeed')
         }
         else{
             req.send('wrong password')

@@ -45,8 +45,10 @@
 async function verifyOTP() {
  // ✅ Debugging: Check if function is running
 
-const email = localStorage.getItem("email"); // ✅ Get email from localStorage
+let email = localStorage.getItem("email"); // ✅ Get email from localStorage
+console.log("CALLED.",email)
 if (!email) {
+    
     alert("⚠️ Email not found! Please sign up again.");
     console.log("Email OK");
     return;
@@ -81,7 +83,7 @@ try {
 
 async function resendOTP() {
     const email = localStorage.getItem("email");
-
+    console.log("CALLED in resend",email)
     if (!email) {
         alert("⚠️ Email not found! Please sign up again.");
         return;
