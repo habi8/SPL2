@@ -10,38 +10,93 @@
     <div class="moving-text" id="movingText">Welcome to Bay Of Bengal</div>
 
     <div class="ocean-container">
+
+        <!-- Sunlight Zone (Epipelagic, 0-200m) -->
         <section class="ocean-layer" id="sunlight-zone">
-            <img src="diver.svg" class="info-icon" data-zone="sunlight-zone">
+            <div class="water-effect"></div>
+            <div class="bubbles">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
             <h1 class="layer-title">Sunlight Zone</h1>
-           
+            <a href="https://marinebiodiversity.org.bd/species/carcharhinus-melanopterus/" target="_blank">
+                <img src="blacktip.png" class="species-icon" id="blacktip-reef-shark">
+            </a>
+            <a href="https://marinebiodiversity.org.bd/species/heliopora-coerulea/" target="_blank">
+                <img src="bluecoral.png" class="species-icon" id="blue-coral">
+            </a>
+            <a href="https://marinebiodiversity.org.bd/species/epinephelus-fuscoguttatus/" target="_blank">
+                <img src="Brown.png" class="species-icon" id="brown-marbled-grouper">
+            </a>
+            <a href="https://marinebiodiversity.org.bd/species/chaetodon-trifascialis/" target="_blank">
+                <img src="chevron.png" class="species-icon" id="chevron-butterflyfish">
+            </a>
+            <a href="https://marinebiodiversity.org.bd/species/diploastrea-heliopora/" target="_blank">
+                <img src="BrainCoral.png" class="species-icon" id="diploastrea-brain-coral">
+            </a>
+            <img src="diver.svg" class="info-icon" data-zone="sunlight-zone">
         </section>
 
+        <!-- Twilight Zone (Mesopelagic, 200-1000m) -->
         <section class="ocean-layer" id="twilight-zone">
-            <img src="diver.svg" class="info-icon" data-zone="twilight-zone">
+            <div class="water-effect"></div>
+            <div class="bubbles">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
             <h1 class="layer-title">Twilight Zone</h1>
+            <a href="#"><img src="starcoral.png" class="species-icon" id="larger-star-coral"></a>
+            <a href="#"><img src="whitecheek.png" class="species-icon" id="whitecheek-shark"></a>
+            <a href="#"><img src="spottail.png" class="species-icon" id="spot-tail-shark"></a>
+            <a href="#"><img src="sword.png" class="species-icon" id="swordfish"></a>
+            <a href="#"><img src="tiger.png" class="species-icon" id="tiger-shark"></a>
+            <img src="diver.svg" class="info-icon" data-zone="twilight-zone">
         </section>
 
+        <!-- Midnight Zone (Bathypelagic, 1000-4000m) -->
         <section class="ocean-layer" id="midnight-zone">
-            <img src="diver.svg" class="info-icon" data-zone="midnight-zone">
+            <div class="water-effect"></div>
+            <div class="bubbles">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
             <h1 class="layer-title">Midnight Zone</h1>
+            <a href="#"><img src="dusky.png" class="species-icon" id="dusky-shark"></a>
+            <a href="#"><img src="threser.png" class="species-icon" id="bigeye-thresher"></a>
+            <a href="#"><img src="bibeyetuna.png" class="species-icon" id="bigeye-tuna"></a>
+            <a href="#"><img src="Bignose.png" class="species-icon" id="bignose-shark"></a>
+            <img src="diver.svg" class="info-icon" data-zone="midnight-zone">
         </section>
 
+        <!-- Abyss Zone (Abyssopelagic, 4000-6000m) -->
         <section class="ocean-layer" id="abyss-zone">
-            <img src="diver.svg" class="info-icon" data-zone="abyss-zone">
+            <div class="water-effect"></div>
+            <div class="bubbles">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
             <h1 class="layer-title">Abyss Zone</h1>
+            <a href="#"><img src="Blueshark.png" class="species-icon" id="blue-shark"></a>
+            <a href="#"><img src="longfin.png" class="species-icon" id="longfin-mako-shark"></a>
+            <a href="#"><img src="leopard.png" class="species-icon" id="leopard-torpedo"></a>
+            <a href="#"><img src="Narrow.png" class="species-icon" id="narrow-barred-spanish-mackerel"></a>
+            <a href="#"><img src="mushroom.png" class="species-icon" id="mushroom-coral"></a>
+            <img src="diver.svg" class="info-icon" data-zone="abyss-zone">
         </section>
 
+        <!-- Trenches Zone (Hadopelagic, 6000m+) -->
         <section class="ocean-layer" id="trenches-zone">
-            <img src="diver.svg" class="info-icon" data-zone="trenches-zone">
+            <div class="water-effect"></div>
+            <div class="bubbles">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
             <h1 class="layer-title">Trenches</h1>
+            <a href="#"><img src="octopuscoral.png" class="species-icon" id="octopus-coral"></a>
+            <a href="#"><img src="Openbrain.png" class="species-icon" id="open-brain-coral"></a>
+            <a href="#"><img src="torch.png" class="species-icon" id="torch-coral"></a>
+            <img src="diver.svg" class="info-icon" data-zone="trenches-zone">
         </section>
     </div>
 
     <div id="info-box" class="info-box hidden">
         <p id="zone-info"></p>
     </div>
-
-   
 
     <script src="Ocean.js"></script>
 </body>
