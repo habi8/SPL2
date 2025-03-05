@@ -3,6 +3,7 @@ const path = require('path')
 const bcrypt = require('bcrypt')
 const {collection,Player } = require('./config')
 const router = express.Router();
+const session = require("express-session");
 
 require('dotenv').config();
 const mongoose = require('mongoose');
@@ -15,7 +16,7 @@ const cors = require('cors');
 const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-
+app.use(express.urlencoded({ extended: true }));
 app.set('view engine','ejs','js')
 
 app.use(express.static('public'))
@@ -24,10 +25,23 @@ const otpStorage = new Map();// Store {email: otp}
 // Replace the previous OTP route with this
 const { sendOTPEmail } = require('./mailer'); // Import mailer.js
 const { log } = require('console');
+
+app.use(session({
+    secret: 'your-secret-key',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false } // Use secure cookies if over HTTPS
+}));
+
+
+
 app.post('/OTP', async (req, res) => {            
     console.log("Signup & OTP Sending Process Started");
 
-    const { email, name, institute, occupation } = req.body;
+    // const { email, name, institute, occupation } = req.body;
+    const { email, name } = req.body; // Capture email and username from the form
+    req.session.email = email;  // Store email in session
+    req.session.username = name;
 
     const existingUser = await collection.findOne({ email ,password: { $exists: true, $ne: null }});
     if (existingUser) return res.send("User already exists");
@@ -101,7 +115,7 @@ app.post('/verify-otp', async (req, res) => {
             if (!updatedUser) {
                 return res.status(404).json({ success: false, message: "User not found" });
             }
-
+            req.session.destroy()
             return res.json({ success: true, message: "OTP verified successfully", user: updatedUser });
 
         } catch (error) {
@@ -211,25 +225,44 @@ app.get('/login',(req,res)=>{
     console.log('login route access')
     res.render('login')
 })
-app.post('/newsfeed',async(req,res)=>{
-    try{
-        const check = await collection.findOne({email:req.body.email})
-        if(!check){
-            res.send("user not found")
+let name='';
+app.post('/newsfeed', async (req, res) => {
+    req.session.email = req.body.email;
+    const email = req.session.email;
+    let user = await collection.findOne({ email : email })
+    name = user.name;
+    req.session.name = name;
+    try {
+        // Check if the session email exists
+        console.log("Session email:", email);
+        if (!req.session.email) {
+            return res.send("Session email is missing.");
         }
-        const isPasswordMatch = await bcrypt.compare(req.body.password,check.password)
-        if(isPasswordMatch){
-           // res.render('community')
-           res.render('newsfeed')
+
+        // Look for user in the database
+        const check = await collection.findOne({ email: email });
+        if (!check) {
+            return res.send("User not found");
         }
-        else{
-            req.send('wrong password')
+
+        // Compare password with the hashed password in the database
+        const isPasswordMatch = await bcrypt.compare(req.body.password, check.password);
+        if (isPasswordMatch) {
+            // Render the newsfeed page if the password matches
+            res.render('newsfeed');
+        } else {
+            return res.send('Wrong password');
         }
+    } catch (error) {
+        console.error(error);
+        res.send("Wrong info");
     }
-    catch{
-        res.end("Wrong info")
-    }
-})
+});
+
+app.get('/newsfeed',(req,res)=>{
+    res.render('newsfeed')
+});
+
 
 // Middleware
 app.use(bodyParser.json());
@@ -270,18 +303,85 @@ app.get("/leaderboard", async (req, res) => {
     }
 });
 
-app.get('/profile', async (req, res) => {
-    // try {
-        // const user = req.session.user; // Assume user data is stored in session
-        // if (!user) {
-            // return res.redirect('/login'); // Redirect if not logged in
-        // }
+// app.get('/profile', async (req, res) => {
+//     // try {
+//         // const user = req.session.user; // Assume user data is stored in session
+//         // if (!user) {
+//             // return res.redirect('/login'); // Redirect if not logged in
+//         // }
         
-        res.render('profile'); // Render profile.ejs and pass user data
-    // } catch (error) {
-    //     console.error("Error loading profile:", error);
-    //     res.status(500).send("Internal Server Error");
-    // }
+//         res.render('profile'); // Render profile.ejs and pass user data
+//     // } catch (error) {
+//     //     console.error("Error loading profile:", error);
+//     //     res.status(500).send("Internal Server Error");
+//     // }
+// });
+
+// Route to display the profile page
+app.get('/profile', async (req, res) => {
+    if (!req.session.email) {
+        return res.redirect('/login'); // If no session email, redirect to login
+    }
+
+    try {
+        // Find the user by the email stored in the session
+        const user = await collection.findOne({ email: req.session.email });
+
+        if (user) {
+            // Pass the user's userName to the EJS template
+            console.log(user.userName)
+            res.render('profile', { Name: user.name ,userName: user.userName,bio: user.bio});
+        } else {
+            res.status(404).send('User not found');
+        }
+    } catch (err) {
+        res.status(500).send('Error retrieving user');
+    }
+});
+
+app.post('/checkUsername', async (req, res) => {
+    const { username } = req.body;
+
+    // Check if the username already exists in the database
+    try {
+        const exists = await checkUsernameExists(username);
+
+        // Respond with whether the username is available
+        res.json({ isAvailable: !exists });
+    } catch (error) {
+        console.error('Error checking username:', error);
+        res.status(500).send('Internal server error');
+    }
+});
+
+// Your update profile endpoint
+app.post('/updateProfile', async (req, res) => {
+    const { username, name, bio } = req.body;
+
+    try {
+        let email = req.session.email;  // Get email from session
+        console.log("Updating profile for email:", email); // Debugging
+
+        if (!email) {
+            return res.status(400).json({ error: "Email not found in session" });
+        }
+
+        const result = await collection.findOneAndUpdate(
+            { email },  // Find the user by email
+            { $set: { userName: username, name: name, bio: bio } },  // Fields to update
+            { returnDocument: "after" }  // Ensure updated document is returned
+        );
+
+        if (!result) {
+            return res.status(404).json({ error: "User not found" });
+        }
+
+        res.status(200).json({ message: "Profile updated successfully", updatedUser: result });
+
+    } catch (error) {
+        console.error('Error updating profile:', error);
+        res.status(500).json({ error: "Error updating profile" });
+    }
 });
 
 

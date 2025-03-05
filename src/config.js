@@ -38,26 +38,10 @@ const LoginSchema = new mongoose.Schema({
     verified:{
         type: Boolean,
         required: false
-    }
-})
-
-const playerSchema = new mongoose.Schema({
-    username: { type: String, unique: true, required: true },
-    highScore: { type: Number, default: 0 }
-});
-
-const userSchema = new mongoose.Schema({
-    email:{
-        type: String,
-        required: true
     },
-    username:{
+    userName:{
         type: String,
-        required:true
-    },
-    name:{
-        type: String,
-        required: true
+        required: false
     },
     posts:{
         type: String,
@@ -70,7 +54,20 @@ const userSchema = new mongoose.Schema({
     friends:[{type: String}]
 })
 
+const playerSchema = new mongoose.Schema({
+    username: { type: String, unique: true, required: true },
+    highScore: { type: Number, default: 0 }
+});
+
+const CommunitySchema = new mongoose.Schema({
+    posts:{
+        type: String,
+        required:false
+    },
+    users:[{type: String}]
+})
+
 const collection =  mongoose.model('Users',LoginSchema);
 const Player = mongoose.model("shark_sprint", playerSchema);
-const users = mongoose.model("community",userSchema)
-module.exports = {collection, Player,users};
+const community = mongoose.model("community",CommunitySchema)
+module.exports = {collection, Player,community};
