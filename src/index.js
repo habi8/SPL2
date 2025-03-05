@@ -211,7 +211,7 @@ app.get('/login',(req,res)=>{
     console.log('login route access')
     res.render('login')
 })
-app.post('/login',async(req,res)=>{
+app.post('/newsfeed',async(req,res)=>{
     try{
         const check = await collection.findOne({email:req.body.email})
         if(!check){
@@ -269,6 +269,21 @@ app.get("/leaderboard", async (req, res) => {
         res.status(500).json({ message: "Failed to fetch leaderboard", error: err });
     }
 });
+
+app.get('/profile', async (req, res) => {
+    // try {
+        // const user = req.session.user; // Assume user data is stored in session
+        // if (!user) {
+            // return res.redirect('/login'); // Redirect if not logged in
+        // }
+        
+        res.render('profile'); // Render profile.ejs and pass user data
+    // } catch (error) {
+    //     console.error("Error loading profile:", error);
+    //     res.status(500).send("Internal Server Error");
+    // }
+});
+
 
 
 
