@@ -379,12 +379,39 @@
     const updatedUsername = document.getElementById('editUsername').value;
     const updatedName = document.getElementById('editName').value;
     const updatedBio = document.getElementById('bioInput').value;
+    const profilePicInput = document.getElementById("profilePicInput");
 
-   
+    let profilePicUrl = document.getElementById("profilePic").src; // Default: keep old pic
+
+    // Check if a new profile picture is selected
+    if (profilePicInput.files.length > 0) {
+        const formData = new FormData();
+        formData.append("profilePic", profilePicInput.files[0]);
+
+        try {
+            const uploadResponse = await fetch('/updateProfilePic', { // Change endpoint
+                method: 'POST',
+                body: formData
+            });
+
+            const uploadData = await uploadResponse.json();
+            if (uploadResponse.ok) {
+                profilePicUrl = uploadData.url; 
+                console.log("profile picture uploaded")// Get Cloudinary URL
+            } else {
+                alert("Failed to upload profile picture: " + uploadData.error);
+                return;
+            }
+        } catch (error) {
+            console.error("Error uploading profile picture:", error);
+            alert("An error occurred while uploading the profile picture.");
+            return;
+        }
+    }
 
     try {
-        // Make a POST request to update the profile data
-        const response = await fetch('/updateProfile', {
+        // Send updated profile info (including profilePicUrl) to backend
+        const response = await fetch('/updateProfile', { // This should be for profile updates only
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -392,17 +419,17 @@
             body: JSON.stringify({
                 username: updatedUsername,
                 name: updatedName,
-                bio: updatedBio
+                bio: updatedBio,
+                profilePic: profilePicUrl
             })
         });
 
-        const data = await response.text();
-
+        const data = await response.json();
         if (response.ok) {
-            // Update the UI with the new data after a successful update
             document.getElementById('username').textContent = updatedUsername;
             document.getElementById('name').textContent = updatedName;
             document.getElementById('bioText').textContent = updatedBio;
+            document.getElementById("profilePic").src = profilePicUrl; // Update UI
 
             // Hide editable fields after saving
             document.getElementById('editUsername').style.display = 'none';
@@ -413,43 +440,44 @@
             document.getElementById('editProfileBtn').style.display = 'block';
             document.getElementById('saveChangesBtn').style.display = 'none';
             document.getElementById('cancelChangesBtn').style.display = 'none';
+
+            alert("Profile updated successfully!");
         } else {
-            alert('Failed to update profile: ' + data);
+            alert("Failed to update profile: " + data.error);
         }
     } catch (error) {
-        console.error('Error updating profile:', error);
-        alert('An error occurred while updating the profile.');
+        console.error("Error updating profile:", error);
+        alert("An error occurred while updating the profile.");
     }
 });
 
+// Cancel changes
+document.getElementById('cancelChangesBtn').addEventListener('click', () => {
+    // Revert the editable fields to their original content
+    document.getElementById('editUsername').value = document.getElementById('username').textContent;
+    document.getElementById('editName').value = document.getElementById('name').textContent;
+    document.getElementById('bioInput').value = document.getElementById('bioText').textContent;
 
+    // Hide editable fields
+    document.getElementById('editUsername').style.display = 'none';
+    document.getElementById('editName').style.display = 'none';
+    document.getElementById('bioInput').style.display = 'none';
+    document.getElementById('profilePicInput').style.display = 'none';
 
-        // Cancel changes
-        document.getElementById('cancelChangesBtn').addEventListener('click', () => {
-            // Revert the editable fields to their original content
-            document.getElementById('editUsername').value = document.getElementById('username').textContent;
-            document.getElementById('editName').value = document.getElementById('name').textContent;
-            document.getElementById('bioInput').value = document.getElementById('bioText').textContent;
-    
-            // Hide editable fields
-            document.getElementById('editUsername').style.display = 'none';
-            document.getElementById('editName').style.display = 'none';
-            document.getElementById('bioInput').style.display = 'none';
-            document.getElementById('profilePicInput').style.display = 'none';
-    
-            document.getElementById('editProfileBtn').style.display = 'block';
-            document.getElementById('saveChangesBtn').style.display = 'none';
-            document.getElementById('cancelChangesBtn').style.display = 'none';
-        });
-    
-        // Profile Picture Upload
-        document.getElementById("profilePicInput").addEventListener("change", function(event) {
-            const reader = new FileReader();
-            reader.onload = function() {
-                document.getElementById("profilePic").src = reader.result;
-            };
-            reader.readAsDataURL(event.target.files[0]);
-        });
+    document.getElementById('editProfileBtn').style.display = 'block';
+    document.getElementById('saveChangesBtn').style.display = 'none';
+    document.getElementById('cancelChangesBtn').style.display = 'none';
+});
+
+// Profile Picture Upload Preview
+document.getElementById("profilePicInput").addEventListener("change", function(event) {
+    const reader = new FileReader();
+    reader.onload = function() {
+        document.getElementById("profilePic").src = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+});
+
     </script>
     
     </body>

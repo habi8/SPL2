@@ -51,6 +51,10 @@ const LoginSchema = new mongoose.Schema({
         type: String,
         required: false
     },
+    profilePic: {
+        type : String,
+        required : false
+    },
     friends:[{type: String}]
 })
 

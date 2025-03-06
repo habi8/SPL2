@@ -4,12 +4,16 @@ const bcrypt = require('bcrypt')
 const {collection,Player } = require('./config')
 const router = express.Router();
 const session = require("express-session");
+const cors = require('cors');
+
 
 require('dotenv').config();
 const mongoose = require('mongoose');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
-const cors = require('cors');
+const multer = require('multer');
+const cloudinary = require('cloudinary').v2;
+const { CloudinaryStorage } = require('multer-storage-cloudinary');
 
 //const { name,email,password } = require('ejs')
 
@@ -18,13 +22,14 @@ app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(express.urlencoded({ extended: true }));
 app.set('view engine','ejs','js')
-
+app.use(cors());
 app.use(express.static('public'))
 const otpStorage = new Map();// Store {email: otp}
 
 // Replace the previous OTP route with this
 const { sendOTPEmail } = require('./mailer'); // Import mailer.js
 const { log } = require('console');
+const uploadRoutes = require('./uploadDP')
 
 app.use(session({
     secret: 'your-secret-key',
@@ -228,8 +233,9 @@ app.get('/login',(req,res)=>{
 let name='';
 app.post('/newsfeed', async (req, res) => {
     req.session.email = req.body.email;
-    const email = req.session.email;
+    let email = req.session.email;
     let user = await collection.findOne({ email : email })
+    console.log(user)
     name = user.name;
     req.session.name = name;
     try {
@@ -330,7 +336,8 @@ app.get('/profile', async (req, res) => {
         if (user) {
             // Pass the user's userName to the EJS template
             console.log(user.userName)
-            res.render('profile', { Name: user.name ,userName: user.userName,bio: user.bio});
+            res.render('profile', { Name: user.name ,userName: user.userName,bio: user.bio,profilePic: user.profilePic});
+           
         } else {
             res.status(404).send('User not found');
         }
@@ -355,36 +362,81 @@ app.post('/checkUsername', async (req, res) => {
 });
 
 // Your update profile endpoint
-app.post('/updateProfile', async (req, res) => {
-    const { username, name, bio } = req.body;
+cloudinary.config({ 
+    cloud_name: 'dipgpjbtc', 
+    api_key: '375663322893436', 
+    api_secret: 'KsbtwFT67NiJc7EFZtaVfg5FmEo'
+});
 
+// Multer Storage for Cloudinary
+const storage = new CloudinaryStorage({
+    cloudinary: cloudinary,
+    params: {
+        folder: 'profile_pictures', // Cloudinary folder
+        format: async (req, file) => 'jpg', // Optional: Convert all to PNG
+        public_id: (req, file) => req.session.email.replace(/[@.]/g, "_"), // Use email as the filename (sanitized)
+    }
+});
+
+const upload = multer({ storage: storage });
+
+// Route to handle profile picture upload
+app.post('/updateProfilePic', upload.single('profilePic'), async (req, res) => {
+    // Get user email from session
+    const email = req.session.email;
+    const profilePicUrl = req.body.profilePicUrl; // Cloudinary URL
+    
     try {
-        let email = req.session.email;  // Get email from session
-        console.log("Updating profile for email:", email); // Debugging
-
+        // Check if the user is authenticated and the email exists in the session
         if (!email) {
-            return res.status(400).json({ error: "Email not found in session" });
+            return res.status(400).json({ error: 'No user email found in session' });
         }
 
-        const result = await collection.findOneAndUpdate(
-            { email },  // Find the user by email
-            { $set: { userName: username, name: name, bio: bio } },  // Fields to update
-            { returnDocument: "after" }  // Ensure updated document is returned
+        // Find the user by email and update the profile picture URL
+        const user = await collection.findOneAndUpdate(
+            { email },
+            { profilePic: profilePicUrl }, // Update the profilePic fieldS
+            { new: true } // Return the updated user document
         );
 
-        if (!result) {
-            return res.status(404).json({ error: "User not found" });
+        if (!user) {
+            return res.status(404).json({ error: 'User not found' });
         }
 
-        res.status(200).json({ message: "Profile updated successfully", updatedUser: result });
-
+        // Send back Cloudinary URL after successfully updating
+        res.status(200).json({ url: profilePicUrl });
     } catch (error) {
-        console.error('Error updating profile:', error);
-        res.status(500).json({ error: "Error updating profile" });
+        console.error('Error updating profile picture:', error);
+        res.status(500).json({ error: 'Error updating profile picture' });
     }
 });
 
 
+
+// Route to update user profile
+app.post('/updateProfile', async (req, res) => {
+    const { username, name, bio, profilePic } = req.body;
+    const email = req.session.email; // Assuming user email is stored in session
+
+    if (!email) {
+        return res.status(400).json({ error: 'User email not found in session' });
+    }
+
+    try {
+        // You can use a database update query here, assuming you have a `User` model or database collection.
+        // Here's an example using a fictional User model:
+         await collection.updateOne({ email }, { userName: username, name: name, bio: bio, profilePic: profilePic });
+
+        // For demonstration purposes, we'll just log the updated data
+        console.log(`Updated profile for ${email}:`, { username, name, bio, profilePic });
+        
+
+        res.status(200).json({ message: 'Profile updated successfully' });
+    } catch (error) {
+        console.error('Error updating profile:', error);
+        res.status(500).json({ error: 'Error updating profile' });
+    }
+});
 
 
 
