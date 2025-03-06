@@ -27,10 +27,14 @@
             overflow-y: auto;
             border-right: 1px solid #ddd;
             border-radius: 10px;
+            
+        }
+
+        .header{
             display: flex;
             align-items: flex-start;
         }
-        .left-sidebar img{
+        .header img{
             align-items: center;
             justify-content: center;
             height: 35px;
@@ -41,10 +45,56 @@
             
         }
 
-        .left-sidebar h3{
+        .header h3{
             margin-top: 30px;
             margin-left: 5px;
         }
+
+        .user-item {
+    display: flex;
+    align-items: center; /* Aligns profile picture and user details horizontally */
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    width: 300px; /* Adjust as needed */
+}
+
+.user-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 60%; /* Round the profile picture */
+    margin-right: 10px; /* Space between image and details */
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column; /* Stack username and button vertically */
+    justify-content: center;
+}
+
+.user-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-left: 5px; /* Space between username and button */
+}
+
+.addFriend {
+    background-color: lightblue; /* Light blue button */
+    border: none;
+    width: 110px;
+    padding: 8px 15px;
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.addFriend:hover {
+    background-color: #8ecae6; /* Darker blue on hover */
+}
 
         .people {
             display: flex;
@@ -184,10 +234,25 @@
 
     <!-- Left Sidebar - People Section -->
     <div class="left-sidebar">
-        <img src="/newsfeed/handshake.png">
+        <div class="header">
+            <img src="/newsfeed/handshake.png" alt="Handshake">
         <h3>People</h3>
-        <div id="people-list"></div>
+        </div>
+        
+        <div id="people-list">
+            <% users.forEach(user => { %>
+                <div class="user-item">
+                    <img src="<%= user.profilePic || '/default-profile.png' %>" alt="<%= user.userName %>'s profile" class="user-pic">
+                    <div class="user-details">
+                        <span class="user-name"><%= user.userName %></span>
+                        <button class="addFriend">Add friend</button>
+                    </div>
+                </div>
+                
+            <% }); %>
+        </div>
     </div>
+    
 
     <!-- Middle Section - Newsfeed -->
     <div class="newsfeed" id="newsfeed">
@@ -199,7 +264,9 @@
     <div class="right-sidebar">
         <div class="profile" id="profile">
             <img src="<%= profilePic%>"alt="Profile picture">
-            <span><b><%=userName%></b></span>
+            <span><b><%=userName%></b>
+            
+            </span>
         </div>
         <div class="icons">
             <img id="notifications" src="/newsfeed/bell.png">

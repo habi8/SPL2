@@ -63,15 +63,18 @@ const playerSchema = new mongoose.Schema({
     highScore: { type: Number, default: 0 }
 });
 
-const CommunitySchema = new mongoose.Schema({
-    posts:{
+const postSchema = new mongoose.Schema({
+    postContent:{
         type: String,
         required:false
     },
-    users:[{type: String}]
+    userEmail:{
+        type: String,
+        required:true
+    }
 })
 
 const collection =  mongoose.model('Users',LoginSchema);
 const Player = mongoose.model("shark_sprint", playerSchema);
-const community = mongoose.model("community",CommunitySchema)
-module.exports = {collection, Player,community};
+const post = mongoose.model("post",postSchema)
+module.exports = {collection, Player,post};

@@ -247,6 +247,7 @@ app.post('/newsfeed', async (req, res) => {
 
         // Look for user in the database
         const check = await collection.findOne({ email: email });
+        
         if (!check) {
             return res.send("User not found");
         }
@@ -257,7 +258,16 @@ app.post('/newsfeed', async (req, res) => {
         const isPasswordMatch = await bcrypt.compare(req.body.password, check.password);
         if (isPasswordMatch) {
             // Render the newsfeed page if the password matches
-            res.render('newsfeed',{profilePic,userName});
+            // If using Mongoose, use `.find()` directly:
+            const users = await collection.find({ email: { $ne: req.session.email } }).select('userName profilePic'); // Only select the fields you need
+
+
+            // Send the list of users and other info to the newsfeed page
+            return res.render('newsfeed', {
+                userName: user.userName,
+                profilePic: user.profilePic || '/default-profile.png',
+                users: users // Pass the users list to the newsfeed page
+            });
         } else {
             return res.send('Wrong password');
         }
@@ -272,9 +282,15 @@ app.get('/newsfeed', async (req, res) => {
         return res.redirect('/login'); // Redirect to login if no email in session
     }
     const user = await collection.findOne({ email: req.session.email });
+    const users = await collection.find({ email: { $ne: req.session.email } }).select('userName profilePic');
+
     const profilePic = user.profilePic;
     const userName = user.userName;
-    res.render('newsfeed',{profilePic,userName});
+    res.render('newsfeed', {
+        userName: user.userName,
+        profilePic: user.profilePic || '/default-profile.png',
+        users: users // Pass the list of users to EJS
+    });
 });
 
 app.get('/newsfeedPage', async (req, res) => {
