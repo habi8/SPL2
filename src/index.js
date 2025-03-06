@@ -252,10 +252,12 @@ app.post('/newsfeed', async (req, res) => {
         }
 
         // Compare password with the hashed password in the database
+        const profilePic = check.profilePic || '/default-profile.png'
+        const userName = check.userName;
         const isPasswordMatch = await bcrypt.compare(req.body.password, check.password);
         if (isPasswordMatch) {
             // Render the newsfeed page if the password matches
-            res.render('newsfeed');
+            res.render('newsfeed',{profilePic,userName});
         } else {
             return res.send('Wrong password');
         }
@@ -268,6 +270,7 @@ app.post('/newsfeed', async (req, res) => {
 app.get('/newsfeed',(req,res)=>{
     res.render('newsfeed')
 });
+
 
 
 // Middleware
@@ -335,8 +338,9 @@ app.get('/profile', async (req, res) => {
 
         if (user) {
             // Pass the user's userName to the EJS template
-            console.log(user.userName)
-            res.render('profile', { Name: user.name ,userName: user.userName,bio: user.bio,profilePic: user.profilePic});
+            console.log("Username: ",user.userName)
+            console.log("Profile pic URL: ",user.profilePic)
+            res.render('profile', { name: user.name ,userName: user.userName,bio: user.bio, profilePic: user.profilePic || '/default-profile.png'});
            
         } else {
             res.status(404).send('User not found');
@@ -384,7 +388,7 @@ const upload = multer({ storage: storage });
 app.post('/updateProfilePic', upload.single('profilePic'), async (req, res) => {
     // Get user email from session
     const email = req.session.email;
-    const profilePicUrl = req.body.profilePicUrl; // Cloudinary URL
+    const profilePicUrl = req.file.path; // Cloudinary URL
     
     try {
         // Check if the user is authenticated and the email exists in the session
@@ -393,10 +397,10 @@ app.post('/updateProfilePic', upload.single('profilePic'), async (req, res) => {
         }
 
         // Find the user by email and update the profile picture URL
-        const user = await collection.findOneAndUpdate(
+        const user = await collection.updateOne(
             { email },
-            { profilePic: profilePicUrl }, // Update the profilePic fieldS
-            { new: true } // Return the updated user document
+            { $set: {profilePic: profilePicUrl} }, // Update the profilePic fieldS
+            // Return the updated user document
         );
 
         if (!user) {

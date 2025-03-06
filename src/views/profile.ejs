@@ -297,12 +297,13 @@
                     <button id="backToNewsfeedBtn" title="Back to Newsfeed">
                         <i class="homebtn"><img src="/newsfeed/home-button.png "></i> 
                        </button>
-                <img src="/newsfeed/user.png" alt="Profile Picture" id="profilePic">
+                       <img id="profilePic" src="<%= profilePic || '/default-profile.png' %>" alt="<=userName>">
+
                 
                 <input type="file" id="profilePicInput" style="display:none;">
                 <h2 id="username"><%= userName%></h2>
                 <input type="text" id="editUsername" placeholder="Enter new username" style="display:none;">
-                <p id="name"><%= Name %></p> 
+                <p id="name"><%= name %></p> 
                 <input type="text" id="editName" placeholder="Enter new name" style="display:none;">
                 
                 <div class="bio-section">
@@ -340,7 +341,7 @@
         //back button
         document.getElementById('backToNewsfeedBtn').addEventListener('click', async function()  {
             try {
-        const response = await fetch("/newsfeed"); // Send GET request to backend
+        const response = await fetch('newsfeed');// Send GET request to backend
         if (response.ok) {
             window.location.href = "/newsfeed"; // Redirect to the profile page
         } else {
@@ -382,6 +383,7 @@
     const profilePicInput = document.getElementById("profilePicInput");
 
     let profilePicUrl = document.getElementById("profilePic").src; // Default: keep old pic
+    console.log("profilePicUrl: ",profilePicUrl)
 
     // Check if a new profile picture is selected
     if (profilePicInput.files.length > 0) {
@@ -476,6 +478,7 @@ document.getElementById("profilePicInput").addEventListener("change", function(e
         document.getElementById("profilePic").src = reader.result;
     };
     reader.readAsDataURL(event.target.files[0]);
+    
 });
 
     </script>
