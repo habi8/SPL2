@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: system-ui;
         }
 
         body {
@@ -27,6 +27,23 @@
             overflow-y: auto;
             border-right: 1px solid #ddd;
             border-radius: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .left-sidebar img{
+            align-items: center;
+            justify-content: center;
+            height: 35px;
+            width: 35px;
+            margin-bottom: 15px;
+            margin-top: 25px;
+            margin-left: 20px;
+            
+        }
+
+        .left-sidebar h3{
+            margin-top: 30px;
+            margin-left: 5px;
         }
 
         .people {
@@ -61,11 +78,22 @@
             margin-bottom: 10px;
             background: #CCCCFF;
             border-radius: 8px;
+            
         }
 
-        img{
-            height: 25px;
-            width: 25px;
+        .newsfeed img{
+            align-items: center;
+            justify-content: center;
+            height: 35px;
+            width: 35px;
+            margin-bottom: 15px;
+            margin-top: 25px;
+            margin-left: 500px;
+            
+        }
+
+        .newsfeed img:hover{
+            cursor: pointer;
         }
 
         .post {
@@ -108,6 +136,8 @@
             cursor: pointer;
             background: white;
             padding: 10px;
+            margin-right: 15px;
+            margin-left: 15px;
             border-radius: 15px;
             display: flex;
             align-items: center;
@@ -122,12 +152,28 @@
             margin-right: 10px;
         }
 
+        .icons{
+            display: flex;
+            margin: 20px;
+            justify-content: space-evenly;
+        }
+
+        .icons img{
+            height: 35px;
+            width: 35px;
+        }
+        .icons img:hover{
+            cursor: pointer;
+        }
+
         .logout {
             margin-top: 20px;
             background: #ff4b5c;
             color: white;
             border: none;
             padding: 10px 15px;
+            margin-right: 40px;
+            
             border-radius: 5px;
             cursor: pointer;
             width: 100%;
@@ -138,13 +184,14 @@
 
     <!-- Left Sidebar - People Section -->
     <div class="left-sidebar">
+        <img src="/newsfeed/handshake.png">
         <h3>People</h3>
         <div id="people-list"></div>
     </div>
 
     <!-- Middle Section - Newsfeed -->
     <div class="newsfeed" id="newsfeed">
-        <img src="/newsfeed/home-button.png">
+        <img src="/newsfeed/newspaper.png">
         <div id="post-container"></div>
     </div>
 
@@ -154,75 +201,79 @@
             <img src="<%= profilePic%>"alt="Profile picture">
             <span><b><%=userName%></b></span>
         </div>
+        <div class="icons">
+            <img id="notifications" src="/newsfeed/bell.png">
+            <img id="messages" src="/newsfeed/message.png">
+        </div>
         <button class="logout" id="logout">Logout</button>
     </div>
 
     <script>
         // Dummy Data for People Section
-        const peopleData = [
-            { name: "John Doe", profilePic: "https://via.placeholder.com/40" },
-            { name: "Jane Smith", profilePic: "https://via.placeholder.com/40" },
-            { name: "Mike Johnson", profilePic: "https://via.placeholder.com/40" }
-        ];
+        // const peopleData = [
+        //     { name: "John Doe", profilePic: "https://via.placeholder.com/40" },
+        //     { name: "Jane Smith", profilePic: "https://via.placeholder.com/40" },
+        //     { name: "Mike Johnson", profilePic: "https://via.placeholder.com/40" }
+        // ];
 
-        const peopleList = document.getElementById("people-list");
+        // const peopleList = document.getElementById("people-list");
 
-        peopleData.forEach(person => {
-            const personDiv = document.createElement("div");
-            personDiv.classList.add("people");
+        // peopleData.forEach(person => {
+        //     const personDiv = document.createElement("div");
+        //     personDiv.classList.add("people");
 
-            personDiv.innerHTML = `
-                <img src="${person.profilePic}" alt="Profile">
-                <span>${person.name}</span>
-                <button class="add-friend">Add Friend</button>
-            `;
+        //     personDiv.innerHTML = `
+        //         <img src="${person.profilePic}" alt="Profile">
+        //         <span>${person.name}</span>
+        //         <button class="add-friend">Add Friend</button>
+        //     `;
 
-            peopleList.appendChild(personDiv);
-        });
+        //     peopleList.appendChild(personDiv);
+        // });
 
-        // Dummy Data for Newsfeed Posts
-        const postData = [
-            {
-                user: "John Doe",
-                profilePic: "https://via.placeholder.com/40",
-                content: "This is my first post!",
-                timestamp: "5 mins ago"
-            },
-            {
-                user: "Jane Smith",
-                profilePic: "https://via.placeholder.com/40",
-                content: "Loving this new social platform!",
-                timestamp: "10 mins ago"
-            },
-            {
-                user: "Mike Johnson",
-                profilePic: "https://via.placeholder.com/40",
-                content: "Just had the best coffee ever ☕",
-                timestamp: "30 mins ago"
-            }
-        ];
+        // // Dummy Data for Newsfeed Posts
+        // const postData = [
+        //     {
+        //         user: "John Doe",
+        //         profilePic: "https://via.placeholder.com/40",
+        //         content: "This is my first post!",
+        //         timestamp: "5 mins ago"
+        //     },
+        //     {
+        //         user: "Jane Smith",
+        //         profilePic: "https://via.placeholder.com/40",
+        //         content: "Loving this new social platform!",
+        //         timestamp: "10 mins ago"
+        //     },
+        //     {
+        //         user: "Mike Johnson",
+        //         profilePic: "https://via.placeholder.com/40",
+        //         content: "Just had the best coffee ever ☕",
+        //         timestamp: "30 mins ago"
+        //     }
+        // ];
 
-        const postContainer = document.getElementById("post-container");
+        // const postContainer = document.getElementById("post-container");
 
-        postData.forEach(post => {
-            const postDiv = document.createElement("div");
-            postDiv.classList.add("post");
+        // postData.forEach(post => {
+        //     const postDiv = document.createElement("div");
+        //     postDiv.classList.add("post");
 
-            postDiv.innerHTML = `
-                <div class="post-header">
-                    <img src="${post.profilePic}" alt="Profile">
-                    <div>
-                        <strong>${post.user}</strong>
-                        <small style="display: block; color: gray;">${post.timestamp}</small>
-                    </div>
-                </div>
-                <div class="post-content">
-                    ${post.content}
-                </div>
-            `;
+        //     postDiv.innerHTML = `
+        //         <div class="post-header">
+        //             <img src="${post.profilePic}" alt="Profile">
+        //             <div>
+        //                 <strong>${post.user}</strong>
+        //                 <small style="display: block; color: gray;">${post.timestamp}</small>
+        //             </div>
+        //         </div>
+        //         <div class="post-content">
+        //             ${post.content}
+        //         </div>
+        //     `;
 
-            postContainer.appendChild(postDiv);
-        });
+        //     postContainer.appendChild(postDiv);
+        // });
 
         // Profile Click Event
         document.getElementById("profile").addEventListener("click", async function() {

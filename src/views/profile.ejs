@@ -281,7 +281,7 @@
 
     <div class="container">
         <!-- Left Sidebar: People -->
-        <aside class="sidebar left">
+        <aside class="sidebar-left">
             <h3>People</h3>
             <ul id="userList">
                 <li><img src="user1.jpg" alt="User1"><span>John Doe</span> <button>Add Friend</button></li>
@@ -328,7 +328,7 @@
         </main>
     
         <!-- Right Sidebar: Inbox -->
-        <aside class="sidebar right">
+        <aside class="sidebar-right">
             <h3>Inbox</h3>
             <ul id="messagesList">
                 <li><strong>John:</strong> Hey there!</li>
@@ -339,19 +339,21 @@
     
     <script>
         //back button
-        document.getElementById('backToNewsfeedBtn').addEventListener('click', async function()  {
-            try {
-        const response = await fetch('newsfeed');// Send GET request to backend
+        document.getElementById('backToNewsfeedBtn').addEventListener('click', async function() {
+    try {
+        const response = await fetch('/newsfeedPage'); // This fetches the profile info
         if (response.ok) {
-            window.location.href = "/newsfeed"; // Redirect to the profile page
+            // You can still handle data here, if necessary, but redirect to newsfeed page
+            window.location.href = "/newsfeed"; // Redirect to the newsfeed page
+            console.log("Going back to newsfeed from profile");
         } else {
             alert("Failed to load newsfeed");
         }
-        } catch (error) {
+    } catch (error) {
         console.error("Error fetching newsfeed:", error);
         alert("Something went wrong!");
-        }
-            });
+    }
+});
 
         // Edit Profile function
         document.getElementById('editProfileBtn').addEventListener('click', () => {

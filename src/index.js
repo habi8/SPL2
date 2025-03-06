@@ -267,9 +267,39 @@ app.post('/newsfeed', async (req, res) => {
     }
 });
 
-app.get('/newsfeed',(req,res)=>{
-    res.render('newsfeed')
+app.get('/newsfeed', async (req, res) => {
+    if (!req.session.email) {
+        return res.redirect('/login'); // Redirect to login if no email in session
+    }
+    const user = await collection.findOne({ email: req.session.email });
+    const profilePic = user.profilePic;
+    const userName = user.userName;
+    res.render('newsfeed',{profilePic,userName});
 });
+
+app.get('/newsfeedPage', async (req, res) => {
+    if (!req.session.email) {
+        return res.status(401).json({ error: "Unauthorized. Please log in." });
+    }
+
+    try {
+        const user = await collection.findOne({ email: req.session.email });
+
+        if (!user) {
+            return res.status(404).json({ error: "User not found." });
+        }
+
+        res.json({
+            userName: user.userName,
+            profilePic: user.profilePic || '/default-profile.png'
+        });
+    } catch (error) {
+        console.error("Error fetching newsfeed data:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
+
+
 
 
 
