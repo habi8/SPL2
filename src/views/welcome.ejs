@@ -1,101 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conserve The Deep</title>
-    <link rel="stylesheet" href="Welcome.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conserve The Deep</title>
+  <link rel="stylesheet" href="/welcomepage/welcome.css">
 </head>
 <body>
-
-    <div class="menu">
-        <div class="menu" >
-            <a href="/community">
-                <img src="Commu.png" alt="Marine Life Saver Community Icon" width="90 height="90">
-                <div class="logos">
-                    <p style="font-size: 12;font-family: system-ui;"> Community </p>
-                </div>
-            </a>
-
-            <div class="logos">
-                <img  src="sp.png" width="90px" height="90px">
-                <p style="font-size: 16;font-family: system-ui;"> Species Profiles </p>
-                <a href="/Shark_Sprint">
-                    <img  src="ss.png" width="90px" height="90px">
-                    <p style="font-size: 16;font-family: system-ui;"> SharkSprint </p>
-                </a>
-              
-            </div>
-          
-        </div>
-        
+  <div class="horizon"></div>
+  <div class="ocean">
+    <div class="bottle1">
+      <img src="/welcomepage/soda.png">
     </div>
-    
-</div>
-
+    <div class="garbage">
+      <img src="/welcomepage/garbage.png">
+    </div>
+    <div class="bag">
+      <img src="/welcomepage/bag.png">
+    </div>
+    <div class="bottle2">
+      <img src="/welcomepage/soda.png">
+    </div>
+    <div class="bottle3">
+      <img src="/welcomepage/coke.png">
+    </div>
   
-    <div class="content">
-        <img src="Conserve-the-deep-logo.png" alt="Explore" style="
-        width: 450px; 
-        height: 450px; 
-        filter: drop-shadow(10px 5px 15px rgba(0, 0, 0, 0.7));
-    ">
+  </div>
+  <div class="content">
+    <img src="/welcomepage/Conserve-the-deep-logo.png">
+     <h1>Conserve The Deep</h1> 
+    <p>Protect the ocean and its inhabitants. Every action makes a difference.</p>
+    <div class="buttons">
+      <button class="btn explore" onclick="window.location.href='/ocean'">Explore</button>
+      <button class="btn species-profiles">Species Profiles</button>
+      <button class="btn shark-sprint" onclick="window.location.href='/shark_sprint'">Shark Sprint</button>
+      <button class="btn community " onclick="window.location.href='/community'">Community</button>
     </div>
-    <div class="ocean"></div>
-    <div class="bottle"></div>
-    <div class="bottle2"></div>
-    <div class="can"></div>
-    <div style="
-    position: fixed; 
-    bottom: 50px; 
-    right: 50px; 
-    text-align: center; 
-    cursor: pointer;
-">
-    <a href="/ocean" style="text-decoration: none; color: inherit;">
-        <div style="position: relative; display: inline-block;">
-         
-            <div style="
-                position: absolute;
-                top: -50px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: white;
-                border-radius: 15px;
-                padding: 10px 20px;
-                font-size: 15px;
-                font-weight: bold;
-                font-family: system-ui;
-                color: #333;
-                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-                white-space: nowrap;
-            ">
-                Explore
-                <div style="
-                    position: absolute;
-                    bottom: -10px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 0;
-                    height: 0;
-                    border-left: 10px solid transparent;
-                    border-right: 10px solid transparent;
-                    border-top: 10px solid white;
-                "></div>
-            </div>
-
-            <img src="diver.svg" alt="Explore" style="
-                width: 70px; 
-                height: auto; 
-                padding-bottom: 20px;
-                filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.7));
-            ">
-        </div>
-    </a>
-</div>
-
-<script src="Ocean.js"></script>
-
-
+  </div>
+  <script src="welcomepage/welcome.js"></script>
 </body>
 </html>
