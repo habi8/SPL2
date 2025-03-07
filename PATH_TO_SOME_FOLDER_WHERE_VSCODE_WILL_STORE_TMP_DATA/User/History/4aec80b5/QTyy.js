@@ -1,12 +1,10 @@
 const express = require('express')
 const path = require('path')
 const bcrypt = require('bcrypt')
-const {collection,Player } = require('./config')
+const {collection,Player,posts} = require('./config')
 const router = express.Router();
 const session = require("express-session");
 const cors = require('cors');
-
-
 require('dotenv').config();
 const mongoose = require('mongoose');
 const nodemailer = require('nodemailer');
@@ -14,9 +12,7 @@ const bodyParser = require('body-parser');
 const multer = require('multer');
 const cloudinary = require('cloudinary').v2;
 const { CloudinaryStorage } = require('multer-storage-cloudinary');
-
-//const { name,email,password } = require('ejs')
-
+const { v4: uuidv4 } = require('uuid');
 const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
@@ -25,8 +21,6 @@ app.set('view engine','ejs','js')
 app.use(cors());
 app.use(express.static('public'))
 const otpStorage = new Map();// Store {email: otp}
-
-// Replace the previous OTP route with this
 const { sendOTPEmail } = require('./mailer'); // Import mailer.js
 const { log } = require('console');
 const uploadRoutes = require('./uploadDP')
@@ -43,9 +37,8 @@ app.use(session({
 app.post('/OTP', async (req, res) => {            
     console.log("Signup & OTP Sending Process Started");
 
-    // const { email, name, institute, occupation } = req.body;
-    const { email, name } = req.body; // Capture email and username from the form
-    req.session.email = email;  // Store email in session
+    const { email, name } = req.body; 
+    req.session.email = email;  
     req.session.username = name;
 
     const existingUser = await collection.findOne({ email ,password: { $exists: true, $ne: null }});
@@ -65,34 +58,22 @@ app.post('/OTP', async (req, res) => {
             name: req.body.name,
             email: req.body.email,
             OTP: otp,
-            //password: req.body.password
-            //shouldn't i add email and otp to the otpStorage map?
         }
 
 
         otpStorage.set(email,otp);        
         console.log("email: ",email,"OTP: ",otp)
-        
-           // const saltRounds = 10
-            //const hashedPassword = await bcrypt.hash(data.password,saltRounds)
-            //data.password = hashedPassword
             const userdata = await collection.insertMany(data)
-           // console.log(userdata)
             console.log("Written on db")
-            //res.render('OTP')
-
         res.render("OTP", { email });
-        // await collection.updateOne({ email }, { otp, verified: false }); 
     } else {
         res.status(500).json({ message: "Failed to send OTP" });
     }
-
     }
 
     
 });
 
-//const User = require('./models/User'); // Import your User model
 
 app.post('/verify-otp', async (req, res) => {
     const { email, otp } = req.body;
@@ -106,29 +87,23 @@ app.post('/verify-otp', async (req, res) => {
     console.log("Stored email and OTP in OTPStorage is:",email, storedOtp);
 
     if (storedOtp === otp) {
-        //otpStorage.clear(); 
-        // // Clear OTP after verification
-
-        // **Update the user's verified field**
+    
         try {
             const updatedUser = await collection.findOneAndUpdate(
-                { email: email },        // Find user by email
-                { $set: { verified: true } }, // Update 'verified' field to true
-                { new: true }            // Return the updated document
+                { email: email },        
+                { $set: { verified: true } }, 
+                { new: true }            
             );
-
             if (!updatedUser) {
                 return res.status(404).json({ success: false, message: "User not found" });
             }
             req.session.destroy()
-            return res.json({ success: true, message: "OTP verified successfully", user: updatedUser });
-
+            return res.json({ success: true, message: "OTP verified successfully", user: updatedUser })
         } catch (error) {
             console.error("Error updating user:", error);
             return res.status(500).json({ success: false, message: "Database update failed" });
         }
     }
-
     return res.status(401).json({ success: false, message: "Invalid OTP" });
 });
 
@@ -147,6 +122,7 @@ app.post("/resend-otp", async (req, res) => {
         return res.status(500).json({ success: false, message: "Failed to resend OTP" });
     }
 });
+
 app.get("/setPassword", (req, res) => {
     res.render("setPassword"); // Render setPassword.ejs
 });
@@ -175,6 +151,7 @@ app.get('/',(req,res)=>{
     res.render('welcome')
 })
 
+
 app.get('/community',(req,res)=>{
     console.log('community route accessed')
     res.render('community')
@@ -195,41 +172,12 @@ app.get('/shark_sprint',(req,res)=>{
     res.render('signup')
 })
 
-// app.post('/OTP',(req,res)=>{
-//     console.log("OTP verification");
-//     res.render('OTP');
-// })
-
-
-// app.post('/signupVerification',async(req,res)=>{
-//     const data = {
-//         institute:req.body.institute,
-//         occupation:req.body.occupation,
-//         name: req.body.name,
-//         email: req.body.email,
-//         //password: req.body.password
-//     }
-//     const existingUser = await collection.findOne({email:data.email})
-//     if(existingUser){
-//         res.end('userExists')
-//     }
-
-//     else{
-//        // const saltRounds = 10
-//         //const hashedPassword = await bcrypt.hash(data.password,saltRounds)
-//         //data.password = hashedPassword
-//         const userdata = await collection.insertMany(data)
-//         console.log(userdata)
-//         console.log("Written on db")
-//         res.render('OTP')
-//     }
-    
-// })
 
 app.get('/login',(req,res)=>{
     console.log('login route access')
     res.render('login')
 })
+
 let name='';
 app.post('/newsfeed', async (req, res) => {
     req.session.email = req.body.email;
@@ -247,6 +195,7 @@ app.post('/newsfeed', async (req, res) => {
 
         // Look for user in the database
         const check = await collection.findOne({ email: email });
+        
         if (!check) {
             return res.send("User not found");
         }
@@ -256,8 +205,13 @@ app.post('/newsfeed', async (req, res) => {
         const userName = check.userName;
         const isPasswordMatch = await bcrypt.compare(req.body.password, check.password);
         if (isPasswordMatch) {
-            // Render the newsfeed page if the password matches
-            res.render('newsfeed',{profilePic,userName});
+            const users = await collection.find({ email: { $ne: req.session.email } }).select('userName profilePic'); // Only select the fields you need
+
+            return res.render('newsfeed', {
+                userName: user.userName,
+                profilePic: user.profilePic || '/posts/user.png',
+                users: users 
+            });
         } else {
             return res.send('Wrong password');
         }
@@ -269,10 +223,18 @@ app.post('/newsfeed', async (req, res) => {
 
 app.get('/newsfeed', async (req, res) => {
     if (!req.session.email) {
-        return res.redirect('/login'); // Redirect to login if no email in session
+        return res.redirect('/login'); 
     }
     const user = await collection.findOne({ email: req.session.email });
-    res.render('newsfeed',{user.profilePic});
+    const users = await collection.find({ email: { $ne: req.session.email } }).select('userName profilePic');
+
+    const profilePic = user.profilePic;
+    const userName = user.userName;
+    res.render('newsfeed', {
+        userName: user.userName,
+        profilePic: user.profilePic || '/posts/user.png',
+        users: users 
+    });
 });
 
 app.get('/newsfeedPage', async (req, res) => {
@@ -340,32 +302,17 @@ app.get("/leaderboard", async (req, res) => {
     }
 });
 
-// app.get('/profile', async (req, res) => {
-//     // try {
-//         // const user = req.session.user; // Assume user data is stored in session
-//         // if (!user) {
-//             // return res.redirect('/login'); // Redirect if not logged in
-//         // }
-        
-//         res.render('profile'); // Render profile.ejs and pass user data
-//     // } catch (error) {
-//     //     console.error("Error loading profile:", error);
-//     //     res.status(500).send("Internal Server Error");
-//     // }
-// });
 
-// Route to display the profile page
 app.get('/profile', async (req, res) => {
     if (!req.session.email) {
-        return res.redirect('/login'); // If no session email, redirect to login
+        return res.redirect('/login'); 
     }
 
     try {
-        // Find the user by the email stored in the session
+        
         const user = await collection.findOne({ email: req.session.email });
 
         if (user) {
-            // Pass the user's userName to the EJS template
             console.log("Username: ",user.userName)
             console.log("Profile pic URL: ",user.profilePic)
             res.render('profile', { name: user.name ,userName: user.userName,bio: user.bio, profilePic: user.profilePic || '/default-profile.png'});
@@ -381,11 +328,8 @@ app.get('/profile', async (req, res) => {
 app.post('/checkUsername', async (req, res) => {
     const { username } = req.body;
 
-    // Check if the username already exists in the database
     try {
         const exists = await checkUsernameExists(username);
-
-        // Respond with whether the username is available
         res.json({ isAvailable: !exists });
     } catch (error) {
         console.error('Error checking username:', error);
@@ -393,49 +337,56 @@ app.post('/checkUsername', async (req, res) => {
     }
 });
 
-// Your update profile endpoint
+
 cloudinary.config({ 
     cloud_name: 'dipgpjbtc', 
     api_key: '375663322893436', 
     api_secret: 'KsbtwFT67NiJc7EFZtaVfg5FmEo'
 });
 
-// Multer Storage for Cloudinary
+
 const storage = new CloudinaryStorage({
     cloudinary: cloudinary,
     params: {
-        folder: 'profile_pictures', // Cloudinary folder
-        format: async (req, file) => 'jpg', // Optional: Convert all to PNG
-        public_id: (req, file) => req.session.email.replace(/[@.]/g, "_"), // Use email as the filename (sanitized)
+        folder: 'profile_pictures', 
+        format: async (req, file) => 'jpg', 
+        public_id: (req, file) => req.session.email.replace(/[@.]/g, "_"), 
     }
 });
-
 const upload = multer({ storage: storage });
 
-// Route to handle profile picture upload
+const storage2 = multer.diskStorage({
+    destination: "./uploads/",
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + path.extname(file.originalname));
+    },
+});
+const upload2 = multer({ storage2});
+
+
+
 app.post('/updateProfilePic', upload.single('profilePic'), async (req, res) => {
-    // Get user email from session
+    
     const email = req.session.email;
     const profilePicUrl = req.file.path; // Cloudinary URL
     
     try {
-        // Check if the user is authenticated and the email exists in the session
+        
         if (!email) {
             return res.status(400).json({ error: 'No user email found in session' });
         }
 
-        // Find the user by email and update the profile picture URL
+        
         const user = await collection.updateOne(
             { email },
-            { $set: {profilePic: profilePicUrl} }, // Update the profilePic fieldS
-            // Return the updated user document
+            { $set: {profilePic: profilePicUrl} }, 
+            
         );
 
         if (!user) {
             return res.status(404).json({ error: 'User not found' });
         }
 
-        // Send back Cloudinary URL after successfully updating
         res.status(200).json({ url: profilePicUrl });
     } catch (error) {
         console.error('Error updating profile picture:', error);
@@ -445,30 +396,102 @@ app.post('/updateProfilePic', upload.single('profilePic'), async (req, res) => {
 
 
 
-// Route to update user profile
+
 app.post('/updateProfile', async (req, res) => {
     const { username, name, bio, profilePic } = req.body;
-    const email = req.session.email; // Assuming user email is stored in session
+    const email = req.session.email; 
 
     if (!email) {
         return res.status(400).json({ error: 'User email not found in session' });
     }
 
     try {
-        // You can use a database update query here, assuming you have a `User` model or database collection.
-        // Here's an example using a fictional User model:
          await collection.updateOne({ email }, { userName: username, name: name, bio: bio, profilePic: profilePic });
-
-        // For demonstration purposes, we'll just log the updated data
         console.log(`Updated profile for ${email}:`, { username, name, bio, profilePic });
         
-
         res.status(200).json({ message: 'Profile updated successfully' });
     } catch (error) {
         console.error('Error updating profile:', error);
         res.status(500).json({ error: 'Error updating profile' });
     }
 });
+
+
+app.post("/uploadPost", upload.single("photo"), async (req, res) => {
+    try {
+        const { userName, profilePic, statusText } = req.body;
+        const email = req.session.email;
+        console.log("Email in /uploadPost: ",email);
+        
+        const newPost = new posts({
+            postID: uuidv4(),
+            userName,
+            email,
+            profilePic,
+            statusText,
+            photo: "", 
+        });
+
+       
+        const savedPost = await newPost.save();
+
+        
+        if (req.file) {
+            const result = await cloudinary.uploader.upload(req.file.path, {
+                folder: "posts", 
+                public_id: savedPost.postID.toString(),
+                overwrite: true, 
+            });
+
+            savedPost.photo = result.secure_url;
+            const updatedPost = await savedPost.save(); 
+        }
+
+       
+        res.json({
+            success: true,
+            message: "Post uploaded successfully!",
+            post: savedPost, 
+        });
+    } catch (error) {
+        console.error(error);
+
+        res.status(500).json({
+            success: false,
+            message: "Server Error",
+        });
+    }
+});
+
+app.get('/getAllPosts', async (req, res) => {
+    try {
+        const Allposts = await posts.find().sort({ createdAt: -1 }); 
+        res.json({ success: true, Allposts });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: "Error fetching posts" });
+    }
+});
+
+app.get('/getYourPosts', async (req, res) => {
+    try {
+        const  email  = req.session.email; // Get email from session
+
+        let query = {};
+        if (email) {
+            query.email = email; // Filter posts by email if provided
+        }
+
+        const Allposts = await posts.find(query).sort({ createdAt: -1 }); // Get filtered posts
+        res.json({ success: true, Allposts });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: "Error fetching posts" });
+    }
+});
+
+
+
 
 
 

@@ -463,10 +463,9 @@ app.post("/uploadPost", upload.single("photo"), async (req, res) => {
     }
 });
 
-// Backend route to fetch all posts
 app.get('/getAllPosts', async (req, res) => {
     try {
-        const Allposts = await posts.find().sort({ createdAt: -1 }); // Get all posts, sorted by created time (most recent first)
+        const Allposts = await posts.find().sort({ createdAt: -1 }); 
         res.json({ success: true, Allposts });
     } catch (error) {
         console.error(error);
@@ -490,6 +489,8 @@ app.get('/getYourPosts', async (req, res) => {
         res.status(500).json({ success: false, message: "Error fetching posts" });
     }
 });
+
+
 
 
 
