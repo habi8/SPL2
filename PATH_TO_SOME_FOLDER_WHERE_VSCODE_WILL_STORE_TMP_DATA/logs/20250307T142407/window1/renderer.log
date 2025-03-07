@@ -1,0 +1,17 @@
+2025-03-07 14:24:08.283 [info] Started local extension host with pid 8124.
+2025-03-07 14:24:09.331 [warning] [twxs.cmake]: Cannot register 'cmake.cmakePath'. This property is already registered.
+2025-03-07 14:24:09.333 [warning] [zobo.php-intellisense]: Cannot register 'php.executablePath'. This property is already registered.
+2025-03-07 14:24:10.758 [info] Settings Sync: Account status changed from uninitialized to unavailable
+2025-03-07 14:24:12.106 [info] [perf] Render performance baseline is 36ms
+2025-03-07 15:50:17.935 [error] Error: file:///c%3A/Users/habib/Desktop/5th%20Sem/SE%20505%28SPL%202%29/Project%20folder/SPL2_Elin/src/config.js has changed in the meantime
+    at ZZe.q (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2138:14907)
+    at ZZe.apply (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2138:15767)
+    at iet.o (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2138:18875)
+    at iet.perform (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2138:18311)
+    at set.apply (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2138:20187)
+    at F7t.$tryApplyWorkspaceEdit (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:1227:4082)
+    at rbt.S (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3246:41614)
+    at rbt.Q (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3246:41392)
+    at rbt.M (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3246:40480)
+    at rbt.L (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3246:39717)
+2025-03-07 15:50:17.945 [warning] IGNORING workspace edit: Error: file:///c%3A/Users/habib/Desktop/5th%20Sem/SE%20505%28SPL%202%29/Project%20folder/SPL2_Elin/src/config.js has changed in the meantime

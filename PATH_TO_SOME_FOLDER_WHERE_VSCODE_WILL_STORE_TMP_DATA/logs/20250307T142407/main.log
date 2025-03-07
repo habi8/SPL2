@@ -1,0 +1,11 @@
+2025-03-07 14:24:07.498 [error] Error: Error mutex already exists
+    at xu.U (file:///C:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/main.js:77:29589)
+2025-03-07 14:24:07.508 [info] update#setState idle
+2025-03-07 14:24:37.511 [info] update#setState checking for updates
+2025-03-07 14:24:37.687 [info] update#setState idle
+2025-03-07 15:24:37.524 [info] update#setState checking for updates
+2025-03-07 15:24:37.905 [info] update#setState idle
+2025-03-07 16:24:37.540 [info] update#setState checking for updates
+2025-03-07 16:24:38.007 [info] update#setState idle
+2025-03-07 17:24:37.549 [info] update#setState checking for updates
+2025-03-07 17:24:38.010 [info] update#setState idle

@@ -1,0 +1,7 @@
+[3/7/2025, 2:24:13 PM] [dbtools-ext     ] [INFO ] Activating Oracle SQL Developer Extension for VSCode...
+[3/7/2025, 2:24:13 PM] [dbtools-client  ] [INFO ] Starting server...
+[3/7/2025, 2:24:13 PM] [dbtools-client  ] [INFO ] Server startup completed
+[3/7/2025, 2:24:17 PM] [dbtools-client  ] [INFO ] Server 'Oracle SQL Developer for VS Code' 24.4.1 running at http://localhost:58060/
+[3/7/2025, 2:24:17 PM] [dbtools-client  ] [INFO ] Language Services connecting at http://localhost:58060/20221610/language-server/socket
+[3/7/2025, 2:24:17 PM] [dbtools-client  ] [INFO ] Language Services Websocket Created
+[3/7/2025, 2:24:17 PM] [dbtools-ext     ] [INFO ] Oracle SQL Developer Extension for VSCode has been activated
