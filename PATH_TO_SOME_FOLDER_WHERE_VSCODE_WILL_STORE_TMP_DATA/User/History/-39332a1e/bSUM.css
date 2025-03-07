@@ -1,0 +1,104 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply fade-in animation to the body */
+body {
+    font-family: system-ui;
+    margin: 0;
+    padding: 0;
+    background: url('/community/communityBG.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+    justify-content: center;
+    animation: fadeIn 2s ease-in-out; /* Fade in animation */
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* background: rgba(0, 0, 0, 0.3); */
+}
+
+header img{
+    height: 150px;
+    width: 150px;
+}
+
+.icon-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    padding-left: 770px;
+}
+
+.icon-container img {
+    height: 100px;
+    width: 100px;
+    padding-left: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for both effects */
+}
+
+.icon-container img:hover {
+    transform: scale(1.1); /* Enlarge the image by 10% */
+     /* Add shadow around the image */
+}
+
+
+
+/* nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+.icon-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    justify-content: space-around;
+    padding: 20px;
+}
+.news-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.news-section h2 {
+    font-size: 2em;
+}
+.news-section p {
+    font-size: 1.2em;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0,0, 0, 0.3);
+} */
+a {
+    text-decoration: none;
+  }
+  
+ p {
+    font-size: 18px;
+    font-family: system-ui;
+    color: black;
+    font-weight: 700;
+   
+  
+}
