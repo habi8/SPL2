@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow: hidden;
+    background: linear-gradient(to bottom, #a8d8f0, #ffffff);
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .horizon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(to bottom, #a8d8f0, #ffffff);
+    z-index: 1;
+  }
+  
+  .ocean {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: #0077be;
+    overflow: hidden;
+    z-index: 2;
+    transition: height 0.3s ease;
+    animation: tide 6s infinite ease-in-out; /* Tide animation */
+  }
+  
+  @keyframes tide {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Move the water layer up */
+    }
+  }
+  
+  .garbage {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: float 10s infinite linear;
+  }
+  
+  .bottle {
+    width: 50px;
+    height: 100px;
+    background-image: url('https://www.svgrepo.com/show/362334/plastic-bottle.svg');
+  }
+  
+  .bag {
+    width: 80px;
+    height: 80px;
+    background-image: url('https://www.svgrepo.com/show/362336/plastic-bag.svg');
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateX(-10%);
+    }
+    100% {
+      transform: translateX(110%);
+    }
+  }
+  
+  .content {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #003366;
+    z-index: 3;
+  }
+  
+  .content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0077be;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn:hover {
+    background-color: #005f8b;
+    transform: translateY(-2px);
+  }
+  
+  /* Ripple effect for water interaction */
+  .ripple {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-effect 1.8s ease-out;
+  }
+  
+  @keyframes ripple-effect {
+    to {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }

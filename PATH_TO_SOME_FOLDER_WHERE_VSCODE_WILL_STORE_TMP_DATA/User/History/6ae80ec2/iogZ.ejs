@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Newsfeed</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            background-color: white;
+        }
+
+        /* Left Sidebar - People Section */
+        .left-sidebar {
+            width: 20%;
+            background: #CCCCFF;
+            padding: 15px;
+            margin:15px;
+            overflow-y: auto;
+            border-right: 1px solid #ddd;
+            border-radius: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .left-sidebar img{
+            align-items: center;
+            justify-content: center;
+            height: 35px;
+            width: 35px;
+            margin-bottom: 15px;
+            margin-top: 25px;
+            margin-left: 20px;
+            
+        }
+
+        .left-sidebar h3{
+            margin-top: 30px;
+            margin-left: 5px;
+        }
+
+        .people {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .people img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .add-friend {
+            background: #1877f2;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Middle Section - Newsfeed */
+        .newsfeed {
+            flex: 1;
+            overflow-y: auto;
+            padding: 15px;
+            margin:5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background: #CCCCFF;
+            border-radius: 8px;
+            
+        }
+
+        .newsfeed img{
+            align-items: center;
+            justify-content: center;
+            height: 35px;
+            width: 35px;
+            margin-bottom: 15px;
+            margin-top: 25px;
+            margin-left: 500px;
+            
+        }
+
+        .post {
+            background: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .post-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .post-content {
+            font-size: 14px;
+        }
+
+        /* Right Sidebar - Profile & Logout */
+        .right-sidebar {
+            width: 20%;
+            padding: 15px;
+            background: #CCCCFF;
+            border-left: 1px solid #ddd;
+            margin:15px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .profile {
+            cursor: pointer;
+            background: white;
+            padding: 10px;
+            margin-right: 15px;
+            margin-left: 15px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .profile img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .logout {
+            margin-top: 20px;
+            background: #ff4b5c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-right: 60px;
+            
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Left Sidebar - People Section -->
+    <div class="left-sidebar">
+        <img src="/newsfeed/handshake.png">
+        <h3>People</h3>
+        <div id="people-list"></div>
+    </div>
+
+    <!-- Middle Section - Newsfeed -->
+    <div class="newsfeed" id="newsfeed">
+        <img src="/newsfeed/newspaper.png">
+        <div id="post-container"></div>
+    </div>
+
+    <!-- Right Sidebar - Profile & Logout -->
+    <div class="right-sidebar">
+        <div class="profile" id="profile">
+            <img src="<%= profilePic%>"alt="Profile picture">
+            <span><b><%=userName%></b></span>
+        </div>
+        <button class="logout" id="logout">Logout</button>
+    </div>
+
+    <script>
+        // Dummy Data for People Section
+        // const peopleData = [
+        //     { name: "John Doe", profilePic: "https://via.placeholder.com/40" },
+        //     { name: "Jane Smith", profilePic: "https://via.placeholder.com/40" },
+        //     { name: "Mike Johnson", profilePic: "https://via.placeholder.com/40" }
+        // ];
+
+        // const peopleList = document.getElementById("people-list");
+
+        // peopleData.forEach(person => {
+        //     const personDiv = document.createElement("div");
+        //     personDiv.classList.add("people");
+
+        //     personDiv.innerHTML = `
+        //         <img src="${person.profilePic}" alt="Profile">
+        //         <span>${person.name}</span>
+        //         <button class="add-friend">Add Friend</button>
+        //     `;
+
+        //     peopleList.appendChild(personDiv);
+        // });
+
+        // // Dummy Data for Newsfeed Posts
+        // const postData = [
+        //     {
+        //         user: "John Doe",
+        //         profilePic: "https://via.placeholder.com/40",
+        //         content: "This is my first post!",
+        //         timestamp: "5 mins ago"
+        //     },
+        //     {
+        //         user: "Jane Smith",
+        //         profilePic: "https://via.placeholder.com/40",
+        //         content: "Loving this new social platform!",
+        //         timestamp: "10 mins ago"
+        //     },
+        //     {
+        //         user: "Mike Johnson",
+        //         profilePic: "https://via.placeholder.com/40",
+        //         content: "Just had the best coffee ever ☕",
+        //         timestamp: "30 mins ago"
+        //     }
+        // ];
+
+        // const postContainer = document.getElementById("post-container");
+
+        // postData.forEach(post => {
+        //     const postDiv = document.createElement("div");
+        //     postDiv.classList.add("post");
+
+        //     postDiv.innerHTML = `
+        //         <div class="post-header">
+        //             <img src="${post.profilePic}" alt="Profile">
+        //             <div>
+        //                 <strong>${post.user}</strong>
+        //                 <small style="display: block; color: gray;">${post.timestamp}</small>
+        //             </div>
+        //         </div>
+        //         <div class="post-content">
+        //             ${post.content}
+        //         </div>
+        //     `;
+
+        //     postContainer.appendChild(postDiv);
+        // });
+
+        // Profile Click Event
+        document.getElementById("profile").addEventListener("click", async function() {
+    try {
+        const response = await fetch("/profile"); // Send GET request to backend
+        if (response.ok) {
+            window.location.href = "/profile"; // Redirect to the profile page
+        } else {
+            alert("Failed to load profile");
+        }
+    } catch (error) {
+        console.error("Error fetching profile:", error);
+        alert("Something went wrong!");
+    }
+});
+
+        // Logout Button Click Event
+        document.getElementById("logout").addEventListener("click",async function() {
+            try {
+                
+        const response = await fetch("/login"); // Send GET request to backend
+        if (response.ok) {
+            window.location.href = "/login";
+            session.destroy(); // Redirect to the profile page
+        } else {
+            alert("Failed to log out");
+        }
+    } catch (error) {
+        console.error("Error logging out:", error);
+        alert("Something went wrong!");
+    }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+2025-03-06 00:13:43.567 [info] Log level: Info
+2025-03-06 00:13:45.517 [warning] [GitHubBranchProtectionProvider][updateRepositoryBranchProtection] Failed to update repository branch protection: No GitHub authentication session available.
+2025-03-06 04:10:15.973 [warning] [GitHubSourceControlHistoryItemDetailsProvider][_loadAssignableUsers] Failed to load assignable user(s) for habi8/SPL2: Error: No GitHub authentication session available.
+2025-03-06 05:33:42.279 [info] Log level: Info
+2025-03-06 12:43:11.116 [info] Log level: Info
+2025-03-06 12:43:15.010 [warning] [GitHubBranchProtectionProvider][updateRepositoryBranchProtection] Failed to update repository branch protection: No GitHub authentication session available.

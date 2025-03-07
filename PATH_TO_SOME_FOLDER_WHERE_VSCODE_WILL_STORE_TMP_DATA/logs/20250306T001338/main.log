@@ -1,0 +1,67 @@
+2025-03-06 00:13:38.311 [error] Error: Error mutex already exists
+    at xu.U (file:///C:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/main.js:77:29589)
+2025-03-06 00:13:38.321 [info] update#setState idle
+2025-03-06 00:14:08.325 [info] update#setState checking for updates
+2025-03-06 00:14:08.486 [info] update#setState idle
+2025-03-06 01:14:08.332 [info] update#setState checking for updates
+2025-03-06 01:14:08.698 [info] update#setState idle
+2025-03-06 02:14:08.350 [info] update#setState checking for updates
+2025-03-06 02:14:08.844 [info] update#setState idle
+2025-03-06 03:14:08.359 [info] update#setState checking for updates
+2025-03-06 03:14:08.844 [info] update#setState idle
+2025-03-06 04:14:08.376 [info] update#setState checking for updates
+2025-03-06 04:14:08.819 [info] update#setState idle
+2025-03-06 04:43:06.051 [warning] No ptyHost heartbeat after 6 seconds
+2025-03-06 05:24:32.137 [info] update#setState checking for updates
+2025-03-06 05:24:33.907 [info] update#setState idle
+2025-03-06 05:33:40.386 [info] Extension host with pid 18380 exited with code: 0, signal: unknown.
+2025-03-06 05:33:43.756 [warning] No ptyHost heartbeat after 6 seconds
+2025-03-06 06:05:35.464 [warning] No ptyHost heartbeat after 6 seconds
+2025-03-06 12:42:26.043 [warning] No ptyHost heartbeat after 6 seconds
+2025-03-06 12:42:26.044 [info] update#setState checking for updates
+2025-03-06 12:42:27.886 [error] #9: https://update.code.visualstudio.com/api/update/win32-x64-user/stable/6609ac3d66f4eade5cf376d1cb76f13985724bcb - error undefined net::ERR_INTERNET_DISCONNECTED
+2025-03-06 12:42:27.889 [error] Error: net::ERR_INTERNET_DISCONNECTED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:118774)
+    at SimpleURLLoaderWrapper.emit (node:events:518:28)
+2025-03-06 12:42:27.890 [info] update#setState idle
+2025-03-06 12:43:06.717 [info] Extension host with pid 19112 exited with code: 0, signal: unknown.
+2025-03-06 13:42:27.692 [info] update#setState checking for updates
+2025-03-06 13:42:28.343 [info] update#setState idle
+2025-03-06 14:43:13.430 [warning] No ptyHost heartbeat after 6 seconds
+2025-03-06 14:43:13.615 [info] update#setState checking for updates
+2025-03-06 14:43:14.683 [info] update#setState idle
+2025-03-06 15:14:34.349 [warning] No ptyHost heartbeat after 6 seconds
+2025-03-06 15:43:13.627 [info] update#setState checking for updates
+2025-03-06 15:43:14.277 [info] update#setState idle
+2025-03-06 16:43:13.637 [info] update#setState checking for updates
+2025-03-06 16:43:14.270 [info] update#setState idle
+2025-03-06 16:43:56.942 [warning] No ptyHost heartbeat after 6 seconds
+2025-03-06 16:59:21.243 [warning] No ptyHost heartbeat after 6 seconds
+2025-03-06 23:35:51.040 [warning] No ptyHost heartbeat after 6 seconds
+2025-03-06 23:35:51.040 [info] update#setState checking for updates
+2025-03-06 23:35:51.044 [error] #15: https://update.code.visualstudio.com/api/update/win32-x64-user/stable/6609ac3d66f4eade5cf376d1cb76f13985724bcb - error undefined net::ERR_NETWORK_IO_SUSPENDED
+2025-03-06 23:35:51.046 [error] Error: net::ERR_NETWORK_IO_SUSPENDED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:118774)
+    at SimpleURLLoaderWrapper.emit (node:events:518:28)
+2025-03-06 23:35:51.046 [info] update#setState idle
+2025-03-07 00:35:51.052 [info] update#setState checking for updates
+2025-03-07 00:35:52.660 [info] update#setState idle
+2025-03-07 01:35:51.067 [info] update#setState checking for updates
+2025-03-07 01:35:51.721 [info] update#setState idle
+2025-03-07 02:35:51.084 [info] update#setState checking for updates
+2025-03-07 02:35:51.603 [info] update#setState idle
+2025-03-07 03:07:05.737 [warning] No ptyHost heartbeat after 6 seconds
+2025-03-07 03:10:24.450 [warning] No ptyHost heartbeat after 6 seconds
+2025-03-07 03:35:39.461 [warning] No ptyHost heartbeat after 6 seconds
+2025-03-07 03:35:51.102 [info] update#setState checking for updates
+2025-03-07 03:35:51.527 [info] update#setState idle
+2025-03-07 04:07:42.591 [warning] No ptyHost heartbeat after 6 seconds
+2025-03-07 04:35:51.106 [info] update#setState checking for updates
+2025-03-07 04:35:51.537 [info] update#setState idle
+2025-03-07 04:46:53.513 [warning] No ptyHost heartbeat after 6 seconds
+2025-03-07 05:28:53.060 [warning] No ptyHost heartbeat after 6 seconds
+2025-03-07 05:35:51.124 [info] update#setState checking for updates
+2025-03-07 05:35:51.565 [info] update#setState idle
+2025-03-07 06:35:51.143 [info] update#setState checking for updates
+2025-03-07 06:35:51.575 [info] update#setState idle
+2025-03-07 06:48:34.725 [info] Extension host with pid 13580 exited with code: 0, signal: unknown.

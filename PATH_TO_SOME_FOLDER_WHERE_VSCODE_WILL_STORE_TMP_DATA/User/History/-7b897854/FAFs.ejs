@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Password</title>
+    <link rel="stylesheet" href="setPassword.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Set Your Password</h2>
+        <form id="setPasswordForm" action="/setPassword" method="post">
+            <input type="password" id="password" placeholder="Enter new password" required>
+            <small id="passwordError" style="color: orange; display: none;">⚠️ Password should be at least 6 characters long.</small>
+            <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+            <button type="submit">Set Password</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("setPasswordForm").addEventListener("submit", async function (event) {
+            event.preventDefault();
+    
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+            const errorMsg = document.getElementById("passwordError");
+            const email = localStorage.getItem("email");
+    
+            // Email Check
+            if (!email) {
+                alert("⚠️ Email not found! Please start over.");
+                window.location.href = "/";
+                return;
+            }
+    
+            // Password Length Check
+            if (password.length < 6) {
+                errorMsg.style.display = "block";
+                return;
+            } else {
+                errorMsg.style.display = "none";
+            }
+    
+            // Password Match Check
+            if (password !== confirmPassword) {
+                alert("❌ Passwords do not match!");
+                return;
+            }
+    
+            try {
+                const response = await fetch("/setpassword", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email, password })
+                });
+    
+                const data = await response.json();
+                if (data.success) {
+                    alert("✅ Password set successfully! Redirecting to login...");
+                    window.location.href = "/login";
+                } else {
+                    alert("❌ Failed to set password. Try again.");
+                }
+            } catch (error) {
+                console.error("Error setting password:", error);
+                alert("⚠️ Server error. Try again later.");
+            }
+        });
+    
+        // Show message when password is too short
+        document.getElementById("password").addEventListener("input", function () {
+            const errorMsg = document.getElementById("passwordError");
+            if (this.value.length < 6) {
+                errorMsg.style.display = "block";
+            } else {
+                errorMsg.style.display = "none";
+            }
+        });
+    </script>
+    
+</body>
+</html>

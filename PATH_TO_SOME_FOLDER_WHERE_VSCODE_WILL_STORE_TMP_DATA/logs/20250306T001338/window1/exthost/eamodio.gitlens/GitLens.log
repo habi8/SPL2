@@ -1,0 +1,32 @@
+2025-03-06 00:13:45.288 [info] GitLens v16.3.2 activating in Visual Studio Code (1.98.0) on the desktop; language='en', logLevel='warn', defaultDateLocale='null' (e820c39a7328ab40885eb5dfca1be1b7eb25c91a5f0d84d935a951ac09d7e362|6d8ca69c-1b57-4e32-ac9e-c972618bb4201741198419104)
+To enable debug logging, set `"gitlens.outputLevel": "debug"` or run "GitLens: Enable Debug Logging" from the Command Palette
+
+2025-03-06 00:24:53.278 [info] [2025-03-05 18:24:52.774] [GIT          ] [c:\Users\habib\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@types\body-parser] git rev-parse --show-toplevel • Command failed: C:\Program Files\Git\cmd\git.exe -c core.longpaths=true -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any of the parent directories): .git [39ms]
+
+
+2025-03-06 00:25:59.230 [info] [2025-03-05 18:25:58.727] [GIT          ] [c:\Users\habib\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@types\express-session] git rev-parse --show-toplevel • Command failed: C:\Program Files\Git\cmd\git.exe -c core.longpaths=true -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any of the parent directories): .git [36ms]
+
+
+2025-03-06 05:33:42.688 [info] GitLens v16.3.2 activating in Visual Studio Code (1.98.0) on the desktop; language='en', logLevel='warn', defaultDateLocale='null' (e820c39a7328ab40885eb5dfca1be1b7eb25c91a5f0d84d935a951ac09d7e362|8d22553a-b1d9-43ac-bb31-f830d4dbb1881741217620483)
+To enable debug logging, set `"gitlens.outputLevel": "debug"` or run "GitLens: Enable Debug Logging" from the Command Palette
+
+2025-03-06 05:33:47.864 [info] [2025-03-05 23:33:46.859] [GIT          ] [c:\Users\habib\Desktop\Landing page] git rev-parse --show-toplevel • Command failed: C:\Program Files\Git\cmd\git.exe -c core.longpaths=true -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any of the parent directories): .git [53ms]
+
+
+2025-03-06 05:33:56.873 [info] [2025-03-05 23:33:56.367] [GIT          ] [c:\Users\habib\Desktop\Landing page\Deepseek] git rev-parse --show-toplevel • Command failed: C:\Program Files\Git\cmd\git.exe -c core.longpaths=true -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any of the parent directories): .git [55ms]
+
+
+2025-03-06 05:34:15.831 [info] [2025-03-05 23:34:15.325] [GIT          ] [c:\Users\habib\Desktop\Landing page\Deepseek] git rev-parse --show-toplevel • Command failed: C:\Program Files\Git\cmd\git.exe -c core.longpaths=true -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any of the parent directories): .git [40ms]
+
+
+2025-03-06 05:34:38.252 [info] [2025-03-05 23:34:37.749] [GIT          ] [c:\Users\habib\Desktop\Landing page\Deepseek] git rev-parse --show-toplevel • Command failed: C:\Program Files\Git\cmd\git.exe -c core.longpaths=true -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any of the parent directories): .git [843ms] (slow)
+
+
+2025-03-06 05:36:04.081 [info] [2025-03-05 23:36:03.567] [GIT          ] [c:\Users\habib\Desktop\Landing page\Deepseek\ChatGPT] git rev-parse --show-toplevel • Command failed: C:\Program Files\Git\cmd\git.exe -c core.longpaths=true -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel • not a git repository (or any of the parent directories): .git [55ms]
+
+
+2025-03-06 12:43:14.416 [info] GitLens v16.3.2 activating in Visual Studio Code (1.98.0) on the desktop; language='en', logLevel='warn', defaultDateLocale='null' (e820c39a7328ab40885eb5dfca1be1b7eb25c91a5f0d84d935a951ac09d7e362|50858397-8b62-4c78-8701-c8b0764396e41741243387012)
+To enable debug logging, set `"gitlens.outputLevel": "debug"` or run "GitLens: Enable Debug Logging" from the Command Palette
+
+2025-03-06 13:33:19.521 [info] [2025-03-06 07:33:19.014] [GIT    *514ms] [c:/Users/habib/Desktop/5th Sem/SE 505(SPL 2)/Project folder/SPL2_Elin] git log --format=%x3c%x2ff%x3e%n%x3cr%x3e%x20%H%n%x3ca%x3e%x20%aN%n%x3ce%x3e%x20%aE%n%x3cd%x3e%x20%at%n%x3cn%x3e%x20%cN%n%x3cm%x3e%x20%cE%n%x3cc%x3e%x20%ct%n%x3cp%x3e%x20%P%n%x3cs%x3e%n%B%n%x3c%x2fs%x3e%n%x3cf%x3e -M --name-status --full-history -m --no-min-parents -n3 72e8cbea52330c556e05e3aed1932d6f69678e35 -- [*514ms] (slow)
+

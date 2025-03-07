@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Pollution Awareness</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Horizon Gradient */
+        .horizon {
+            background: linear-gradient(to bottom, #1e3c72, #2a5298);
+            height: 50%;
+            position: relative;
+        }
+
+        .horizon::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: #ffffff;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Ocean Water */
+        .ocean {
+            height: 50%;
+            background: #0a2a3c;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Ocean Waves Animation */
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: -200%;
+            width: 300%;
+            height: 100px;
+            background: url('https://www.transparenttextures.com/patterns/wave.png') repeat-x;
+            animation: wave-animation 5s linear infinite;
+        }
+
+        @keyframes wave-animation {
+            0% { left: -200%; }
+            100% { left: 100%; }
+        }
+
+        /* Floating Garbage */
+        .garbage {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            animation: float-garbage 10s infinite;
+        }
+
+        .garbage:nth-child(2) {
+            background-color: #0074cc; /* Bottle */
+            width: 30px;
+            height: 70px;
+        }
+
+        .garbage:nth-child(3) {
+            background-color: #0e8b7b; /* Plastic Bag */
+            width: 60px;
+            height: 60px;
+        }
+
+        @keyframes float-garbage {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                left: 30%;
+            }
+            50% {
+                transform: translateY(-50px) rotate(20deg);
+                left: 70%;
+            }
+            100% {
+                transform: translateY(0) rotate(-20deg);
+                left: 50%;
+            }
+        }
+
+        /* Title and Info */
+        .header {
+            text-align: center;
+            color: white;
+            padding-top: 100px;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 1.2em;
+        }
+
+        /* Button */
+        .cta-button {
+            background-color: #ff5a5f;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 30px;
+            margin-top: 30px;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #ff3b3f;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="horizon">
+        <div class="header">
+            <h1>Save Our Oceans</h1>
+            <p>Together, we can fight ocean pollution</p>
+            <a href="#learn-more" class="cta-button">Learn More</a>
+        </div>
+    </div>
+
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="garbage"></div>
+        <div class="garbage"></div>
+        <div class="garbage"></div>
+    </div>
+
+    <script>
+        // You can use JavaScript to make the garbage float with random speeds and directions
+        const garbageElements = document.querySelectorAll('.garbage');
+
+        garbageElements.forEach(g => {
+            let randomX = Math.random() * 100;
+            let randomDelay = Math.random() * 10;
+            g.style.left = `${randomX}%`;
+            g.style.animationDelay = `${randomDelay}s`;
+        });
+    </script>
+
+</body>
+</html>

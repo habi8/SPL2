@@ -1,0 +1,27 @@
+2025-03-06 05:33:45.678 [info] Getting Manifest... ms-python.debugpy
+2025-03-06 05:33:45.679 [info] Getting Manifest... ms-python.python
+2025-03-06 05:33:46.296 [info] Installing extension: ms-python.python {"productVersion":{"version":"1.98.0","date":"2025-03-04T21:06:18.612Z"},"pinned":false,"operation":3,"isApplicationScoped":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/c%3A/Users/habib/.vscode/extensions/extensions.json","path":"/c:/Users/habib/.vscode/extensions/extensions.json","scheme":"vscode-userdata"}}
+2025-03-06 05:33:46.299 [info] Installing extension: ms-python.debugpy {"productVersion":{"version":"1.98.0","date":"2025-03-04T21:06:18.612Z"},"pinned":false,"operation":3,"isApplicationScoped":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/c%3A/Users/habib/.vscode/extensions/extensions.json","path":"/c:/Users/habib/.vscode/extensions/extensions.json","scheme":"vscode-userdata"}}
+2025-03-06 05:33:47.174 [info] Getting Manifest... ms-python.python
+2025-03-06 05:33:47.524 [info] Getting Manifest... ms-python.vscode-pylance
+2025-03-06 05:33:47.540 [info] Getting Manifest... ms-python.debugpy
+2025-03-06 05:33:48.028 [info] Getting Manifest... ms-python.vscode-pylance
+2025-03-06 05:33:49.371 [info] Extension signature verification result for ms-python.python: Success. Internal Code: 0. Executed: true. Duration: 467ms.
+2025-03-06 05:33:52.436 [info] Extracted extension to file:///c%3A/Users/habib/.vscode/extensions/ms-python.python-2025.2.0-win32-x64: ms-python.python
+2025-03-06 05:33:52.509 [info] Renamed to c:\Users\habib\.vscode\extensions\ms-python.python-2025.2.0-win32-x64
+2025-03-06 05:33:52.560 [info] Marked extension as removed ms-python.python-2025.0.0
+2025-03-06 05:33:52.575 [info] Extension installed successfully: ms-python.python vscode-userdata:/c%3A/Users/habib/.vscode/extensions/extensions.json
+2025-03-06 05:33:53.007 [info] Extension signature verification result for ms-python.debugpy: Success. Internal Code: 0. Executed: true. Duration: 88ms.
+2025-03-06 05:33:53.596 [info] Extracted extension to file:///c%3A/Users/habib/.vscode/extensions/ms-python.debugpy-2025.4.0-win32-x64: ms-python.debugpy
+2025-03-06 05:33:53.619 [info] Renamed to c:\Users\habib\.vscode\extensions\ms-python.debugpy-2025.4.0-win32-x64
+2025-03-06 05:33:53.680 [info] Marked extension as removed ms-python.debugpy-2025.0.1
+2025-03-06 05:33:53.685 [info] Extension installed successfully: ms-python.debugpy vscode-userdata:/c%3A/Users/habib/.vscode/extensions/extensions.json
+2025-03-06 12:43:13.805 [info] Getting Manifest... ms-python.vscode-pylance
+2025-03-06 12:43:15.481 [info] Installing extension: ms-python.vscode-pylance {"productVersion":{"version":"1.98.0","date":"2025-03-04T21:06:18.612Z"},"pinned":false,"operation":3,"isApplicationScoped":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/c%3A/Users/habib/.vscode/extensions/extensions.json","path":"/c:/Users/habib/.vscode/extensions/extensions.json","scheme":"vscode-userdata"}}
+2025-03-06 12:43:16.305 [info] Getting Manifest... ms-python.python
+2025-03-06 12:43:17.161 [info] Getting Manifest... ms-python.debugpy
+2025-03-06 12:43:46.135 [info] Extension signature verification result for ms-python.vscode-pylance: Success. Internal Code: 0. Executed: true. Duration: 328ms.
+2025-03-06 12:44:13.365 [info] Extracted extension to file:///c%3A/Users/habib/.vscode/extensions/ms-python.vscode-pylance-2025.3.1: ms-python.vscode-pylance
+2025-03-06 12:44:14.297 [info] Renamed to c:\Users\habib\.vscode\extensions\ms-python.vscode-pylance-2025.3.1
+2025-03-06 12:44:14.466 [info] Marked extension as removed ms-python.vscode-pylance-2025.2.1
+2025-03-06 12:44:14.483 [info] Extension installed successfully: ms-python.vscode-pylance vscode-userdata:/c%3A/Users/habib/.vscode/extensions/extensions.json

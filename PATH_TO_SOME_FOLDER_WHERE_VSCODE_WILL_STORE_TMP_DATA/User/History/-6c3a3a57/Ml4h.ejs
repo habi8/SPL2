@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine Life Community</title>
+    
+    
+        <link rel="stylesheet" href="signup.css">
+    
+</head>
+<body>
+    <div class="reg-container">
+       
+        
+        <div class="reg-form-container">
+           <form action="/OTP" method="post">
+            <div id="register-form" >
+                <div class="header">
+                    <img src="conserve-the-deep-logo.png">
+                    <h1> Community</h1>
+                </div>
+                
+                    <input type="text" id="name" name = "name" placeholder="Full Name" required>
+    
+                    
+                        <div class="role">
+                            
+                            <p>You are a(n): </p>
+                            <select id="role" name="Role" required>
+                            <option value="" disabled selected>Select Your Occupation</option>
+                            <option value="Student">Student</option>
+                            <option value="Researcher">Researcher</option>
+                            <option value="Conservationist">Conservationist</option>
+                            <option value="Ecologist">Ecologist</option>
+                            <option value="Marine biologist">Marine biologist</option>
+                            <option value="Environmental activist">Environmental activist</option>
+                            <option value="Visitor">Visitor</option>
+                            </select>
+                            
+                        </div>
+                        
+                    </select>
+                    <input type="text" id="institute/Workplace" name = "institute" placeholder="Institute Name" required>
+                    <input type="email" id="email" name = "email" placeholder="Email" required>
+                    
+                    <!--
+                        <input type="password" id="password" name = "password" placeholder="Password" required>
+                    -->
+                        
+                   <button type="submit" class="reg-button">Get OTP</button>  
+ 
+                
+                <p>Already have an account? <a href="/login">Login here</a></p>
+            </div>
+           </form>
+           
+        </div>
+    </div>
+    <script >
+        // req.session.email = email;
+
+          document.querySelector("form").addEventListener("submit", function () {
+            const email = document.getElementById("email").value;
+             const name = document.getElementById("name").value;
+           localStorage.setItem("email", email); // Store email
+    });
+
+
+    </script> 
+</body>
+</html>

@@ -1,0 +1,42 @@
+2025-03-06 00:24:52.779 [info] [2025-03-05 18:24:52.774] [         39ms] [c:\Users\habib\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@types\body-parser] git rev-parse --show-toplevel • FAILED
+2025-03-06 00:24:52.779 [info] 
+Error: Command failed: C:\Program Files\Git\cmd\git.exe -c core.longpaths=true -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any of the parent directories): .git
+
+
+2025-03-06 00:25:58.727 [info] [2025-03-05 18:25:58.727] [         36ms] [c:\Users\habib\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@types\express-session] git rev-parse --show-toplevel • FAILED
+2025-03-06 00:25:58.727 [info] 
+Error: Command failed: C:\Program Files\Git\cmd\git.exe -c core.longpaths=true -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any of the parent directories): .git
+
+
+2025-03-06 05:33:46.862 [info] [2025-03-05 23:33:46.859] [         53ms] [c:\Users\habib\Desktop\Landing page] git rev-parse --show-toplevel • FAILED
+2025-03-06 05:33:46.862 [info] 
+Error: Command failed: C:\Program Files\Git\cmd\git.exe -c core.longpaths=true -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any of the parent directories): .git
+
+
+2025-03-06 05:33:56.368 [info] [2025-03-05 23:33:56.367] [         55ms] [c:\Users\habib\Desktop\Landing page\Deepseek] git rev-parse --show-toplevel • FAILED
+2025-03-06 05:33:56.368 [info] 
+Error: Command failed: C:\Program Files\Git\cmd\git.exe -c core.longpaths=true -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any of the parent directories): .git
+
+
+2025-03-06 05:34:15.325 [info] [2025-03-05 23:34:15.325] [         40ms] [c:\Users\habib\Desktop\Landing page\Deepseek] git rev-parse --show-toplevel • FAILED
+2025-03-06 05:34:15.325 [info] 
+Error: Command failed: C:\Program Files\Git\cmd\git.exe -c core.longpaths=true -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any of the parent directories): .git
+
+
+2025-03-06 05:34:37.750 [info] [2025-03-05 23:34:37.749] [*       843ms] [c:\Users\habib\Desktop\Landing page\Deepseek] git rev-parse --show-toplevel (slow) • FAILED
+2025-03-06 05:34:37.750 [info] 
+Error: Command failed: C:\Program Files\Git\cmd\git.exe -c core.longpaths=true -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any of the parent directories): .git
+
+
+2025-03-06 05:36:03.568 [info] [2025-03-05 23:36:03.568] [         55ms] [c:\Users\habib\Desktop\Landing page\Deepseek\ChatGPT] git rev-parse --show-toplevel • FAILED
+2025-03-06 05:36:03.568 [info] 
+Error: Command failed: C:\Program Files\Git\cmd\git.exe -c core.longpaths=true -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any of the parent directories): .git
+
+

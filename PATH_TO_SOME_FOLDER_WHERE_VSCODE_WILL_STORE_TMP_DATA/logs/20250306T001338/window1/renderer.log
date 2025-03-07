@@ -1,0 +1,135 @@
+2025-03-06 00:13:39.615 [info] Started local extension host with pid 18380.
+2025-03-06 00:13:40.964 [warning] [twxs.cmake]: Cannot register 'cmake.cmakePath'. This property is already registered.
+2025-03-06 00:13:40.965 [warning] [zobo.php-intellisense]: Cannot register 'php.executablePath'. This property is already registered.
+2025-03-06 00:13:42.470 [info] Settings Sync: Account status changed from uninitialized to unavailable
+2025-03-06 00:13:43.267 [error] Error while getting the latest version for the extension cweijan.dbclient-jdbc. Failed to fetch
+2025-03-06 00:13:43.268 [error] Error while getting the latest version for the extension ms-python.vscode-pylance. Failed to fetch
+2025-03-06 00:13:43.269 [error] Error while getting the latest version for the extension linjun.oracle-support. Failed to fetch
+2025-03-06 00:13:43.270 [error] Error while getting the latest version for the extension zobo.php-intellisense. Failed to fetch
+2025-03-06 00:13:43.276 [error] Error while getting the latest version for the extension xdebug.php-pack. Failed to fetch
+2025-03-06 00:13:43.825 [info] [perf] Render performance baseline is 28ms
+2025-03-06 02:35:03.439 [error] Error: file:///c%3A/Users/habib/Desktop/5th%20Sem/SE%20505%28SPL%202%29/Project%20folder/SPL2_Elin/src/index.js has changed in the meantime
+    at ZZe.q (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2138:14907)
+    at ZZe.apply (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2138:15767)
+    at iet.o (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2138:18875)
+    at iet.perform (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2138:18311)
+    at set.apply (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2138:20187)
+    at F7t.$tryApplyWorkspaceEdit (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:1227:4082)
+    at rbt.S (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3246:41614)
+    at rbt.Q (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3246:41392)
+    at rbt.M (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3246:40480)
+    at rbt.L (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3246:39717)
+2025-03-06 02:35:03.439 [warning] IGNORING workspace edit: Error: file:///c%3A/Users/habib/Desktop/5th%20Sem/SE%20505%28SPL%202%29/Project%20folder/SPL2_Elin/src/index.js has changed in the meantime
+2025-03-06 02:41:29.819 [error] Error: file:///c%3A/Users/habib/Desktop/5th%20Sem/SE%20505%28SPL%202%29/Project%20folder/SPL2_Elin/src/index.js has changed in the meantime
+    at ZZe.q (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2138:14907)
+    at ZZe.apply (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2138:15767)
+    at iet.o (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2138:18875)
+    at iet.perform (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2138:18311)
+    at set.apply (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2138:20187)
+    at F7t.$tryApplyWorkspaceEdit (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:1227:4082)
+    at rbt.S (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3246:41614)
+    at rbt.Q (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3246:41392)
+    at rbt.M (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3246:40480)
+    at rbt.L (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3246:39717)
+2025-03-06 02:41:29.820 [warning] IGNORING workspace edit: Error: file:///c%3A/Users/habib/Desktop/5th%20Sem/SE%20505%28SPL%202%29/Project%20folder/SPL2_Elin/src/index.js has changed in the meantime
+2025-03-06 03:50:27.643 [error] Error: file:///c%3A/Users/habib/Desktop/5th%20Sem/SE%20505%28SPL%202%29/Project%20folder/SPL2_Elin/src/index.js has changed in the meantime
+    at ZZe.q (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2138:14907)
+    at ZZe.apply (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2138:15767)
+    at iet.o (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2138:18875)
+    at iet.perform (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2138:18311)
+    at set.apply (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2138:20187)
+    at F7t.$tryApplyWorkspaceEdit (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:1227:4082)
+    at rbt.S (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3246:41614)
+    at rbt.Q (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3246:41392)
+    at rbt.M (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3246:40480)
+    at rbt.L (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:3246:39717)
+2025-03-06 03:50:27.643 [warning] IGNORING workspace edit: Error: file:///c%3A/Users/habib/Desktop/5th%20Sem/SE%20505%28SPL%202%29/Project%20folder/SPL2_Elin/src/index.js has changed in the meantime
+2025-03-06 05:33:40.684 [info] Started local extension host with pid 19112.
+2025-03-06 05:33:41.098 [warning] [zobo.php-intellisense]: Cannot register 'php.executablePath'. This property is already registered.
+2025-03-06 05:33:41.528 [info] Settings Sync: Account status changed from uninitialized to unavailable
+2025-03-06 05:33:46.374 [info] [perf] Render performance baseline is 13ms
+2025-03-06 05:33:46.861 [warning] [twxs.cmake]: Cannot register 'cmake.cmakePath'. This property is already registered.
+2025-03-06 05:44:25.393 [error] Illegal value for lineNumber: Error: Illegal value for lineNumber
+    at Cf.getLineMaxColumn (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:253:112)
+    at vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2001:13251
+    at HI._computeFn (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:24260)
+    at HI.q (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:25793)
+    at HI.get (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:25545)
+    at HI.reportChanges (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:15998)
+    at rse.endUpdate (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:22892)
+    at HI.endUpdate (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:26591)
+    at _5.finish (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:17858)
+    at Hi (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:17251)
+2025-03-06 05:55:15.129 [error] Illegal value for lineNumber: Error: Illegal value for lineNumber
+    at Cf.getLineMaxColumn (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:253:112)
+    at vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2001:13251
+    at HI._computeFn (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:24260)
+    at HI.q (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:25793)
+    at HI.get (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:25545)
+    at HI.reportChanges (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:15998)
+    at rse.endUpdate (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:22892)
+    at HI.endUpdate (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:26591)
+    at _5.finish (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:17858)
+    at Hi (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:17251)
+2025-03-06 12:42:27.892 [warning] Failed to fetch chat participant registry Offline
+2025-03-06 12:43:07.643 [info] Started local extension host with pid 13580.
+2025-03-06 12:43:08.767 [warning] [twxs.cmake]: Cannot register 'cmake.cmakePath'. This property is already registered.
+2025-03-06 12:43:08.768 [warning] [zobo.php-intellisense]: Cannot register 'php.executablePath'. This property is already registered.
+2025-03-06 12:43:10.362 [info] Settings Sync: Account status changed from uninitialized to unavailable
+2025-03-06 12:43:11.091 [info] [perf] Render performance baseline is 35ms
+2025-03-06 13:28:43.685 [error] Illegal value for lineNumber: Error: Illegal value for lineNumber
+    at Cf.getLineMaxColumn (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:253:112)
+    at vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2001:13251
+    at HI._computeFn (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:24260)
+    at HI.q (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:25793)
+    at HI.get (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:25545)
+    at HI.reportChanges (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:15998)
+    at rse.endUpdate (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:22892)
+    at HI.endUpdate (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:26591)
+    at _5.finish (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:17858)
+    at Hi (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:17251)
+2025-03-06 14:02:03.062 [error] Illegal value for lineNumber: Error: Illegal value for lineNumber
+    at Cf.getLineMaxColumn (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:253:112)
+    at vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2001:13251
+    at HI._computeFn (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:24260)
+    at HI.q (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:25793)
+    at HI.get (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:25545)
+    at HI.reportChanges (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:15998)
+    at rse.endUpdate (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:22892)
+    at HI.endUpdate (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:26591)
+    at _5.finish (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:17858)
+    at Hi (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:17251)
+2025-03-06 14:08:29.739 [error] Illegal value for lineNumber: Error: Illegal value for lineNumber
+    at Cf.getLineMaxColumn (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:253:112)
+    at vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2001:13251
+    at HI._computeFn (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:24260)
+    at HI.q (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:25793)
+    at HI.get (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:25545)
+    at HI.reportChanges (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:15998)
+    at rse.endUpdate (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:22892)
+    at HI.endUpdate (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:26591)
+    at _5.finish (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:17858)
+    at Hi (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:17251)
+2025-03-06 16:40:38.361 [error] Illegal value for lineNumber: Error: Illegal value for lineNumber
+    at Cf.getLineMaxColumn (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:253:112)
+    at vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2001:13251
+    at HI._computeFn (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:24260)
+    at HI.q (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:25793)
+    at HI.get (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:25545)
+    at HI.reportChanges (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:15998)
+    at rse.endUpdate (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:22892)
+    at HI.endUpdate (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:26591)
+    at _5.finish (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:17858)
+    at Hi (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:17251)
+2025-03-06 23:35:51.042 [warning] Failed to fetch chat participant registry Failed to fetch
+2025-03-07 05:44:22.908 [error] Illegal value for lineNumber: Error: Illegal value for lineNumber
+    at Cf.getLineMaxColumn (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:253:112)
+    at vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:2001:13251
+    at HI._computeFn (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:24260)
+    at HI.q (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:25793)
+    at HI.get (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:25545)
+    at HI.reportChanges (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:15998)
+    at rse.endUpdate (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:22892)
+    at HI.endUpdate (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:26591)
+    at _5.finish (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:17858)
+    at Hi (vscode-file://vscode-app/c:/Users/habib/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/workbench.desktop.main.js:31:17251)

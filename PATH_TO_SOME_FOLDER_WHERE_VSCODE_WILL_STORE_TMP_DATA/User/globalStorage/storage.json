@@ -7,22 +7,20 @@
         "folders": [
             {
                 "folderUri": "file:///c%3A/Users/habib/Desktop/5th%20Sem/SE%20505%28SPL%202%29/Project%20folder/SPL2_Elin"
+            },
+            {
+                "folderUri": "file:///c%3A/Users/habib/Desktop/Landing%20page"
             }
         ],
-        "emptyWindows": [
-            {
-                "backupFolder": "1740904765639"
-            }
-        ]
+        "emptyWindows": []
     },
     "windowControlHeight": 35,
     "profileAssociations": {
         "workspaces": {
-            "file:///c%3A/Users/habib/Desktop/5th%20Sem/SE%20505%28SPL%202%29/Project%20folder/SPL2_Elin": "__default__profile__"
+            "file:///c%3A/Users/habib/Desktop/5th%20Sem/SE%20505%28SPL%202%29/Project%20folder/SPL2_Elin": "__default__profile__",
+            "file:///c%3A/Users/habib/Desktop/Landing%20page": "__default__profile__"
         },
-        "emptyWindows": {
-            "1740904765639": "__default__profile__"
-        }
+        "emptyWindows": {}
     },
     "theme": "vs-dark",
     "themeBackground": "#1f1f1f",

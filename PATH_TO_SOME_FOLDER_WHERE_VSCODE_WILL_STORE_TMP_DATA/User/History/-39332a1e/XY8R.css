@@ -1,0 +1,84 @@
+body {
+    font-family: system-ui;
+    margin: 0;
+    padding: 0;
+    background: url('/community/communityBG.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    justify-content: center;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+header img{
+    height: 150px;
+    width: 150px;
+}
+
+.icon-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    padding-left: 800px;
+}
+
+.icon-container img{
+    height: 100px;
+    width: 100px;
+}
+
+
+/* nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+.icon-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    justify-content: space-around;
+    padding: 20px;
+}
+.news-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.news-section h2 {
+    font-size: 2em;
+}
+.news-section p {
+    font-size: 1.2em;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0,0, 0, 0.3);
+} */
+a {
+    text-decoration: none;
+  }
+  
+ p {
+    font-size: 18px;
+    font-family: system-ui;
+    color: white;
+    font-weight: 700;
+  
+}
