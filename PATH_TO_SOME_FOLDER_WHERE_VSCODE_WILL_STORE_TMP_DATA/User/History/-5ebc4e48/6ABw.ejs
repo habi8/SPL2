@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="/posts/profile.css">
+    
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Sidebar: People -->
+        <div class="sidebar-left">
+            <div class="header">
+                <img src="/newsfeed/friends.png">
+            <h3>Friends</h3>
+            </div>
+            
+            <ul id="userList">
+                <li><img src="user1.jpg" alt="User1"><span>John Doe</span> <button>Add Friend</button></li>
+                <li><img src="user2.jpg" alt="User2"><span>Jane Smith</span> <button>Add Friend</button></li>
+            </ul>
+        </div>
+        
+ 
+        <!-- Main Profile Section -->
+        <main class="profile-section">
+            
+                <div class="profile-header">
+                    <button id="backToNewsfeedBtn" title="Back to Newsfeed">
+                        <i class="homebtn"><img src="/newsfeed/home-button.png "></i> 
+                       </button>
+                       <img id="profilePic" src="<%= profilePic || '/default-profile.png' %>" alt="<=userName>">
+
+                
+                <input type="file" id="profilePicInput" style="display:none;">
+                <h2 id="username"><%= userName%></h2>
+                <input type="text" id="editUsername" placeholder="Enter new username" style="display:none;">
+                <p id="name"><%= name %></p> 
+                <input type="text" id="editName" placeholder="Enter new name" style="display:none;">
+                
+                <div class="bio-section">
+                    <p id="bioText"><%= bio%></p>
+                    <textarea id="bioInput" placeholder="Enter new bio" style="display:none;"></textarea>
+                </div>
+                <button id="editProfileBtn">Edit Profile</button>
+                <button id="saveChangesBtn" style="display:none;">Save Changes</button>
+                <button id="cancelChangesBtn" style="display:none;">Cancel</button>
+            </div>
+    
+            <!-- Posts Section -->
+             <div class="upload">
+                <img id="dp" src="<%= profilePic || '/default-profile.png' %>">
+                <textarea id="status" placeholder="What''s on your mind?"></textarea>
+                <input type="file" id="picUpload" accept="image/*" style="display: none;">
+                <img id="uploadPic" src="/posts/photos.png">
+                <img id="upload" src="/posts/upload.png">
+             </div>
+
+
+            <div class="posts">
+                <h3>Posts</h3>
+                <div id="postContainer"></div> <!-- This will contain all the posts -->
+            </div>
+            
+        </main>
+    
+        <!-- Right Sidebar: Inbox -->
+        <div class="sidebar-right">
+            <div class="header">
+            <img src="/newsfeed/message.png">
+            <h3>Inbox</h3>
+            </div>
+            <ul id="messagesList">
+                <li><strong>John:</strong> Hey there!</li>
+                <li><strong>Jane:</strong> How are you?</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        //back button
+        document.getElementById('backToNewsfeedBtn').addEventListener('click', async function() {
+    try {
+        const response = await fetch('/newsfeedPage'); // This fetches the profile info
+        if (response.ok) {
+            // You can still handle data here, if necessary, but redirect to newsfeed page
+            window.location.href = "/newsfeed"; // Redirect to the newsfeed page
+            console.log("Going back to newsfeed from profile");
+        } else {
+            alert("Failed to load newsfeed");
+        }
+    } catch (error) {
+        console.error("Error fetching newsfeed:", error);
+        alert("Something went wrong!");
+    }
+});
+
+        // Edit Profile function
+        document.getElementById('editProfileBtn').addEventListener('click', () => {
+            const isEditing = document.getElementById('editUsername').style.display === 'block';
+    
+            // Toggle visibility of editable fields
+            document.getElementById('editUsername').style.display = isEditing ? 'none' : 'block';
+            document.getElementById('editUsername').value = document.getElementById('username').textContent;
+    
+            document.getElementById('editName').style.display = isEditing ? 'none' : 'block';
+            document.getElementById('editName').value = document.getElementById('name').textContent;
+    
+            document.getElementById('bioInput').style.display = isEditing ? 'none' : 'block';
+            document.getElementById('bioInput').value = document.getElementById('bioText').textContent;
+    
+            document.getElementById('profilePicInput').style.display = isEditing ? 'none' : 'block';
+    
+            document.getElementById('editProfileBtn').style.display = isEditing ? 'block' : 'none';
+            document.getElementById('saveChangesBtn').style.display = isEditing ? 'none' : 'inline-block';
+            document.getElementById('cancelChangesBtn').style.display = isEditing ? 'none' : 'inline-block';
+        });
+    
+        // Save changes
+    // Save changes
+    document.getElementById('saveChangesBtn').addEventListener('click', async () => {
+    const updatedUsername = document.getElementById('editUsername').value;
+    const updatedName = document.getElementById('editName').value;
+    const updatedBio = document.getElementById('bioInput').value;
+    const profilePicInput = document.getElementById("profilePicInput");
+
+    let profilePicUrl = document.getElementById("profilePic").src; // Default: keep old pic
+    console.log("profilePicUrl: ",profilePicUrl)
+
+    // Check if a new profile picture is selected
+    if (profilePicInput.files.length > 0) {
+        const formData = new FormData();
+        formData.append("profilePic", profilePicInput.files[0]);
+
+        try {
+            const uploadResponse = await fetch('/updateProfilePic', { // Change endpoint
+                method: 'POST',
+                body: formData
+            });
+
+            const uploadData = await uploadResponse.json();
+            if (uploadResponse.ok) {
+                profilePicUrl = uploadData.url; 
+                console.log("profile picture uploaded")// Get Cloudinary URL
+            } else {
+                alert("Failed to upload profile picture: " + uploadData.error);
+                return;
+            }
+        } catch (error) {
+            console.error("Error uploading profile picture:", error);
+            alert("An error occurred while uploading the profile picture.");
+            return;
+        }
+    }
+
+    try {
+        // Send updated profile info (including profilePicUrl) to backend
+        const response = await fetch('/updateProfile', { // This should be for profile updates only
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                username: updatedUsername,
+                name: updatedName,
+                bio: updatedBio,
+                profilePic: profilePicUrl
+            })
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+            document.getElementById('username').textContent = updatedUsername;
+            document.getElementById('name').textContent = updatedName;
+            document.getElementById('bioText').textContent = updatedBio;
+            document.getElementById("profilePic").src = profilePicUrl; // Update UI
+
+            // Hide editable fields after saving
+            document.getElementById('editUsername').style.display = 'none';
+            document.getElementById('editName').style.display = 'none';
+            document.getElementById('bioInput').style.display = 'none';
+            document.getElementById('profilePicInput').style.display = 'none';
+
+            document.getElementById('editProfileBtn').style.display = 'block';
+            document.getElementById('saveChangesBtn').style.display = 'none';
+            document.getElementById('cancelChangesBtn').style.display = 'none';
+
+            alert("Profile updated successfully!");
+        } else {
+            alert("Failed to update profile: " + data.error);
+        }
+    } catch (error) {
+        console.error("Error updating profile:", error);
+        alert("An error occurred while updating the profile.");
+    }
+});
+
+// Cancel changes
+document.getElementById('cancelChangesBtn').addEventListener('click', () => {
+    // Revert the editable fields to their original content
+    document.getElementById('editUsername').value = document.getElementById('username').textContent;
+    document.getElementById('editName').value = document.getElementById('name').textContent;
+    document.getElementById('bioInput').value = document.getElementById('bioText').textContent;
+
+    // Hide editable fields
+    document.getElementById('editUsername').style.display = 'none';
+    document.getElementById('editName').style.display = 'none';
+    document.getElementById('bioInput').style.display = 'none';
+    document.getElementById('profilePicInput').style.display = 'none';
+
+    document.getElementById('editProfileBtn').style.display = 'block';
+    document.getElementById('saveChangesBtn').style.display = 'none';
+    document.getElementById('cancelChangesBtn').style.display = 'none';
+});
+
+// Profile Picture Upload Preview
+document.getElementById("profilePicInput").addEventListener("change", function(event) {
+    const reader = new FileReader();
+    reader.onload = function() {
+        document.getElementById("profilePic").src = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+    
+});
+
+//status/picture upload
+document.getElementById("uploadPic").addEventListener("click", function() {
+        document.getElementById("picUpload").click(); // Trigger file input on click
+    });
+
+    document.getElementById("picUpload").addEventListener("change", function(event) {
+        const file = event.target.files[0]; // Get selected file
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+              const photo=  document.getElementById("uploadPic").src = e.target.result; // Change uploadPic image to selected file
+              
+            };
+            reader.readAsDataURL(file); // Read file as Data URL
+        }
+    });
+
+    document.getElementById("upload").addEventListener("click", async function () {
+    const statusText = document.getElementById("status").value;
+    const fileInput = document.getElementById("picUpload");
+    const file = fileInput.files[0];
+
+
+    const userName = "<%= userName%>"; // You should get this from your authentication system
+    const profilePic = "<%= profilePic || '/default-profile.png' %>"; 
+    //const email = req.session.email;
+    //console.log("SEssion mail in profile.js: ",email)
+    if (!statusText && !file) {
+        alert("Please enter some text or upload an image.");
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append("userName", userName);
+    formData.append("profilePic", profilePic);
+    formData.append("statusText", statusText);
+    //formData.append("email",email);
+    if (file) {
+        formData.append("photo", file);
+        console.log("form data sent")
+    }
+
+    try {
+        const response = await fetch("/uploadPost", {
+            method: "POST",
+            body: formData,
+        });
+
+        const result = await response.json();
+        if (result.success) {
+            alert("Post uploaded successfully!");
+            document.getElementById("status").value = "";
+            fileInput.value = ""; // Reset file input
+            document.getElementById("uploadPic").src="/posts/photos.png";
+        } else {
+            alert("Error uploading post.");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Something went wrong.");
+    }
+});
+
+// Fetch all posts from the backend and display them
+async function fetchPosts() {
+    try {
+        const response = await fetch('/getAllPosts');
+        const data = await response.json();
+
+        if (data.success) {
+            const posts = data.Allposts;
+            const postContainer = document.getElementById('postContainer');
+            postContainer.innerHTML = ''; // Clear any existing content
+
+            posts.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.classList.add('post'); // Add a class for styling
+
+                // Create a box for each post
+                postElement.innerHTML = `
+                    <div class="postBox">
+                        <div class="profileInfo">
+                            <img src="${post.profilePic}" alt="Profile Picture">
+                            <div class="namedate">
+                                 <h4>${post.userName}</h4>
+                                 <p class="timestamp">${new Date(post.createdAt).toLocaleString()}</p>
+                             </div>   
+                        </div>
+                        <div class="postContent">
+                            <p class="statusText">${post.statusText}</p>
+                            ${post.photo ? `<img src="${post.photo}" class="postImage">` : ''}
+                        </div>
+                    </div>
+                `;
+                postContainer.appendChild(postElement);
+            });
+        }
+    } catch (error) {
+        console.error('Error fetching posts:', error);
+    }
+}
+
+// Call the function to fetch posts when the page loads
+window.onload = fetchPosts;
+
+
+
+    </script>
+    
+    </body>
+</html>

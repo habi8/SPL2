@@ -3614,3 +3614,130 @@
 2025-03-07 17:42:36.250 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [60ms]
 2025-03-07 17:42:36.320 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [60ms]
 2025-03-07 17:42:36.346 [info] > git status -z -uall [91ms]
+2025-03-07 17:42:36.978 [info] > git add -A -- . [764ms]
+2025-03-07 17:42:36.978 [info] warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/Local Storage/leveldb/LOG.old', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/Service Worker/Database/LOG.old', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/User/globalStorage/storage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/.package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/logs/20250307T142407/main.log', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/logs/20250307T142407/window1/exthost/eamodio.gitlens/GitLens.log', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/logs/20250307T142407/window1/exthost/mongodb.mongodb-vscode/MongoDB Extension.log', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/logs/20250307T142407/window1/exthost/output_logging_20250307T142409/1-IntelliCode API Examples.log', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/logs/20250307T142407/window1/exthost/output_logging_20250307T142409/2-VS IntelliCode.log', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/logs/20250307T142407/window1/exthost/output_logging_20250307T142409/4-SQL Developer - Log.log', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/logs/20250307T142407/window1/exthost/output_logging_20250307T142409/5-API Usage Examples LSP.log', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/logs/20250307T142407/window1/exthost/output_logging_20250307T142409/6-Database Client.log', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/logs/20250307T142407/window1/renderer.log', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/.bin/uuid', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/.bin/uuid.ps1', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/CHANGELOG.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/CONTRIBUTING.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/LICENSE.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/bin/uuid', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-browser/index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-browser/md5.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-browser/parse.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-browser/rng.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-browser/sha1.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-browser/stringify.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-browser/v1.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-browser/v3.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-browser/v35.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-browser/v4.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-browser/v5.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-browser/validate.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-browser/version.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-node/index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-node/md5.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-node/parse.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-node/rng.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-node/sha1.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-node/stringify.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-node/v1.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-node/v3.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-node/v35.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-node/v4.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-node/v5.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-node/validate.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/esm-node/version.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/md5-browser.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/md5.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/nil.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/parse.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/regex.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/rng-browser.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/rng.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/sha1-browser.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/sha1.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/stringify.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/uuid-bin.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/v1.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/v3.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/v35.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/v4.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/v5.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/validate.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/dist/version.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/node_modules/uuid/wrapper.mjs', LF will be replaced by CRLF the next time Git touches it
+2025-03-07 17:42:37.188 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [206ms]
+2025-03-07 17:42:37.226 [info] > git config --get commit.template [35ms]
+2025-03-07 17:42:37.284 [info] > git config --get commit.template [54ms]
+2025-03-07 17:42:37.294 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [59ms]
+2025-03-07 17:42:37.348 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [46ms]
+2025-03-07 17:42:37.364 [info] > git status -z -uall [65ms]
+2025-03-07 17:42:37.436 [info] > git merge-base refs/heads/main refs/remotes/origin/main [56ms]
+2025-03-07 17:42:37.454 [info] > git blame --root --incremental 8f36f633e0a599a0707549e6ece17dd6e1950103 -- src/index.js [81ms]
+2025-03-07 17:42:37.491 [info] > git config --get commit.template [55ms]
+2025-03-07 17:42:37.503 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [57ms]
+2025-03-07 17:42:37.503 [info] > git diff --name-status -z --diff-filter=ADMR f637b766c788aa1c2198d389dceb4bf43f8c82bf...refs/remotes/origin/main [62ms]
+2025-03-07 17:42:37.563 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [52ms]
+2025-03-07 17:42:37.574 [info] > git status -z -uall [66ms]
+2025-03-07 17:42:38.505 [info] > git ls-files --stage -- src/index.js [34ms]
+2025-03-07 17:42:38.541 [info] > git cat-file -s 7375630c1e59f764595b69ef105eac6548251154 [33ms]
+2025-03-07 17:42:38.579 [info] > git show --textconv :src/index.js [35ms]
+2025-03-07 17:42:41.416 [info] > git config --get commit.template [46ms]
+2025-03-07 17:42:41.420 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [46ms]
+2025-03-07 17:42:41.473 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [46ms]
+2025-03-07 17:42:41.484 [info] > git status -z -uall [60ms]
+2025-03-07 17:42:46.546 [info] > git config --get commit.template [44ms]
+2025-03-07 17:42:46.553 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [46ms]
+2025-03-07 17:42:46.606 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [46ms]
+2025-03-07 17:42:46.620 [info] > git status -z -uall [63ms]
+2025-03-07 17:42:51.675 [info] > git config --get commit.template [45ms]
+2025-03-07 17:42:51.679 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [46ms]
+2025-03-07 17:42:51.729 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [43ms]
+2025-03-07 17:42:51.740 [info] > git status -z -uall [57ms]
+2025-03-07 17:42:56.807 [info] > git config --get commit.template [54ms]
+2025-03-07 17:42:56.813 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [57ms]
+2025-03-07 17:42:56.864 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [45ms]
+2025-03-07 17:42:56.876 [info] > git status -z -uall [60ms]
+2025-03-07 17:43:07.098 [info] > git config --get commit.template [43ms]
+2025-03-07 17:43:07.105 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [46ms]
+2025-03-07 17:43:07.154 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [41ms]
+2025-03-07 17:43:07.169 [info] > git status -z -uall [60ms]
+2025-03-07 17:43:08.454 [info] > git config --get commit.template [44ms]
+2025-03-07 17:43:08.461 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [46ms]
+2025-03-07 17:43:08.511 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [43ms]
+2025-03-07 17:43:08.522 [info] > git status -z -uall [57ms]
+2025-03-07 17:43:13.581 [info] > git config --get commit.template [48ms]
+2025-03-07 17:43:13.584 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [46ms]
+2025-03-07 17:43:13.635 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [44ms]
+2025-03-07 17:43:13.646 [info] > git status -z -uall [58ms]
+2025-03-07 17:43:19.409 [info] > git config --get commit.template [51ms]
+2025-03-07 17:43:19.414 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [53ms]
+2025-03-07 17:43:19.468 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [45ms]
+2025-03-07 17:43:19.482 [info] > git status -z -uall [62ms]
+2025-03-07 17:43:19.523 [info] > git merge-base refs/heads/main refs/remotes/origin/main [36ms]
+2025-03-07 17:43:19.564 [info] > git diff --name-status -z --diff-filter=ADMR 8f36f633e0a599a0707549e6ece17dd6e1950103...refs/remotes/origin/main [37ms]
+2025-03-07 17:43:20.552 [info] > git ls-files --stage -- src/index.js [33ms]
+2025-03-07 17:43:20.588 [info] > git cat-file -s 7375630c1e59f764595b69ef105eac6548251154 [33ms]
+2025-03-07 17:43:20.625 [info] > git show --textconv :src/index.js [34ms]
+2025-03-07 17:43:20.832 [info] > git config --get commit.template [49ms]
+2025-03-07 17:43:20.834 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [47ms]
+2025-03-07 17:43:20.883 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [42ms]
+2025-03-07 17:43:20.897 [info] > git status -z -uall [59ms]
