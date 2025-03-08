@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Newsfeed</title>
+    <link rel="stylesheet" href="/newsfeed/newsfeed.css">
+    
+</head>
+<body>
+
+    <!-- Left Sidebar - People Section -->
+     
+    <div class="left-sidebar">
+        <div class="head">
+            <img src="/newsfeed/conserve-the-deep-logo.png">
+        <p><b>Community</b></p>
+        </div>
+        
+        <div class="header">
+            <img src="/newsfeed/handshake.png" alt="Handshake">
+        <h3>People</h3>
+        </div>
+        
+        <div id="people-list">
+            <% users.forEach(user => { %>
+                <div class="user-item">
+                    <img src="<%= user.profilePic || '/posts/user.png' %>" alt="<%= user.userName %>'s profile" class="user-pic">
+                    <div class="user-details">
+                        <span class="user-name"><%= user.userName || "My Profile" %></span>
+                        <% if (requests.includes(user.userName)) { %> <!-- ✅ Ensure `requests` is not undefined -->
+                            <span class="friend-request-sent">Friend request sent ✅</span>
+                        <% } else { %>
+                            <button class="addFriend" data-username="<%= userName %>">Add friend</button>
+                        <% } %>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+        
+        
+    </div>
+    
+
+    <!-- Middle Section - Newsfeed -->
+    <div class="newsfeed" id="newsfeed">
+        <div id = "header">
+            <img id="newspaperimg" src="/newsfeed/newspaper.png" onclick="refreshPage()">
+        </div>
+        <div id="post-container">
+
+        </div>
+    </div>
+
+    <!-- Right Sidebar - Profile & Logout -->
+    <div class="right-sidebar">
+        <div class="profile" id="profile">
+            <img src="<%= profilePic%>"alt="Profile picture">
+            <span><b><%=userName%></b>
+            
+            </span>
+        </div>
+        <div class="icons">
+            <div class="notification-wrapper">
+                <img id="notifications" src="/newsfeed/bell.png" alt="Notifications" />
+                <div class="popup-box" id="popup" style="display: none; opacity: 0;">
+                    <h3>Notifications</h3>
+                    <div class="notification-list" id="notification-list">
+                        <!-- Notifications will be dynamically added here -->
+                        <p>No new notifications</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="messages-wrapper">
+                <img id="messages" src="/newsfeed/message.png">
+                <div class="popup-boxmsg" id="popupmsg">
+                    <h3>Messages</h3>
+                    <p>No new Messages</p>
+                </div>
+            </div>
+            
+        </div>
+        
+        <button class="logout" id="logout">Logout</button>
+    </div>
+
+    <script>
+        function refreshPage() {
+    window.scrollTo(0, 0); // Scroll back to top
+    location.reload(); // Refresh the page
+}
+
+        //fetcing posts
+        document.addEventListener("DOMContentLoaded", async function () {
+    try {
+        const response = await fetch("/getAllPosts");
+        const data = await response.json();
+
+        if (data.success) {
+            displayPosts(data.Allposts);
+        } else {
+            console.error("Failed to fetch posts:", data.message);
+        }
+    } catch (error) {
+        console.error("Error fetching posts:", error);
+    }
+});
+
+function displayPosts(posts) {
+    const postContainer = document.getElementById("post-container");
+    postContainer.innerHTML = ""; // Clear existing posts before loading new ones
+
+    posts.forEach((post) => {
+        const postElement = document.createElement("div");
+        postElement.classList.add("post-box");
+
+        postElement.innerHTML = `
+            <div class="post-header">
+                <img id="profilePic" src="${post.profilePic}" alt="Profile" class="profile-pic">
+                <div class="post-info">
+                    <h4>${post.userName}</h4>
+                    <p class="post-time">${new Date(post.createdAt).toLocaleString()}</p>
+                </div>
+            </div>
+            <p class="post-text">${post.statusText || ""}</p>
+            ${post.photo ? `<img  src="${post.photo}" alt="Post Image" class="post-image">` : ""}
+           <div class="like">
+                            <img src="/posts/like.png" id="likeImage" onclick="toggleLike(this)">    
+                        </div>
+        `;
+        function toggleLike(imgElement) {
+    const likeSrc = "/posts/like.png";
+    const likedSrc = "/posts/liked.png";
+    
+    // Check if the current image source is "like.png"
+    if (imgElement.src.includes(likeSrc)) {
+        imgElement.src = likedSrc;  // Change to liked image
+    } else {
+        imgElement.src = likeSrc;   // Change back to like image
+    }
+}
+
+        postContainer.appendChild(postElement);
+    });
+}
+
+
+
+        // Profile Click Event
+        document.getElementById("profile").addEventListener("click", async function() {
+    try {
+        const response = await fetch("/profile"); // Send GET request to backend
+        if (response.ok) {
+            window.location.href = "/profile"; // Redirect to the profile page
+        } else {
+            alert("Failed to load profile");
+        }
+    } catch (error) {
+        console.error("Error fetching profile:", error);
+        alert("Something went wrong!");
+    }
+});
+
+        document.getElementById("newsfeed").addEventListener("click",async function(){
+            window.location.reload();
+
+        })
+
+        // Logout Button Click Event
+        document.getElementById("logout").addEventListener("click",async function() {
+            try {
+                
+        const response = await fetch("/login"); // Send GET request to backend
+        if (response.ok) {
+            window.location.href = "/login";
+            session.destroy(); // Redirect to the profile page
+        } else {
+            alert("Failed to log out");
+        }
+    } catch (error) {
+        console.error("Error logging out:", error);
+        alert("Something went wrong!");
+    }
+        });
+        
+    //notificationBox
+const bellIcon = document.getElementById("notifications");
+const popup = document.getElementById("popup");
+const notificationList = document.getElementById("notification-list");
+
+bellIcon.addEventListener("click", async () => {
+    // Toggle popup visibility and animation
+    if (popup.style.display === "block") {
+        bellIcon.style.transform = "scale(1)";
+        popup.style.opacity = "0";
+        setTimeout(() => {
+            popup.style.display = "none";
+        }, 300); // Matches the fade-out transition
+    } else {
+        bellIcon.style.transform = "scale(1.4)";
+        popup.style.display = "block";
+        setTimeout(() => {
+            popup.style.opacity = "1";
+        }, 10); // Small delay for smooth fade-in effect
+
+        // Fetch and display notifications
+        try {
+            const response = await fetch('/notifications'); // Your backend route for fetching notifications
+            const notifications = await response.json();
+
+            notificationList.innerHTML = ''; // Clear the previous notifications
+
+            if (notifications.length === 0) {
+                notificationList.innerHTML = '<p>No new notifications.</p>';
+            } else {
+                // Loop through the notifications and create HTML for each
+                notifications.forEach(notification => {
+                    const notificationItem = document.createElement('div');
+                    notificationItem.classList.add('notification-item');
+
+                    const profilePic = document.createElement('img');
+                    profilePic.src = notification.userProfilePic || '/default-profile.png';
+                    profilePic.alt = notification.fromUserName;
+                    profilePic.classList.add('notification-profile-pic');
+
+                    const content = document.createElement('p');
+                    content.classList.add('notification-content');
+                    content.innerHTML = ` ${notification.content}`;
+
+                    const acceptButton = document.createElement('button');
+                    acceptButton.classList.add('accept-btn');
+                    acceptButton.textContent = 'Accept';
+
+                    const deleteButton = document.createElement('button');
+                    deleteButton.classList.add('delete-btn');
+                    deleteButton.textContent = 'Delete';
+
+                    notificationItem.appendChild(profilePic);
+                    notificationItem.appendChild(content);
+                    notificationItem.appendChild(acceptButton);
+                    notificationItem.appendChild(deleteButton);
+
+                    // Event listeners for accept and delete actions
+                    acceptButton.addEventListener('click', () => {
+                        alert(`Friend request accepted from ${notification.fromUserName}`);
+                        // Handle accepting the friend request
+                    });
+
+                    deleteButton.addEventListener('click', () => {
+                        
+                        // Handle deleting the notification
+                        notificationItem.remove(); // Remove the notification from the list
+                    });
+
+                    notificationList.appendChild(notificationItem);
+                });
+            }
+        } catch (error) {
+            console.error('Error fetching notifications:', error);
+        }
+    }
+});
+
+
+//messages
+const msgIcon = document.getElementById("messages");
+const popupmsg = document.getElementById("popupmsg");
+
+msgIcon.addEventListener("click", () => {
+    if (popupmsg.style.display === "block") {
+        msgIcon.style.transform= "scale(1)"; 
+        popupmsg.style.opacity = "0";
+        setTimeout(() => {
+            popupmsg.style.display = "none";
+        }, 300); // Matches the fade-out transition
+    } else {
+        msgIcon.style.transform= "scale(1.4)"; 
+        popupmsg.style.display = "block";
+        setTimeout(() => {
+            popupmsg.style.opacity = "1";
+        }, 10); // Small delay for smooth fade-in effect
+    }
+});
+
+//add friend
+document.querySelectorAll('.addFriend').forEach(button => {
+    button.addEventListener('click', async (e) => {
+        // Get the username of the user you're sending the request to
+        const toUserName = e.target.closest('.user-item').querySelector('.user-name').textContent;
+        
+        // Get the profile picture and username of the current logged-in user
+        const profilePicElement = document.querySelector('#profile img');
+        const profilePic = profilePicElement ? profilePicElement.getAttribute('src') : '/default-profile.png'; // Fallback to default if not found
+        const userNameElement = document.querySelector('#profile span b');
+        const fromUserName = userNameElement ? userNameElement.textContent.trim() : '';
+
+        // Debugging logs for checking values
+        console.log("Profile Pic: ", profilePic);
+        console.log("From User: ", fromUserName);
+        console.log("To User: ", toUserName);
+
+        try {
+            // Send a POST request to the backend to add a friend
+            const response = await fetch('/addFriend', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ fromUserName, profilePic, toUserName })
+            });
+
+            const data = await response.json();
+
+            // Check if the friend request was successful
+            if (data.success) {
+                // Replace the "Add Friend" button with the message "Friend request sent"
+                const statusElement = document.createElement('span');
+                statusElement.textContent = 'Friend request sent ✅';
+                e.target.replaceWith(statusElement);
+
+               // alert("Friend request sent!");
+
+
+
+            } else {
+                alert('Failed to send friend request');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Something went wrong while sending the friend request');
+        }
+    });
+});
+
+
+
+    </script>
+</body>
+</html>

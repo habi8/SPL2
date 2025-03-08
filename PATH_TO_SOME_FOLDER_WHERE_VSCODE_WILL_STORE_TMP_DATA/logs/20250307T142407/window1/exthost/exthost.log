@@ -1157,3 +1157,11 @@
 2025-03-08 02:28:59.050 [warning] [Decorations] CAPPING events from decorations provider vscode.git 400
 2025-03-08 02:29:05.961 [warning] [Decorations] CAPPING events from decorations provider vscode.git 400
 2025-03-08 02:29:07.658 [warning] [Decorations] CAPPING events from decorations provider vscode.git 400
+2025-03-08 12:07:25.098 [warning] TextEditor is closed/disposed
+2025-03-08 12:07:28.332 [warning] TextEditor is closed/disposed
+2025-03-08 12:22:01.751 [warning] TextEditor is closed/disposed
+2025-03-08 13:53:05.350 [warning] TextEditor is closed/disposed
+2025-03-08 13:53:57.100 [warning] TextEditor is closed/disposed
+2025-03-08 13:58:23.401 [warning] TextEditor is closed/disposed
+2025-03-08 14:00:26.038 [warning] TextEditor is closed/disposed
+2025-03-08 14:01:27.267 [warning] TextEditor is closed/disposed
