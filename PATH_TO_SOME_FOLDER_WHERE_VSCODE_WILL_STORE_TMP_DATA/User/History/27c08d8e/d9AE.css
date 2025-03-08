@@ -288,19 +288,18 @@ background-color: #8ecae6; /* Darker blue on hover */
     display: flex;
     margin: 20px;
     justify-content: space-between;
-    top: 20px;
     
 }
 
 #notifications{
-    height: 60px;
-    width: 60px;
+    height: 35px;
+    width: 35px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #messages{
-    height: 60px;
-    width: 60px;
+    height: 35px;
+    width: 35px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .icons img:hover{
@@ -310,7 +309,7 @@ background-color: #8ecae6; /* Darker blue on hover */
 
 
 #logout {
-    margin-top: 140px;
+    margin-top: 720px;
     background: #ff4b5c;
     color: white;
     border: none;
@@ -329,7 +328,6 @@ background-color: #8ecae6; /* Darker blue on hover */
 .icons {
     display: flex;
     justify-content: space-evenly;
-    flex-direction: column;
     align-items: center;
     position: relative; /* Ensures elements stay aligned */
     gap: 20px; /* Ensures even spacing */
@@ -341,38 +339,9 @@ background-color: #8ecae6; /* Darker blue on hover */
     display: inline-block;
 }
 
-.Events,.Groups,.Explore,.Settings{
-    display: flex;
-    height: 90px;
-    width: 200px;
-    margin-top: 20px;
-    margin-left: 80px;
-    padding-left: 30px;
-    background: #FAF9F6;
-    border-radius: 10px;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-}
-.Events{
-    margin-top: 60px;
-}
-.Events:hover{
-    background: #f1f1f1;
-}
-.Groups:hover{
-    background:  #f1f1f1;
-}
-.Explore:hover{
-    background:  #f1f1f1;
-}
-
-.Settings:hover{
-    background:  #f1f1f1;
-}
-.events,.groups,.explore,.settings{
-    height: 60px;
-    width: 60px;
+.events {
+    height: 70px;
+    width: 70px;
 }
 
 /* Bell icon */

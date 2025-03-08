@@ -310,7 +310,7 @@ background-color: #8ecae6; /* Darker blue on hover */
 
 
 #logout {
-    margin-top: 140px;
+    margin-top: 300px;
     background: #ff4b5c;
     color: white;
     border: none;
@@ -353,9 +353,6 @@ background-color: #8ecae6; /* Darker blue on hover */
     align-items: center;
     gap: 10px;
     cursor: pointer;
-}
-.Events{
-    margin-top: 60px;
 }
 .Events:hover{
     background: #f1f1f1;
