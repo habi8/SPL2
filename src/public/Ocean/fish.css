@@ -1,0 +1,26 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.water {
+    background-color: #1a1a1a;
+    height: 100%;
+    position: relative;
+}
+
+.pearl {
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer; /* Indicates draggable */
+    animation: twinkle 1.5s infinite ease-in-out;
+    user-select: none;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}

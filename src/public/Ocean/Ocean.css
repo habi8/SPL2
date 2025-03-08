@@ -1,0 +1,324 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: black;
+    scroll-behavior: smooth;
+    color: white;
+}
+
+.ocean-container {
+    width: 100%;
+    height: 5000vh;
+    position: relative;
+}
+
+/* Moving Text Animation */
+.moving-text {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: rgba(160, 212, 240, 0.7);
+    padding: 10px;
+    animation: moveText 7s linear forwards;
+    z-index: 1000;
+}
+
+@keyframes moveText {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Ocean Layer Base */
+.ocean-layer {
+    height: 1000vh;
+    text-align: center;
+    padding-top: 20vh;
+    box-sizing: border-box;
+    position: relative;
+    transition: background 1s ease-in-out;
+    overflow: hidden;
+}
+
+/* Background Colors for Ocean Layers */
+#sunlight-zone {
+    background: linear-gradient(to bottom, #76dbf5, #00BFFF);
+}
+
+#twilight-zone {
+    background: linear-gradient(to bottom, #00BFFF, #000080);
+}
+
+#midnight-zone {
+    background: linear-gradient(to bottom, #000080, #000033);
+}
+
+#abyss-zone {
+    background: linear-gradient(to bottom, #000033, #1a001a);
+}
+
+#trenches-zone {
+    background: linear-gradient(to bottom, #1a001a, #050007);
+}
+
+
+.bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.bubbles span {
+    position: absolute;
+    bottom: -50px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: riseUp linear infinite;
+}
+
+@keyframes riseUp {
+    from { transform: translateY(0); opacity: 0.6; }
+    to { transform: translateY(-200vh); opacity: 0; }
+}
+
+
+.bubbles span:nth-child(1) {
+    width: 20px;
+    height: 20px;
+    left: 10%;
+    animation-duration: 5s;
+}
+
+.bubbles span:nth-child(2) {
+    width: 15px;
+    height: 15px;
+    left: 30%;
+    animation-duration: 10s;
+}
+
+.bubbles span:nth-child(3) {
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    animation-duration: 6s;
+}
+
+.bubbles span:nth-child(4) {
+    width: 25px;
+    height: 25px;
+    left: 70%;
+    animation-duration: 9s;
+}
+
+.bubbles span:nth-child(5) {
+    width: 18px;
+    height: 18px;
+    left: 90%;
+    animation-duration: 7s;
+}
+
+.layer-title {
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px #fff;
+}
+
+#blacktip-reef-shark {height:450px; width:450px; bottom: 3000px; right: 700px; }
+#blue-coral { height:145px; width:145px ; bottom:0px; right: 1300px; }
+#blue-coral-1 { height:150px; width:150px ; bottom:0px; right:1310px; }
+#blue-coral-2 { height:140px; width:140px ; bottom:0px; right:1210px; }
+#blue-coral-3 { height:150px; width:150px ; bottom:0px; right:1270px; }
+#brown-marbled-grouper {height:100px;width:100px; bottom: 2000px; right: 500px; }
+#chevron-butterflyfish { height:70px ;width:70px; bottom: 500px; right: 900px; }
+#chevron-butterflyfish-1 { height:50px ;width:50px; bottom: 370px; right: 850px; }
+#chevron-butterflyfish-2 { height:90px ;width:90px; bottom: 410px; right: 800px; }
+#chevron-butterflyfish-3 { height:60px ;width:60px; bottom: 400px; right: 910px; }
+#diploastrea-brain-coral { height:150px;width:150px; bottom:100px; right: 370px; }
+
+
+#whitecheek-shark {height:400px;width:400px; bottom: 2000px; right:100px; }
+#spot-tail-shark {height:400px;width:400px; bottom:500px; right:800px; }
+#swordfish { height:250px;width:250px;bottom: 2500px; right: 400px; }
+#tiger-shark { height:350px;width:350px;bottom: 5000px; right: 1000px; }
+#larger-star-coral { height:150px;width:150px;bottom: 0px; right: 450px; }
+#larger-star-coral-1 { height:150px;width:150px;bottom: 0px; right: 350px; }
+#larger-star-coral-2 { height:150px;width:150px;bottom: 0px; right: 400px; }
+
+
+
+#bigeye-thresher {height:450px;width:450px; bottom: 1000px; right: 470px; }
+#bigeye-tuna {height:250px;width:250px; bottom: 500px; right: 450px; }
+#dusky-shark {height:650px;width:650px; bottom: 5000px; right: 500px; }
+#bignose-shark {height:550px;width:550px; bottom: 2000px; right: 900px; }
+
+
+
+#blue-shark { height:650px;width:650px;bottom: 5000px; right: 500px; }
+#longfin-mako-shark { height:450px;width:450px;bottom: 2000px; right: 700px; }
+#leopard-torpedo { height:350px;width:350px;bottom: 3000px; right: 600px; }
+#narrow-barred-spanish-mackerel { height:350px;width:350px;bottom: 600px; right: 300px; }
+#mushroom-coral { height:250px;width:250px;bottom: 0px; right: 750px; }
+
+#open-brain-coral {height:250px;width:250px; bottom: 4500px; right: 1000px; }
+#torch-coral { height:150px;width:150px;bottom: 3000px; right: 500px; }
+#torch-coral-1 { height:150px;width:150px;bottom: 2050px; right: 400px; }
+#torch-coral-2 { height:150px;width:150px;bottom: 970px; right: 450px; }
+#torch-coral-3 { height:150px;width:150px;bottom:4890px; right: 520px; }
+#octopus-coral {height:250px;width:250px; bottom: 2500px; right: 700px; }
+
+
+
+
+
+/* Additional Style for Hovering and Info Box Position */
+.species-icon {
+    position: absolute;
+    width: 100px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    z-index: 10; /* Ensures icons are above bubbles and other elements */
+}
+.species-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;  /* Space between image and name */
+    text-align: center;
+}
+
+
+
+.fish {
+    position: absolute;
+    width: 100px;
+    top: 50%;
+    left: -150px;
+    transform: translateY(-50%) scaleX(-1);
+    animation: moveFish 10s linear infinite;
+}
+
+@keyframes moveFish {
+    0% { left: -150px; }
+    100% { left: 50vw; }
+
+}
+
+.hilsha {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top:0%;
+    left: -150px;
+    transform: translateY(-10%) scaleX(-);
+    animation: movehilsha-2 7s linear infinite;
+}
+.hilsha-1 {
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    top: 10%;
+    left: -150px;
+    transform: translateY(-10%) scaleX(-1);
+    animation: movehilsha 7s linear infinite;
+}
+.hilsha-2 {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    top: 20%;
+    left: -150px;
+    transform: translateY(-10%) scaleX(-);
+    animation: movehilsha-2 7s linear infinite;
+}
+.hilsha-3 {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 10%;
+    left: -150px;
+    transform: translateY(-10%) scaleX(-1);
+    animation: movehilsha 7s linear infinite;
+}
+.dolphin {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    bottom:12000;
+    left: -500px;
+    transform: translateY(-10%) scaleX(-2);
+    animation: movedolphin 7s linear infinite;
+}
+@keyframes movedolphin {
+    0% { left:1000px; }
+    100% { left: -100vw; }
+}
+
+@keyframes movehilsha {
+    0% { left: 500px; }
+    100% { left: -100vw; }
+}
+
+@keyframes movehilsha-2 {
+    0% { left: -500px; }
+    100% { left: 100vw; }
+}
+
+
+
+.info-icon {
+    position: relative;
+    bottom: 100px;
+    right: 110px;
+    width: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.info-icon:hover {
+    transform: scale(1.2);
+}
+
+.info-box {
+    position: absolute;
+    background: rgba(245, 242, 242, 0.8);
+    padding: 15px;
+    color: white;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    display: none;
+    pointer-events: none;
+    font-size: 16px;
+    max-width: 250px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.hidden {
+    display: none;
+}
+
+.pearl {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.564);
+    cursor: pointer; /* Indicates draggable */
+    animation: twinkle 1.5s infinite ease-in-out;
+    user-select: none;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.1 }
+    50% { opacity: 1; }
+}
+
+
+img:hover{
+    transform: scale(1.1);
+}

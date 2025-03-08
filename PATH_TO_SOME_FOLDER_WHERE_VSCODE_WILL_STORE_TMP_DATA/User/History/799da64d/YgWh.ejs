@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bay of Bengal</title>
+    <link rel="stylesheet" href="/Ocean/Ocean.css">
+</head>
+<body>
+    <div class="moving-text" id="movingText">Welcome to Bay Of Bengal</div>
+
+    <div class="ocean-container">
+        <!-- Sunlight Zone -->
+        <section class="ocean-layer" id="sunlight-zone">
+            <h1 class="layer-title">Sunlight Zone</h1>
+            <img src="/Ocean/blacktip.png" class="species-icon" id="blacktip-reef-shark">
+            <img src="/Ocean/bluecoral.png" class="species-icon" id="blue-coral">
+            <img src="/Ocean/chevron.png" class="species-icon" id="chevron-butterflyfish">
+        </section>
+
+        <!-- Twilight Zone -->
+        <section class="ocean-layer" id="twilight-zone">
+            <h1 class="layer-title">Twilight Zone</h1>
+            <img src="/Ocean/starcoral.png" class="species-icon" id="larger-star-coral">
+            <img src="/Ocean/whitecheek.png" class="species-icon" id="whitecheek-shark">
+            <img src="/Ocean/spottail.png" class="species-icon" id="spot-tail-shark">
+        </section>
+    </div>
+
+    <!-- Species Info Modal -->
+    <div id="species-info-box" class="hidden">
+        <div class="species-info-content">
+            <h2 id="species-name">Species Name</h2>
+            <p><strong>Lifespan:</strong> <span id="lifespan">N/A</span></p>
+            <p><strong>Quantity:</strong> <span id="quantity">N/A</span></p>
+            <p><strong>Habitat:</strong> <span id="habitat">N/A</span></p>
+            <p><strong>Diet:</strong> <span id="diet">N/A</span></p>
+            <p><strong>Interesting Info:</strong> <span id="species-zone-info">N/A</span></p>
+        </div>
+    </div>
+
+    <script src="/Ocean/Ocean.js"></script>
+</body>
+</html>
