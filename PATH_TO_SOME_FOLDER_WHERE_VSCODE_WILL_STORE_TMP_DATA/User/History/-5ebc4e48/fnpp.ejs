@@ -21,9 +21,10 @@
                 <% if (friends.length > 0) { %>
                     <% friends.forEach(friend => { %>
                         <li class="friend-item">
+                            hehe
                             <img src="<%= friend.profilePic || '/posts/user.png' %>" alt="<%= friend.userName %>'s profile">
                             <span><b><%= friend.userName %></b></span>
-                            <button class="sendMessage" data-username="<%= friend.userName %>">Message</button>
+                            <button class="sendMessage" data-username="<%= friend.userName %>">Send Message</button>
                         </li>
                     <% }) %>
                 <% } else { %>

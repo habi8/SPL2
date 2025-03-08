@@ -335,7 +335,7 @@ app.get('/profile', async (req, res) => {
 
         if (user) {
             const friends = await collection.find(
-                { _id: { $in: user.friends } }
+                { userName: { $in: user.friends } }
             ).select('userName profilePic');
            
             res.render('profile', { name: user.name ,userName: user.userName,bio: user.bio, profilePic: user.profilePic || '/default-profile.png',friends: friends});
@@ -617,7 +617,7 @@ app.post('/acceptFriend', async (req, res) => {
 
         return res.json({ 
             success: true, 
-           // message: 'Friend request accepted!', 
+            message: 'Friend request accepted!', 
             userProfilePic: fromUser.profilePic ,
             userName: fromUser.userName
         });

@@ -617,7 +617,7 @@ app.post('/acceptFriend', async (req, res) => {
 
         return res.json({ 
             success: true, 
-           // message: 'Friend request accepted!', 
+            message: 'Friend request accepted!', 
             userProfilePic: fromUser.profilePic ,
             userName: fromUser.userName
         });

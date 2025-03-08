@@ -17,13 +17,13 @@
             <h3>Friends</h3>
             </div>
             
-            <ul id="userList">
+            <ul id="userList">hehe
                 <% if (friends.length > 0) { %>
                     <% friends.forEach(friend => { %>
                         <li class="friend-item">
                             <img src="<%= friend.profilePic || '/posts/user.png' %>" alt="<%= friend.userName %>'s profile">
                             <span><b><%= friend.userName %></b></span>
-                            <button class="sendMessage" data-username="<%= friend.userName %>">Message</button>
+                            <button class="sendMessage" data-username="<%= friend.userName %>">Send Message</button>
                         </li>
                     <% }) %>
                 <% } else { %>
@@ -92,7 +92,7 @@
 
         //friendList
 
-        
+
         //back button
         document.getElementById('backToNewsfeedBtn').addEventListener('click', async function() {
     try {

@@ -95,13 +95,11 @@
         
         .sendMessage {
             background-color: #007bff;  /* Blue color */
-            bottom: 10px;
             color: white;
             height: 30px;
             width: 60px;
             border: none;
-            padding: 0;
-            margin-bottom: 5px;
+            padding-bottom: 5px;
             border-radius: 10px;
             cursor: pointer;
             font-size: 12px;

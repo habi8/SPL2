@@ -1,0 +1,6 @@
+2025-03-09 00:27:51.686 [info] [2025-03-08 18:27:51.656] [         44ms] [c:\Users\habib\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@types\express-session] git rev-parse --show-toplevel • FAILED
+2025-03-09 00:27:51.687 [info] 
+Error: Command failed: C:\Program Files\Git\cmd\git.exe -c core.longpaths=true -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any of the parent directories): .git
+
+

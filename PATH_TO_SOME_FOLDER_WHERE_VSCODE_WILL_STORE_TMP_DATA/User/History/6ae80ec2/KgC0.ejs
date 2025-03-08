@@ -242,53 +242,11 @@ bellIcon.addEventListener("click", async () => {
                     notificationItem.appendChild(deleteButton);
 
                     // Event listeners for accept and delete actions
-    acceptButton.addEventListener('click', async () => {
-    try {
-        const response = await fetch('/acceptFriend', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ fromUserName: notification.fromUserName, toUserName: notification.toUserName })
-        });
-
-        const data = await response.json();
-        if (data.success) {
-            alert(`Friend request accepted from ${notification.fromUserName}`);
-
-            // Remove notification from UI
-            notificationItem.remove();
-
-            // Add friend to the profile's friends list dynamically
-            const userList = document.getElementById("userList");
-
-            const newFriendItem = document.createElement("li");
-            newFriendItem.classList.add("friend-item");
-
-            const friendImage = document.createElement("img");
-            friendImage.src = notification.userProfilePic || '/posts/user.png';
-            friendImage.alt = `${notification.fromUserName}'s profile`;
-
-            const friendName = document.createElement("span");
-            friendName.innerHTML = `<b>${notification.fromUserName}</b>`;
-
-            const messageButton = document.createElement("button");
-            messageButton.textContent = "Send Message";
-            messageButton.classList.add("sendMessage");
-            messageButton.setAttribute("data-username", notification.fromUserName);
-
-            newFriendItem.appendChild(friendImage);
-            newFriendItem.appendChild(friendName);
-            newFriendItem.appendChild(messageButton);
-
-            userList.appendChild(newFriendItem);
-        } else {
-            alert('Error accepting friend request');
-        }
-    } catch (error) {
-        console.error('Error:', error);
-       
-    }
-});
-
+                    acceptButton.addEventListener('click', () => {
+                        alert(`Friend request accepted from ${notification.fromUserName}`);
+                        
+                        
+                    });
 
                     deleteButton.addEventListener('click', async() => {
                         

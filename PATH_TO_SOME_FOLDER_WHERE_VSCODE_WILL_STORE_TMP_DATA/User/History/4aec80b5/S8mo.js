@@ -237,7 +237,7 @@ app.get('/newsfeed', async (req, res) => {
         }
 
         // Fetch all users except the logged-in user
-        const users = await collection.find({ email: { $ne: req.session.email },_id: { $nin: user.friends} }).select('userName profilePic');
+        const users = await collection.find({ email: { $ne: req.session.email } }).select('userName profilePic');
 
         // Extract the usernames to whom the current user has sent friend requests
         const friendRequestsSent = user.friendRequestsSent ; // Ensure this is always an array
@@ -335,7 +335,7 @@ app.get('/profile', async (req, res) => {
 
         if (user) {
             const friends = await collection.find(
-                { _id: { $in: user.friends } }
+                { userName: { $in: user.friends } }
             ).select('userName profilePic');
            
             res.render('profile', { name: user.name ,userName: user.userName,bio: user.bio, profilePic: user.profilePic || '/default-profile.png',friends: friends});
@@ -617,7 +617,7 @@ app.post('/acceptFriend', async (req, res) => {
 
         return res.json({ 
             success: true, 
-           // message: 'Friend request accepted!', 
+            message: 'Friend request accepted!', 
             userProfilePic: fromUser.profilePic ,
             userName: fromUser.userName
         });

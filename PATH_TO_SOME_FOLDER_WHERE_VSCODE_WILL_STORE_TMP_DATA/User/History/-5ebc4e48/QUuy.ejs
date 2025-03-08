@@ -23,7 +23,7 @@
                         <li class="friend-item">
                             <img src="<%= friend.profilePic || '/posts/user.png' %>" alt="<%= friend.userName %>'s profile">
                             <span><b><%= friend.userName %></b></span>
-                            <button class="sendMessage" data-username="<%= friend.userName %>">Message</button>
+                            <button class="sendMessage" data-username="<%= friend.userName %>">Send Message</button>
                         </li>
                     <% }) %>
                 <% } else { %>
@@ -89,10 +89,6 @@
     </div>
     
     <script>
-
-        //friendList
-
-        
         //back button
         document.getElementById('backToNewsfeedBtn').addEventListener('click', async function() {
     try {
