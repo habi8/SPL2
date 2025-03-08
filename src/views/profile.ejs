@@ -98,8 +98,8 @@
     try {
         const response = await fetch('/newsfeedPage'); // This fetches the profile info
         if (response.ok) {
-            // You can still handle data here, if necessary, but redirect to newsfeed page
-            window.location.href = "/newsfeed"; // Redirect to the newsfeed page
+            
+            window.location.href = "/newsfeed"; 
             console.log("Going back to newsfeed from profile");
         } else {
             alert("Failed to load newsfeed");
@@ -212,12 +212,12 @@
 
 // Cancel changes
 document.getElementById('cancelChangesBtn').addEventListener('click', () => {
-    // Revert the editable fields to their original content
+    
     document.getElementById('editUsername').value = document.getElementById('username').textContent;
     document.getElementById('editName').value = document.getElementById('name').textContent;
     document.getElementById('bioInput').value = document.getElementById('bioText').textContent;
 
-    // Hide editable fields
+    
     document.getElementById('editUsername').style.display = 'none';
     document.getElementById('editName').style.display = 'none';
     document.getElementById('bioInput').style.display = 'none';
@@ -244,14 +244,14 @@ document.getElementById("uploadPic").addEventListener("click", function() {
     });
 
     document.getElementById("picUpload").addEventListener("change", function(event) {
-        const file = event.target.files[0]; // Get selected file
+        const file = event.target.files[0]; 
         if (file) {
             const reader = new FileReader();
             reader.onload = function(e) {
-              const photo=  document.getElementById("uploadPic").src = e.target.result; // Change uploadPic image to selected file
+              const photo=  document.getElementById("uploadPic").src = e.target.result; 
               
             };
-            reader.readAsDataURL(file); // Read file as Data URL
+            reader.readAsDataURL(file); 
         }
     });
 
@@ -261,7 +261,7 @@ document.getElementById("uploadPic").addEventListener("click", function() {
     const file = fileInput.files[0];
 
 
-    const userName = "<%= userName%>"; // You should get this from your authentication system
+    const userName = "<%= userName%>"; 
     const profilePic = "<%= profilePic || '/default-profile.png' %>"; 
     //const email = req.session.email;
     //console.log("SEssion mail in profile.js: ",email)
@@ -310,13 +310,13 @@ async function fetchPosts() {
         if (data.success) {
             const posts = data.Allposts;
             const postContainer = document.getElementById('postContainer');
-            postContainer.innerHTML = ''; // Clear any existing content
+            postContainer.innerHTML = ''; 
 
             posts.forEach(post => {
                 const postElement = document.createElement('div');
-                postElement.classList.add('post'); // Add a class for styling
+                postElement.classList.add('post'); 
 
-                // Create a box for each post
+                
                 postElement.innerHTML = `
                     <div class="postBox">
                         <div class="profileInfo">
@@ -351,12 +351,10 @@ function toggleLike(imgElement) {
     }
 }
 
-// Call the function to fetch posts when the page loads
+
 window.onload = fetchPosts;
 
-
-
-    </script>
+</script>
     
-    </body>
+</body>
 </html>

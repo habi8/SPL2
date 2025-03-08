@@ -33,6 +33,75 @@ app.use(session({
 }));
 
 
+app.get('/',(req,res)=>{
+    res.render('welcome')
+})
+
+
+app.get('/community',(req,res)=>{
+    console.log('community route accessed')
+    res.render('community')
+})
+
+app.get('/ocean',(req,res)=>{
+    console.log('ocean route accessed')
+    res.render('ocean')
+})
+
+app.get('/shark_sprint',(req,res)=>{
+    res.render('shark_sprint')
+})
+
+
+ app.get('/signup',(req,res)=>{
+     console.log('signup route accessed')
+    res.render('signup')
+})
+
+
+app.get('/login',(req,res)=>{
+    console.log('login route access')
+    res.render('login')
+})
+
+/ Middleware
+app.use(bodyParser.json());
+app.use(cors());
+
+app.post("/save-score", async (req, res) => {
+    const { username, score } = req.body;
+
+    try {
+        let player = await Player.findOne({ username });
+
+        if (player) {
+            if (score > player.highScore) {
+                player.highScore = score;
+                await player.save();
+            }
+        } else {
+            player = new Player({ username, highScore: score });
+            await player.save();
+        }
+
+        res.json({ message: "Score saved successfully!", player });
+    } catch (err) {
+        console.error("Error saving score:", err);
+        res.status(500).json({ message: "Failed to save score", error: err });
+    }
+});
+
+
+// Fetch Leaderboard
+app.get("/leaderboard", async (req, res) => {
+    try {
+        const leaderboard = await Player.find().sort({ highScore: -1 }).limit(5);
+        res.json(leaderboard);
+    } catch (err) {
+        console.error("Error fetching leaderboard:", err);
+        res.status(500).json({ message: "Failed to fetch leaderboard", error: err });
+    }
+});
 
 app.post('/OTP', async (req, res) => {            
     console.log("Signup & OTP Sending Process Started");
@@ -45,8 +114,6 @@ app.post('/OTP', async (req, res) => {
     if (existingUser) return res.send("User already exists");
 
     else{
-       
-         // Send OTP via mail
     const mailResponse = await sendOTPEmail(email);
     const otp = mailResponse.otp;
     console.log("Mail response: ",mailResponse);
@@ -147,36 +214,7 @@ app.post("/setpassword", async (req, res) => {
 
 
 
-app.get('/',(req,res)=>{
-    res.render('welcome')
-})
 
-
-app.get('/community',(req,res)=>{
-    console.log('community route accessed')
-    res.render('community')
-})
-
-app.get('/ocean',(req,res)=>{
-    console.log('ocean route accessed')
-    res.render('ocean')
-})
-
-app.get('/shark_sprint',(req,res)=>{
-    res.render('shark_sprint')
-})
-
-
- app.get('/signup',(req,res)=>{
-     console.log('signup route accessed')
-    res.render('signup')
-})
-
-
-app.get('/login',(req,res)=>{
-    console.log('login route access')
-    res.render('login')
-})
 
 let name='';
 app.post('/newsfeed', async (req, res) => {
@@ -284,44 +322,7 @@ app.get('/newsfeedPage', async (req, res) => {
 
 
 
-// Middleware
-app.use(bodyParser.json());
-app.use(cors());
-
-app.post("/save-score", async (req, res) => {
-    const { username, score } = req.body;
-
-    try {
-        let player = await Player.findOne({ username });
-
-        if (player) {
-            if (score > player.highScore) {
-                player.highScore = score;
-                await player.save();
-            }
-        } else {
-            player = new Player({ username, highScore: score });
-            await player.save();
-        }
-
-        res.json({ message: "Score saved successfully!", player });
-    } catch (err) {
-        console.error("Error saving score:", err);
-        res.status(500).json({ message: "Failed to save score", error: err });
-    }
-});
-
-
-// Fetch Leaderboard
-app.get("/leaderboard", async (req, res) => {
-    try {
-        const leaderboard = await Player.find().sort({ highScore: -1 }).limit(5);
-        res.json(leaderboard);
-    } catch (err) {
-        console.error("Error fetching leaderboard:", err);
-        res.status(500).json({ message: "Failed to fetch leaderboard", error: err });
-    }
-});
+/
 
 
 app.get('/profile', async (req, res) => {

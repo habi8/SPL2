@@ -33,6 +33,75 @@ app.use(session({
 }));
 
 
+app.get('/',(req,res)=>{
+    res.render('welcome')
+})
+
+
+app.get('/community',(req,res)=>{
+    console.log('community route accessed')
+    res.render('community')
+})
+
+app.get('/ocean',(req,res)=>{
+    console.log('ocean route accessed')
+    res.render('ocean')
+})
+
+app.get('/shark_sprint',(req,res)=>{
+    res.render('shark_sprint')
+})
+
+
+ app.get('/signup',(req,res)=>{
+     console.log('signup route accessed')
+    res.render('signup')
+})
+
+
+app.get('/login',(req,res)=>{
+    console.log('login route access')
+    res.render('login')
+})
+
+/ Middleware
+app.use(bodyParser.json());
+app.use(cors());
+
+app.post("/save-score", async (req, res) => {
+    const { username, score } = req.body;
+
+    try {
+        let player = await Player.findOne({ username });
+
+        if (player) {
+            if (score > player.highScore) {
+                player.highScore = score;
+                await player.save();
+            }
+        } else {
+            player = new Player({ username, highScore: score });
+            await player.save();
+        }
+
+        res.json({ message: "Score saved successfully!", player });
+    } catch (err) {
+        console.error("Error saving score:", err);
+        res.status(500).json({ message: "Failed to save score", error: err });
+    }
+});
+
+
+// Fetch Leaderboard
+app.get("/leaderboard", async (req, res) => {
+    try {
+        const leaderboard = await Player.find().sort({ highScore: -1 }).limit(5);
+        res.json(leaderboard);
+    } catch (err) {
+        console.error("Error fetching leaderboard:", err);
+        res.status(500).json({ message: "Failed to fetch leaderboard", error: err });
+    }
+});
 
 app.post('/OTP', async (req, res) => {            
     console.log("Signup & OTP Sending Process Started");
@@ -45,8 +114,6 @@ app.post('/OTP', async (req, res) => {
     if (existingUser) return res.send("User already exists");
 
     else{
-       
-         // Send OTP via mail
     const mailResponse = await sendOTPEmail(email);
     const otp = mailResponse.otp;
     console.log("Mail response: ",mailResponse);
@@ -147,36 +214,7 @@ app.post("/setpassword", async (req, res) => {
 
 
 
-app.get('/',(req,res)=>{
-    res.render('welcome')
-})
 
-
-app.get('/community',(req,res)=>{
-    console.log('community route accessed')
-    res.render('community')
-})
-
-app.get('/ocean',(req,res)=>{
-    console.log('ocean route accessed')
-    res.render('ocean')
-})
-
-app.get('/shark_sprint',(req,res)=>{
-    res.render('shark_sprint')
-})
-
-
- app.get('/signup',(req,res)=>{
-     console.log('signup route accessed')
-    res.render('signup')
-})
-
-
-app.get('/login',(req,res)=>{
-    console.log('login route access')
-    res.render('login')
-})
 
 let name='';
 app.post('/newsfeed', async (req, res) => {
@@ -205,12 +243,15 @@ app.post('/newsfeed', async (req, res) => {
         const userName = check.userName;
         const isPasswordMatch = await bcrypt.compare(req.body.password, check.password);
         if (isPasswordMatch) {
-            const users = await collection.find({ email: { $ne: req.session.email } }).select('userName profilePic'); // Only select the fields you need
+            const user = await collection.findOne({email: req.session.email})
+            const users = await collection.find({ email: { $ne: req.session.email },_id: { $nin: user.friends} }).select('userName profilePic'); // Only select the fields you need
+            const friendRequestsSent = user.friendRequestsSent || []; 
 
             return res.render('newsfeed', {
                 userName: user.userName,
                 profilePic: user.profilePic || '/posts/user.png',
-                users: users 
+                users: users ,
+                requests: friendRequestsSent 
             });
         } else {
             return res.send('Wrong password');
@@ -225,26 +266,35 @@ app.get('/newsfeed', async (req, res) => {
     if (!req.session.email) {
         return res.redirect('/login'); 
     }
-    const user = await collection.findOne({ email: req.session.email });
-    const users = await collection.find({ email: { $ne: req.session.email } }).select('userName profilePic');
 
-    const profilePic = user.profilePic;
-    const userName = user.userName;
+    try {
+        const user = await collection.findOne({ email: req.session.email });
 
-    // Get the usernames to whom the current user has sent a friend request
-    const friendRequestsSent = await collection.find(
-        { friendRequests: user.userName },
-        { userName: 1, _id: 0 }
-    );
+        if (!user) {
+            return res.status(404).send("User not found.");
+        }
 
-    const sentRequestUsernames = friendRequestsSent.map(u => u.userName); // Extract usernames
-    
-    res.render('newsfeed', {
-        userName: user.userName,
-        profilePic: user.profilePic || '/posts/user.png',
-        users: users 
-    });
+        // Fetch all users except the logged-in user
+        const users = await collection.find({ email: { $ne: req.session.email },_id: { $nin: user.friends} }).select('userName profilePic');
+
+        // Extract the usernames to whom the current user has sent friend requests
+        const friendRequestsSent = user.friendRequestsSent ; // Ensure this is always an array
+
+        res.render('newsfeed', {
+            userName: user.userName,
+            profilePic: user.profilePic || '/posts/user.png',
+            users: users,
+            requests: friendRequestsSent 
+        });
+
+    } catch (error) {
+        console.error("Error fetching newsfeed:", error);
+        res.status(500).send("Internal server error");
+    }
 });
+
+
+
 
 app.get('/newsfeedPage', async (req, res) => {
     if (!req.session.email) {
@@ -272,44 +322,7 @@ app.get('/newsfeedPage', async (req, res) => {
 
 
 
-// Middleware
-app.use(bodyParser.json());
-app.use(cors());
-
-app.post("/save-score", async (req, res) => {
-    const { username, score } = req.body;
-
-    try {
-        let player = await Player.findOne({ username });
-
-        if (player) {
-            if (score > player.highScore) {
-                player.highScore = score;
-                await player.save();
-            }
-        } else {
-            player = new Player({ username, highScore: score });
-            await player.save();
-        }
-
-        res.json({ message: "Score saved successfully!", player });
-    } catch (err) {
-        console.error("Error saving score:", err);
-        res.status(500).json({ message: "Failed to save score", error: err });
-    }
-});
-
-
-// Fetch Leaderboard
-app.get("/leaderboard", async (req, res) => {
-    try {
-        const leaderboard = await Player.find().sort({ highScore: -1 }).limit(5);
-        res.json(leaderboard);
-    } catch (err) {
-        console.error("Error fetching leaderboard:", err);
-        res.status(500).json({ message: "Failed to fetch leaderboard", error: err });
-    }
-});
+/
 
 
 app.get('/profile', async (req, res) => {
@@ -322,9 +335,11 @@ app.get('/profile', async (req, res) => {
         const user = await collection.findOne({ email: req.session.email });
 
         if (user) {
-            console.log("Username: ",user.userName)
-            console.log("Profile pic URL: ",user.profilePic)
-            res.render('profile', { name: user.name ,userName: user.userName,bio: user.bio, profilePic: user.profilePic || '/default-profile.png'});
+            const friends = await collection.find(
+                { _id: { $in: user.friends } }
+            ).select('userName profilePic');
+           
+            res.render('profile', { name: user.name ,userName: user.userName,bio: user.bio, profilePic: user.profilePic || '/default-profile.png',friends: friends});
            
         } else {
             res.status(404).send('User not found');
@@ -503,26 +518,15 @@ app.get('/getYourPosts', async (req, res) => {
 
 
 app.post('/addFriend', async (req, res) => {
-    const { fromUserName,profilePic,toUserName } = req.body;  // The user to send a friend request to
-    //const currentEmail = req.session.email;  // Current user's email from the session
+    const { fromUserName, profilePic, toUserName } = req.body;
 
     try {
-        // Fetch the current user's userName using their email from the session
-        // const currentUser = await collection.findOne({ email: currentEmail });
-
-        // if (!currentUser) {
-        //     return res.json({ success: false, message: 'Current user not found' });
-        // }
-
-        // const fromUserName = currentUser.userName;  // Get the current user's userName
-
-        // Fetch the recipient by their userName
-        const recipient = await collection.findOne({ userName: toUserName });
-        const sender = await posts.findOne({ userName: fromUserName })
-
-        if (!recipient || !sender) {
-            return res.json({ success: false, message: 'Recipient or sender not found' });
+        // Ensure both sender and recipient usernames are provided
+        if (!fromUserName || !toUserName) {
+            return res.json({ success: false, message: "Invalid request. Missing user information." });
         }
+
+        // Fetch sender and recipient from the database
         const fromUser = await collection.findOne({ userName: fromUserName });
         const toUser = await collection.findOne({ userName: toUserName });
 
@@ -530,36 +534,124 @@ app.post('/addFriend', async (req, res) => {
             return res.json({ success: false, message: "User not found" });
         }
 
-        // Prevent duplicate friend requests
-        if (toUser.friendRequests.includes(fromUserName)) {
+        // Prevent duplicate friend requests using $addToSet (avoids duplicates automatically)
+        const result = await collection.updateOne(
+            { userName: fromUserName },
+            { 
+                $push: {
+                    friendRequestsSent: toUserName
+                }
+            }
+        );
+
+        const result2 = await collection.updateOne(
+            { userName: toUserName },
+            { 
+                $push: {
+                    friendRequestsReceived: fromUserName
+                }
+            }
+        );
+        
+        if (result.modifiedCount === 0 || result2.modifiedCount === 0 ) {
             return res.json({ success: false, message: "Friend request already sent" });
         }
-
-        // Add friend request to the recipient's pending requests
-        toUser.friendRequests.push(fromUserName);
-        await toUser.save();
 
         // Create a new notification for the recipient
         const newNotification = new notifications({
             userProfilePic: profilePic,
             fromUserName: fromUserName,
-            toUserName: toUserName,  // Set the userName of the recipient (the one receiving the notification)
-            content: `${fromUserName} sent you a friend request`,  // Content of the notification
+            toUserName: toUserName,
+            content: `${fromUserName} sent you a friend request`,
         });
 
         // Save the notification in the database
         await newNotification.save();
 
-        // Respond with success
         res.json({ success: true, message: 'Friend request sent and notification created' });
 
     } catch (error) {
         console.error("Error adding friend and creating notification:", error);
-        res.json({ success: false, message: error.message });
+        res.status(500).json({ success: false, message: "Internal server error" });
+    }
+});
+
+app.get('/notifications', async (req, res) => {
+    try {
+        const email = req.session.email; // Get the email of the logged-in user
+        const user = await collection.findOne({ email: email }); // Fetch user details
+
+        if (!user) {
+            return res.send("User not found");
+        }
+
+        // Fetch notifications where the `toUserName` matches the logged-in user's username
+        const Notifications = await notifications.find({ toUserName: user.userName }).sort({ createdAt: -1 });
+
+        // Send the notifications to the frontend
+        res.json(Notifications); 
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Server error");
+    }
+});
+
+app.post('/acceptFriend', async (req, res) => {
+    try {
+        const { fromUserName, toUserName } = req.body;
+
+        // Find both users in the database
+        const fromUser = await collection.findOne({ userName: fromUserName });
+        const toUser = await collection.findOne({ userName: toUserName });
+
+        if (!fromUser || !toUser) {
+            return res.json({ success: false, message: 'User not found' });
+        }
+
+        // ✅ Add each other to their friends list
+        await collection.updateOne({ userName: fromUserName }, { $push: { friends: toUser } });
+        await collection.updateOne({ userName: toUserName }, { $push: { friends: fromUser } });
+
+        // ✅ Remove the friend request from notifications
+        await notifications.deleteOne({ fromUserName, toUserName });
+        await notifications.deleteOne({ fromUserName, toUserName });
+
+        return res.json({ 
+            success: true, 
+           // message: 'Friend request accepted!', 
+            userProfilePic: fromUser.profilePic ,
+            userName: fromUser.userName
+        });
+
+    } catch (error) {
+        console.error('Error accepting friend request:', error);
+        res.status(500).json({ success: false, message: 'Server error' });
     }
 });
 
 
+app.post('/deleteNotification', async (req, res) => {
+    const { fromUserName, toUserName } = req.body;
+    try {
+        // Delete the notification from the database
+        const result = await notifications.deleteOne({
+            fromUserName: fromUserName,
+            toUserName: toUserName
+        });
+
+        await collection.updateOne(
+            { userName: fromUserName },
+            { $pull: { friendRequestsSent: toUserName } }
+        );
+
+        
+            res.json({ success: true });
+        
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'Error deleting notification' });
+    }
+});
 
 
 app.listen(5000,()=>{
