@@ -9727,3 +9727,75 @@ warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP
 2025-03-08 02:29:05.861 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [88ms]
 2025-03-08 02:29:05.932 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [62ms]
 2025-03-08 02:29:05.953 [info] > git status -z -uall [87ms]
+2025-03-08 02:29:07.218 [info] > git add -A -- . [1436ms]
+2025-03-08 02:29:07.218 [info] warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/User/globalStorage/storage.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/logs/20250307T142407/window1/exthost/vscode.git/Git.log', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/public/community/Community.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/User/History/-39332a1e/0LSj.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/User/History/-39332a1e/EGiM.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/User/History/-39332a1e/IQJg.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/User/History/-39332a1e/K7Zt.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/User/History/-39332a1e/bSUM.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/User/History/95f0c02/2weY.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/User/History/95f0c02/3VkM.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/User/History/95f0c02/OeYk.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/User/History/95f0c02/Uzox.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/User/History/95f0c02/e8g6.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/User/History/95f0c02/gQDB.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/User/History/95f0c02/h4Dh.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/User/History/95f0c02/hqxo.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/User/History/95f0c02/iLy1.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/User/History/95f0c02/oFOK.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/User/History/95f0c02/vsHK.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/User/History/95f0c02/wEWU.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PATH_TO_SOME_FOLDER_WHERE_VSCODE_WILL_STORE_TMP_DATA/User/History/95f0c02/z9y8.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/public/login/login.css', LF will be replaced by CRLF the next time Git touches it
+2025-03-08 02:29:07.480 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [258ms]
+2025-03-08 02:29:07.521 [info] > git config --get commit.template [38ms]
+2025-03-08 02:29:07.575 [info] > git config --get commit.template [49ms]
+2025-03-08 02:29:07.583 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [53ms]
+2025-03-08 02:29:07.637 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [46ms]
+2025-03-08 02:29:07.654 [info] > git status -z -uall [66ms]
+2025-03-08 02:29:07.726 [info] > git merge-base refs/heads/main refs/remotes/origin/main [58ms]
+2025-03-08 02:29:07.738 [info] > git blame --root --incremental f3d56d4718e3dcff66187e6e8d3a50260824ebf1 -- src/index.js [74ms]
+2025-03-08 02:29:07.778 [info] > git config --get commit.template [58ms]
+2025-03-08 02:29:07.788 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [63ms]
+2025-03-08 02:29:07.788 [info] > git diff --name-status -z --diff-filter=ADMR 2a97af8b860b23821fbd10106429fb93409168ef...refs/remotes/origin/main [56ms]
+2025-03-08 02:29:07.852 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [54ms]
+2025-03-08 02:29:07.871 [info] > git status -z -uall [78ms]
+2025-03-08 02:29:08.827 [info] > git ls-files --stage -- src/index.js [37ms]
+2025-03-08 02:29:08.867 [info] > git cat-file -s 04d89b14f800c6d67475518db9922c5f6d6d51e6 [36ms]
+2025-03-08 02:29:08.908 [info] > git show --textconv :src/index.js [36ms]
+2025-03-08 02:29:11.030 [info] > git config --get commit.template [50ms]
+2025-03-08 02:29:11.033 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [50ms]
+2025-03-08 02:29:11.083 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [43ms]
+2025-03-08 02:29:11.100 [info] > git status -z -uall [63ms]
+2025-03-08 02:29:16.166 [info] > git config --get commit.template [51ms]
+2025-03-08 02:29:16.171 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [54ms]
+2025-03-08 02:29:16.234 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [55ms]
+2025-03-08 02:29:16.246 [info] > git status -z -uall [70ms]
+2025-03-08 02:29:21.298 [info] > git config --get commit.template [42ms]
+2025-03-08 02:29:21.305 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [45ms]
+2025-03-08 02:29:21.356 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [43ms]
+2025-03-08 02:29:21.367 [info] > git status -z -uall [59ms]
+2025-03-08 02:29:26.432 [info] > git config --get commit.template [59ms]
+2025-03-08 02:29:26.442 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [63ms]
+2025-03-08 02:29:26.505 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [55ms]
+2025-03-08 02:29:26.520 [info] > git status -z -uall [74ms]
+2025-03-08 02:29:31.576 [info] > git config --get commit.template [44ms]
+2025-03-08 02:29:31.584 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [49ms]
+2025-03-08 02:29:31.639 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [47ms]
+2025-03-08 02:29:31.652 [info] > git status -z -uall [64ms]
+2025-03-08 02:29:36.717 [info] > git config --get commit.template [53ms]
+2025-03-08 02:29:36.726 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [56ms]
+2025-03-08 02:29:36.788 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [54ms]
+2025-03-08 02:29:36.802 [info] > git status -z -uall [73ms]
+2025-03-08 02:29:51.390 [info] > git check-ignore -v -z --stdin [46ms]
+2025-03-08 02:29:52.163 [info] > git config --get commit.template [48ms]
+2025-03-08 02:29:52.177 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [58ms]
+2025-03-08 02:29:52.237 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [51ms]
+2025-03-08 02:29:52.248 [info] > git status -z -uall [67ms]
+2025-03-08 02:30:03.695 [info] > git config --get commit.template [58ms]
+2025-03-08 02:30:03.708 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [65ms]
+2025-03-08 02:30:03.774 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [57ms]
+2025-03-08 02:30:03.790 [info] > git status -z -uall [77ms]

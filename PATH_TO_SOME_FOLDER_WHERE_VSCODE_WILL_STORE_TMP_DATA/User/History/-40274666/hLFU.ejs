@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="OTP.css">
+</head>
+<body>
+    <div class="OTP-container">
+        <p>Please enter the 4-digit OTP that has been sent to your email address :</p>
+        <div class="digit-container">
+            <input type="text" id="digit1" maxlength="1">
+            <input type="text" id="digit2" maxlength="1">
+            <input type="text" id="digit3" maxlength="1">
+            <input type="text" id="digit4" maxlength="1">
+        </div>
+        <div class="button-container">
+            <button type="submit" id="verifyBtn">Verify OTP</button>
+            <button type="button" id="resend" onclick="resendOTP()">Resend OTP</button>
+        </div>
+    </div>
+
+    <script >
+        document.addEventListener("DOMContentLoaded", function () {
+    const inputs = document.querySelectorAll(".digit-container input");
+
+    inputs.forEach((input, index) => {
+        input.addEventListener("input", (e) => {
+            if (e.target.value.length === 1 && index < inputs.length - 1) {
+                inputs[index + 1].focus();
+            }
+        });
+
+        input.addEventListener("keydown", (e) => {
+            if (e.key === "Backspace" && index > 0 && !e.target.value) {
+                inputs[index - 1].focus();
+            }
+        });
+    });
+
+    document.getElementById("verifyBtn").addEventListener("click", verifyOTP);
+});
+
+async function verifyOTP() {
+ // ✅ Debugging: Check if function is running
+
+let email = localStorage.getItem("email"); // ✅ Get email from localStorage
+console.log("CALLED.",email)
+if (!email) {
+    
+    alert("⚠️ Email not found! Please sign up again.");
+    console.log("Email OK");
+    return;
+}
+
+const otp = document.getElementById("digit1").value +
+            document.getElementById("digit2").value +
+            document.getElementById("digit3").value +
+            document.getElementById("digit4").value;
+
+console.log("Entered OTP:", otp); // ✅ Debugging: Check entered OTP
+
+try {
+    const response = await fetch("/verify-otp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, otp })
+    });
+
+    const data = await response.json();
+    if (data.success) {
+        alert("✅ OTP Verified Successfully!");
+        window.location.href = "/setPassword"; // Redirect after successful verification
+    } else {
+        alert("❌ Invalid OTP! Please try again.");
+    }
+} catch (error) {
+    console.error("Error verifying OTP:", error);
+    alert("⚠️ Server error. Please try again later.");
+}
+}
+
+async function resendOTP() {
+    const email = localStorage.getItem("email");
+    console.log("CALLED in resend",email)
+    if (!email) {
+        alert("⚠️ Email not found! Please sign up again.");
+        return;
+    }
+
+    try {
+        const response = await fetch("/resend-otp", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email })
+        });
+
+        const data = await response.json();
+        if (data.success) {
+            alert("🔄 New OTP sent successfully!");
+        } else {
+            alert("❌ Failed to resend OTP. Try again.");
+        }
+    } catch (error) {
+        console.error("Error resending OTP:", error);
+        alert("⚠️ Server error. Please try again later.");
+    }
+}
+    
+
+    </script>
+</body>
+</html>
